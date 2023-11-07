@@ -1,0 +1,123 @@
+//Personality Parameters
+localparam  MAJOR_VERSION='h0;
+localparam  MINOR_VERSION='h5;
+localparam  REVISION_NUM='h000F;
+localparam  FH_MODE='h1;
+localparam  NUM_ETH_CORES='h1;
+localparam  FDD_SUPPORTED='h1;
+localparam  TDD_SUPPORTED='h0;
+localparam  MAX_SUPPORTED_ANTENNAS='h4;
+localparam  MAX_SUPPORTED_CARRIERS='h2;
+localparam  MAX_PRECISION='h16;
+localparam  CAR0_LTE_SUPPORTED='h1;
+localparam  CAR1_LTE_SUPPORTED='h1;
+localparam  CAR0_5G_SUPPORTED='h0;
+localparam  CAR1_5G_SUPPORTED='h0;
+localparam  NUMEROLOGY0_SUPPORTED='h1;
+localparam  NUMEROLOGY1_SUPPORTED='h0;
+localparam  NUMEROLOGY2_SUPPORTED='h0;
+localparam  EXTENDED_CP_SUPPORTED='h0;
+localparam  SEC_TYPE0_SUPPORTED='h1;
+localparam  SEC_TYPE1_SUPPORTED='h1;
+localparam  SEC_TYPE3_SUPPORTED='h1;
+localparam  CAR0_PRACH_LTE_FORMAT0_SUPPORTED='h1;
+localparam  CAR0_PRACH_LTE_FORMAT1_SUPPORTED='h1;
+localparam  CAR0_PRACH_LTE_FORMAT2_SUPPORTED='h1;
+localparam  CAR0_PRACH_LTE_FORMAT3_SUPPORTED='h1;
+localparam  CAR0_PRACH_LTE_FORMAT4_SUPPORTED='h0;
+localparam  CAR1_PRACH_LTE_FORMAT0_SUPPORTED='h1;
+localparam  CAR1_PRACH_LTE_FORMAT1_SUPPORTED='h1;
+localparam  CAR1_PRACH_LTE_FORMAT2_SUPPORTED='h1;
+localparam  CAR1_PRACH_LTE_FORMAT3_SUPPORTED='h1;
+localparam  CAR1_PRACH_LTE_FORMAT4_SUPPORTED='h0;
+localparam  CAR0_BW_5MHZ_SUPPORTED='h1;
+localparam  CAR0_BW_10MHZ_SUPPORTED='h1;
+localparam  CAR0_BW_15MHZ_SUPPORTED='h1;
+localparam  CAR0_BW_20MHZ_SUPPORTED='h1;
+localparam  CAR1_BW_5MHZ_SUPPORTED='h1;
+localparam  CAR1_BW_10MHZ_SUPPORTED='h1;
+localparam  CAR1_BW_15MHZ_SUPPORTED='h1;
+localparam  CAR1_BW_20MHZ_SUPPORTED='h1;
+localparam  T2A_MIN_UP_NS_20MHZ='d115000;
+localparam  T2A_MIN_UP_NS_15MHZ='d115000;
+localparam  T2A_MIN_UP_NS_10MHZ='d119443;
+localparam  T2A_MIN_UP_NS_5MHZ ='d127863;
+localparam  TUP_RECEPTION_WINDOW_DL_NS='d467000;
+localparam  TCP_RECEPTION_WINDOW_DL_NS='d296000;
+localparam  TCP_ADV_DL_NS='d120000;
+localparam  TA3_MIN_UP_NS_20MHZ='d120732;
+localparam  TA3_MIN_UP_NS_15MHZ='d120732;
+localparam  TA3_MIN_UP_NS_10MHZ='d125192;
+localparam  TA3_MIN_UP_NS_5MHZ='d137919;
+localparam  TA3_MIN_UP_PRACH_NS_20MHZ='d89554;
+localparam  TA3_MIN_UP_PRACH_NS_15MHZ='d89554;
+localparam  TA3_MIN_UP_PRACH_NS_10MHZ='d92638;
+localparam  TA3_MIN_UP_PRACH_NS_5MHZ='d105039;
+localparam  TUP_TRANSMISSION_WINDOW_UL_NS='d31000;
+localparam  T2A_MIN_CP_UL_NS='h0;
+localparam  TCP_RECEPTION_WINDOW_UL_NS='d531000;
+localparam  DL_FRM_MRKR_TIME_ADVANCE_20MHZ='h1AAC8;
+localparam  DL_FRM_MRKR_TIME_ADVANCE_15MHZ='h1AAC8;
+localparam  DL_FRM_MRKR_TIME_ADVANCE_10MHZ='h1BC6C;
+localparam  DL_FRM_MRKR_TIME_ADVANCE_5MHZ='h1DD4F;
+localparam  UL_FRM_MRKR_TIME_DELAY_20MHZ='hEDC;
+localparam  UL_FRM_MRKR_TIME_DELAY_15MHZ='hEDC;
+localparam  UL_FRM_MRKR_TIME_DELAY_10MHZ='h1B62;
+localparam  UL_FRM_MRKR_TIME_DELAY_5MHZ='h35C4;
+localparam  PRACH_FRM_MRKR_TIME_DELAY_20MHZ='h12CF0;
+localparam  PRACH_FRM_MRKR_TIME_DELAY_15MHZ='h12CF0;
+localparam  PRACH_FRM_MRKR_TIME_DELAY_10MHZ='h138FC;
+localparam  PRACH_FRM_MRKR_TIME_DELAY_5MHZ='h1696D;
+localparam  CFR_SAMPLE_PERIOD_PS='hA99;
+localparam  PATH_DELAY_SAMPLE_PERIOD_PS='h1FCA;
+localparam  DL_TIME_DELAY_BYPASS='h0;
+localparam  UL_TIME_DELAY_BYPASS='h0;
+
+
+
+
+
+//Design Parameters
+localparam N_ETH_PORTS=NUM_ETH_CORES;
+localparam N_CARRIERS= MAX_SUPPORTED_CARRIERS;
+localparam N_ANTENNAS=MAX_SUPPORTED_ANTENNAS;
+localparam DFE_PRECISION=16;
+localparam NCO_COEF_WIDTH=40;
+localparam AXI_DATA_WIDTH=32;
+localparam TOP_CTRL_AXI_ADDR_WIDTH=13;
+localparam GAIN_SCALER_BW=4;
+localparam FH_DATA_WIDTH=64;
+
+localparam DL_DEFM_UPLANE_TUSER_BW=31;
+localparam UL_FRAM_UPLANE_TUSER_BW=1;
+localparam PRACH_UPLANE_TUSER_BW=32;
+localparam UNSOL_UPLANE_TUSER_BW=32;
+localparam UNSUP_MSGS_TUSER_BW=1;
+localparam XRAN_BWEIGHT_TUSER_BW=1;
+localparam UL_FRAME_UPLANE_REQ_BW=25;
+
+
+//localparam USER_ID_BW = $clog2(N_ANTENNAS);
+localparam USER_ID_BW = 2;
+
+localparam DPD_HOST_USER_ADDR_WIDTH=32;
+localparam DPD_CTRL_ADDR_WIDTH=32;
+localparam CFR_CTRL_ADDR_WIDTH=32;
+
+localparam DBGBUF_ADDR_WIDTH=32;
+localparam DBGBUF_DATA_WIDTH=64;
+localparam IWAVEBUF_ADDR_WIDTH=32;
+localparam IWAVEBUF_DATA_WIDTH=32;
+localparam CPRI_DATA_WIDTH=32;
+   
+ 
+localparam N_SRX_ADC=2;
+localparam PRECISION=DFE_PRECISION;
+localparam CPRI_PRECISION=15;
+localparam DFE_SYNTH_OUT=0;
+localparam DAC_DATA_WIDTH=64;
+
+localparam MAX_RSSI_TICS_BW = 21;
+
+localparam BOARD = 1; //0-ZCU111, 1- LOGAN  
+localparam N_CPRI_GRPS=N_CARRIERS*N_ANTENNAS; 

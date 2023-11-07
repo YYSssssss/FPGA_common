@@ -1,0 +1,92 @@
+Base_addr,Register_Name,Reg_Addr_Offset_hex,REG_ADDR_hex,Reg_Type,Field_Name,Bit_Width,Reset_Value_hex,Description,signal_info
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_COLD_RST,8,A026C008,RW,cold_rst_n,[0],1,,ctrl.cold_rst_n
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_COLD_RST_MASK,C,A026C00C,RW,cold_rst_n_mask,[0],1,1 = Mask cold_rst_n,ctrl.cold_rst_n_mask
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_SPI_BANK_SELECT,10,A026C010,RW,spi_bank_sel,[3:0],0,"0 =  Disable SPI Access, 1 = TX DSAs 0 to 3, 2 = TX DSAs 4 to 7, 3 = ORx DSAs 0 to 3, 4 = ORx DSA 4 to 7",ctrl.spi_bank_sel
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_DL_DFE_RADIO_PATH_MAP,20,A026C020,RW,dac0_dl_dfe_sel,[2:0],2,Select DL DFE stream (0 to 7) for DAC 0 (Bank228 DAC0) - DL Radio Path 1,ctrl.dac_dl_dfe_sel[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_DL_DFE_RADIO_PATH_MAP,20,A026C020,RW,dac1_dl_dfe_sel,[6:4],1,Select DL DFE stream (0 to 7) for DAC 1 (Bank228 DAC1) - DL Radio Path 2,ctrl.dac_dl_dfe_sel[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_DL_DFE_RADIO_PATH_MAP,20,A026C020,RW,dac2_dl_dfe_sel,[10:8],3,Select DL DFE stream (0 to 7) for DAC 2 (Bank228 DAC2) - DL Radio Path 3,ctrl.dac_dl_dfe_sel[2]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_DL_DFE_RADIO_PATH_MAP,20,A026C020,RW,dac3_dl_dfe_sel,[14:12],0,Select DL DFE stream (0 to 7) for DAC 3 (Bank228 DAC3) - DL Radio Path 4,ctrl.dac_dl_dfe_sel[3]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_DL_DFE_RADIO_PATH_MAP,20,A026C020,RW,dac4_dl_dfe_sel,[18:16],7,Select DL DFE stream (0 to 7) for DAC 4 (Bank229 DAC0) - DL Radio Path 5,ctrl.dac_dl_dfe_sel[4]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_DL_DFE_RADIO_PATH_MAP,20,A026C020,RW,dac5_dl_dfe_sel,[22:20],4,Select DL DFE stream (0 to 7) for DAC 5 (Bank229 DAC1) - DL Radio Path 6,ctrl.dac_dl_dfe_sel[5]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_DL_DFE_RADIO_PATH_MAP,20,A026C020,RW,dac6_dl_dfe_sel,[26:24],6,Select DL DFE stream (0 to 7) for DAC 6 (Bank229 DAC2) - DL Radio Path 7,ctrl.dac_dl_dfe_sel[6]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_DL_DFE_RADIO_PATH_MAP,20,A026C020,RW,dac7_dl_dfe_sel,[30:28],5,Select DL DFE stream (0 to 7) for DAC 7 (Bank229 DAC3) - DL Radio Path 8,ctrl.dac_dl_dfe_sel[7]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_DFE_RADIO_PATH_MAP,28,A026C028,RW,ul_dfe_rx0_adc_sel,[2:0],3,"Select ADC for UL DFE0 RX. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_rx_adc_sel[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_DFE_RADIO_PATH_MAP,28,A026C028,RW,ul_dfe_rx1_adc_sel,[6:4],1,"Select ADC for UL DFE1 RX. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_rx_adc_sel[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_DFE_RADIO_PATH_MAP,28,A026C028,RW,ul_dfe_rx2_adc_sel,[10:8],0,"Select ADC for UL DFE2 RX. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_rx_adc_sel[2]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_DFE_RADIO_PATH_MAP,28,A026C028,RW,ul_dfe_rx3_adc_sel,[14:12],2,"Select ADC for UL DFE3 RX. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_rx_adc_sel[3]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_DFE_RADIO_PATH_MAP,28,A026C028,RW,ul_dfe_rx4_adc_sel,[18:16],4,"Select ADC for UL DFE4 RX. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_rx_adc_sel[4]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_DFE_RADIO_PATH_MAP,28,A026C028,RW,ul_dfe_rx5_adc_sel,[22:20],6,"Select ADC for UL DFE5 RX. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_rx_adc_sel[5]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_DFE_RADIO_PATH_MAP,28,A026C028,RW,ul_dfe_rx6_adc_sel,[26:24],7,"Select ADC for UL DFE6 RX. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_rx_adc_sel[6]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_DFE_RADIO_PATH_MAP,28,A026C028,RW,ul_dfe_rx7_adc_sel,[30:28],5,"Select ADC for UL DFE7 RX. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_rx_adc_sel[7]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_ORX_RADIO_PATH_MAP,30,A026C030,RW,ul_dfe_orx0_adc_sel,[2:0],3,"Select ADC for UL ORX0 stream. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_orx_adc_sel[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_ORX_RADIO_PATH_MAP,30,A026C030,RW,ul_dfe_orx1_adc_sel,[6:4],1,"Select ADC for UL ORX1 stream. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_orx_adc_sel[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_ORX_RADIO_PATH_MAP,30,A026C030,RW,ul_dfe_orx2_adc_sel,[10:8],0,"Select ADC for UL ORX2 stream. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_orx_adc_sel[2]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_ORX_RADIO_PATH_MAP,30,A026C030,RW,ul_dfe_orx3_adc_sel,[14:12],2,"Select ADC for UL ORX3 stream. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_orx_adc_sel[3]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_ORX_RADIO_PATH_MAP,30,A026C030,RW,ul_dfe_orx4_adc_sel,[18:16],4,"Select ADC for UL ORX4 stream. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_orx_adc_sel[4]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_ORX_RADIO_PATH_MAP,30,A026C030,RW,ul_dfe_orx5_adc_sel,[22:20],6,"Select ADC for UL ORX5 stream. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_orx_adc_sel[5]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_ORX_RADIO_PATH_MAP,30,A026C030,RW,ul_dfe_orx6_adc_sel,[26:24],7,"Select ADC for UL ORX6 stream. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_orx_adc_sel[6]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_UL_ORX_RADIO_PATH_MAP,30,A026C030,RW,ul_dfe_orx7_adc_sel,[30:28],5,"Select ADC for UL ORX7 stream. 0=ADC0 (Bank224 ADC01), 1=ADC1 (Bank224 ADC23), 2=ADC2 (Bank225 ADC01) ...",ctrl.ul_dfe_orx_adc_sel[7]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_ORX_RF_SW_CTRL1,100,A026C100,RW,rf_switch_override,[0],0,1 = Software override for RF switches,ctrl.rf_switch_override
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_ORX_RF_SW_CTRL1,100,A026C100,RW,orx_ant_sel,[10:8],0,"0  = Antenna 1, 1 = Antenna 2, 2 = Antenna 3, …, 7 = Antenna 8",ctrl.orx_ant_sel[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_ORX_RF_SW_CTRL1,100,A026C100,RW,orx_path_sel,[11],0,"0 = Incident (DPD), 1 = Reflected (VSWR)",ctrl.orx_path_sel[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_ORX_RF_SW_CTRL2,104,A026C104,RW,ant_switch_delay,[15:0],c8,"Antenna switch delay for DPD and VSWR measurements, C8=200 cycles of 368.64MHz = 542ns",ctrl.ant_switch_delay
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_ANT_CAL_CTRL,110,A026C110,RW,tx_ant_cal_en,[0],0,Enable TX calibration. This also controls the Tx vs. Rx switch at the antenna cal port,ctrl.tx_ant_cal_en
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_ANT_CAL_CTRL,110,A026C110,RW,rx_ant_cal_en,[8],0,Enable RX Calibration. Tx calbration control (tx_ant_cal_en) must be low to enable RX calibration port,ctrl.rx_ant_cal_en
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_TX_GAINBLOCK_CTRL,120,A026C120,RW,tx_gainblock_en_n,[0],1,"0 = Enable TX Gain Blocks QPA9127 and TQL9062 for all TX paths, 1 = Disable",ctrl.tx_gainblock_en_n
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_RX_GAINBLOCK_CTRL,124,A026C124,RW,rx_gainblock_en_n,[0],1,"0 = Enable RX Gain Blocks QPA9127 and QPL9097 (LNA) for all RX paths, 1 = Disable",ctrl.rx_gainblock_en_n
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_LNA_CTRL,128,A026C128,RW,bypass_lna_0,[0],1,1 = Bypass QPL9097 LNA on Rx Chain 0,ctrl.bypass_lna[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_LNA_CTRL,128,A026C128,RW,bypass_lna_1,[1],1,1 = Bypass QPL9097 LNA on Rx Chain 1,ctrl.bypass_lna[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_LNA_CTRL,128,A026C128,RW,bypass_lna_2,[2],1,1 = Bypass QPL9097 LNA on Rx Chain 2,ctrl.bypass_lna[2]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_LNA_CTRL,128,A026C128,RW,bypass_lna_3,[3],1,1 = Bypass QPL9097 LNA on Rx Chain 3,ctrl.bypass_lna[3]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_LNA_CTRL,128,A026C128,RW,bypass_lna_4,[4],1,1 = Bypass QPL9097 LNA on Rx Chain 4,ctrl.bypass_lna[4]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_LNA_CTRL,128,A026C128,RW,bypass_lna_5,[5],1,1 = Bypass QPL9097 LNA on Rx Chain 5,ctrl.bypass_lna[5]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_LNA_CTRL,128,A026C128,RW,bypass_lna_6,[6],1,1 = Bypass QPL9097 LNA on Rx Chain 6,ctrl.bypass_lna[6]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_LNA_CTRL,128,A026C128,RW,bypass_lna_7,[7],1,1 = Bypass QPL9097 LNA on Rx Chain 7,ctrl.bypass_lna[7]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_ADCP_CTRL,12C,A026C12C,RW,pl_adcp_0_disable,[0],0,1 = Disable PL ADCP for Rx0 - Only prevents PL from responding to overvoltage and overrange,ctrl.pl_adcp_disable[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_ADCP_CTRL,12C,A026C12C,RW,pl_adcp_1_disable,[1],0,1 = Disable PL ADCP for Rx1 - Only prevents PL from responding to overvoltage and overrange,ctrl.pl_adcp_disable[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_ADCP_CTRL,12C,A026C12C,RW,pl_adcp_2_disable,[2],0,1 = Disable PL ADCP for Rx2 - Only prevents PL from responding to overvoltage and overrange,ctrl.pl_adcp_disable[2]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_ADCP_CTRL,12C,A026C12C,RW,pl_adcp_3_disable,[3],0,1 = Disable PL ADCP for Rx3 - Only prevents PL from responding to overvoltage and overrange,ctrl.pl_adcp_disable[3]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_ADCP_CTRL,12C,A026C12C,RW,pl_adcp_4_disable,[4],0,1 = Disable PL ADCP for Rx4 - Only prevents PL from responding to overvoltage and overrange,ctrl.pl_adcp_disable[4]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_ADCP_CTRL,12C,A026C12C,RW,pl_adcp_5_disable,[5],0,1 = Disable PL ADCP for Rx5 - Only prevents PL from responding to overvoltage and overrange,ctrl.pl_adcp_disable[5]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_ADCP_CTRL,12C,A026C12C,RW,pl_adcp_6_disable,[6],0,1 = Disable PL ADCP for Rx6 - Only prevents PL from responding to overvoltage and overrange,ctrl.pl_adcp_disable[6]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_ADCP_CTRL,12C,A026C12C,RW,pl_adcp_7_disable,[7],0,1 = Disable PL ADCP for Rx7 - Only prevents PL from responding to overvoltage and overrange,ctrl.pl_adcp_disable[7]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PS_DSA_CTRL,130,A026C130,RW,ps_rxdsa_0,[6:0],7f,Rx DSA 0 control from PS,ctrl.ps_rxdsa[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PS_DSA_CTRL,130,A026C130,RW,ps_rxdsa_1,[14:8],7f,Rx DSA 1 control from PS,ctrl.ps_rxdsa[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PS_DSA_CTRL,130,A026C130,RW,ps_rxdsa_2,[22:16],7f,Rx DSA 2 control from PS,ctrl.ps_rxdsa[2]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PS_DSA_CTRL,130,A026C130,RW,ps_rxdsa_3,[30:24],7f,Rx DSA 3 control from PS,ctrl.ps_rxdsa[3]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PS_DSA_CTRL2,134,A026C134,RW,ps_rxdsa_4,[6:0],7f,Rx DSA 4 control from PS,ctrl.ps_rxdsa[4]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PS_DSA_CTRL2,134,A026C134,RW,ps_rxdsa_5,[14:8],7f,Rx DSA 5 control from PS,ctrl.ps_rxdsa[5]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PS_DSA_CTRL2,134,A026C134,RW,ps_rxdsa_6,[22:16],7f,Rx DSA 6 control from PS,ctrl.ps_rxdsa[6]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PS_DSA_CTRL2,134,A026C134,RW,ps_rxdsa_7,[30:24],7f,Rx DSA 7 control from PS,ctrl.ps_rxdsa[7]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_DSA_CTRL,138,A026C138,RO,pl_rxdsa_0,[6:0],7f,Actual control applied to Rx DSA 0 from PL (Read Only),ctrl.pl_rxdsa[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_DSA_CTRL,138,A026C138,RO,pl_rxdsa_1,[14:8],7f,Actual control applied to Rx DSA 1 from PL (Read Only),ctrl.pl_rxdsa[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_DSA_CTRL,138,A026C138,RO,pl_rxdsa_2,[22:16],7f,Actual control applied to Rx DSA 2 from PL (Read Only),ctrl.pl_rxdsa[2]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_DSA_CTRL,138,A026C138,RO,pl_rxdsa_3,[30:24],7f,Actual control applied to Rx DSA 3 from PL (Read Only),ctrl.pl_rxdsa[3]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_DSA_CTRL2,13C,A026C13C,RO,pl_rxdsa_4,[6:0],7f,Actual control applied to Rx DSA 4 from PL (Read Only),ctrl.pl_rxdsa[4]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_DSA_CTRL2,13C,A026C13C,RO,pl_rxdsa_5,[14:8],7f,Actual control applied to Rx DSA 5 from PL (Read Only),ctrl.pl_rxdsa[5]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_DSA_CTRL2,13C,A026C13C,RO,pl_rxdsa_6,[22:16],7f,Actual control applied to Rx DSA 6 from PL (Read Only),ctrl.pl_rxdsa[6]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PL_DSA_CTRL2,13C,A026C13C,RO,pl_rxdsa_7,[30:24],7f,Actual control applied to Rx DSA 7 from PL (Read Only),ctrl.pl_rxdsa[7]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_LNA_CTRL,200,A026C200,RW,pa_lna_en_1to4,[0],0,1 = Enable PA board 1 LNA,ctrl.pa_lna_en[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_LNA_CTRL,200,A026C200,RW,pa_lna_en_5to8,[0],0,1 = Enable PA board 2 LNA,ctrl.pa_lna_en[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_RESET_CTRL,204,A026C204,RW,pa_resetn,[0],1,0 = Reset PA controllers for both PA boards,ctrl.pa_resetn
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_TDD_CTRL,208,A026C208,RW,tdd_ctrl_pa_1,[0],0,TDD on/off control for PA1,ctrl.tdd_ctrl_pa[0]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_TDD_CTRL,208,A026C208,RW,tdd_ctrl_pa_2,[1],0,TDD on/off control for PA2,ctrl.tdd_ctrl_pa[1]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_TDD_CTRL,208,A026C208,RW,tdd_ctrl_pa_3,[2],0,TDD on/off control for PA3,ctrl.tdd_ctrl_pa[2]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_TDD_CTRL,208,A026C208,RW,tdd_ctrl_pa_4,[3],0,TDD on/off control for PA4,ctrl.tdd_ctrl_pa[3]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_TDD_CTRL,208,A026C208,RW,tdd_ctrl_pa_5,[4],0,TDD on/off control for PA5,ctrl.tdd_ctrl_pa[4]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_TDD_CTRL,208,A026C208,RW,tdd_ctrl_pa_6,[5],0,TDD on/off control for PA6,ctrl.tdd_ctrl_pa[5]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_TDD_CTRL,208,A026C208,RW,tdd_ctrl_pa_7,[6],0,TDD on/off control for PA7,ctrl.tdd_ctrl_pa[6]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PA_CONTROLLER_TDD_CTRL,208,A026C208,RW,tdd_ctrl_pa_8,[7],0,TDD on/off control for PA8,ctrl.tdd_ctrl_pa[7]
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PWR_STATUS,300,A026C300,RO,pa_v_pgood,[7:0],ff,PA_V Power Good,ctrl.pa_v_pgood
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_PWR_STATUS,300,A026C300,RO,aisg_pgood,[8],1,Power Good.  Signal is pulled up on schematic,ctrl.aisg_pgood
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_AISG_PWR_CTRL,304,A026C304,RW,aisg_vdd_enn,[0],1,"0 - Enabled, 1 - Disabled",ctrl.aisg_vdd_enn
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_AISG_PWR_CTRL,304,A026C304,RW,aisg_vdd_sw_enn,[1],1,"0 - Enabled, 1 - Disabled",ctrl.aisg_vdd_sw_enn
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_AISG_CTRL,308,A026C308,RW,aisg_uart_de_ren,[0],0,"0 - Receiving, 1 - Transmitting (Driver En, Receiver En_n)",ctrl.uart1_de_ren
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_SFP_CTRL,30C,A026C30C,RW,sfp_tx_en_n,[1:0],0,"Active low - [0] Bit for SFP0, [1] Bit for SFP1",ctrl.sfp_tx_en_n
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_SFP_CTRL,30C,A026C30C,RW,sfp_tx_en_n_override,[17:16],0,"0 = use internal PL logic, 1 = override internal PL logic with sfp_tx_en_n register",ctrl.sfp_tx_en_n_override
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_SFP_CTRL2,310,A026C310,RW,sfp_rs,[1:0],0,SFP Rate Select,ctrl.sfp_rs
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_SFP_CTRL2,310,A026C310,RW,sfp_led,[3:2],0,SFP LEDs,ctrl.sfp_led
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_TRIG_CTRL,314,A026C314,RW,trigger,[0],0,Trigger to the Maintenance Board,ctrl.trigger
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_TRIG_CTRL,314,A026C314,RW,trigger_override,[16],0,"1 = Trigger comes from the register bit, 0 = generated internally",ctrl.trigger_override
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_1PPS_CTRL,318,A026C318,RW,one_pps_source,[0],0,"0 = 1PPS (ONE_PPS) from Si5518, 1 = 1PPS (1PPS_IN2) from Maintenance Board (J12 Molex RF Connector)",ctrl.one_pps_source
+FPGA_BASE_ADDR_TOP_CTRL_HW,FPGA_REG_HW_SCRATCH,1FFC,A026DFFC,RW,hw_scratch,[31:0],3333_ffff,HW scratch,

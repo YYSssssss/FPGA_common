@@ -1,0 +1,12 @@
+Base_addr,Register_Name,Reg_Addr_Offset_hex,REG_ADDR_hex,Reg_Type,Field_Name,Bit_Width,Reset_Value_hex,Description,signal_info
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_VERSION_REGISTER,0,A0262000,RO,major_version,[31:24],0,major version,param.major_version
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_VERSION_REGISTER,0,A0262000,RO,minor_version,[23:16],0,minor version,param.minor_version
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_VERSION_REGISTER,0,A0262000,RO,revision_num,[15:0],0,Revision number,param.revision_num
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_INTERNAL_REVISION,4,A0262004,RO,debug_revision,[31:0],0,Debug build version. Should be 0 for official builds.,param.debug_revision
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_HW_ID,8,A0262008,RW,hw_id,[15:0],0,,ctrl.hw_id
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_SOFT_RESET_REGISTER,C,A026200C,RW,soft_reset,[15:0],0,bit 0 - Write 1 and then 0 to resets data path except Fronthaul. ,ctrl.soft_reset
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_xSSI_WINDOW_CFG,10,A0262010,RW,xssi_num_15p36_tics,[20:0],177000,"Number of tics @15.36Mhz clock after which RSSI, WRSSI, TSSI re-loaded into registers",ctrl.xssi_num_15p36_tics
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_DL_DFE_RESET_REGISTER,14,A0262014,RW,dl_dfe_reset,[0],0,bit 0 - Write 1 and then 0 to resets dl_dfe data path  ,ctrl.dl_dfe_reset
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_UL_DFE_RESET_REGISTER,18,A0262018,RW,ul_dfe_reset,[0],0,bit 0 - Write 1 and then 0 to resets ul_dfe data path  ,ctrl.ul_dfe_reset
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_DBG_RESET_REGISTER,1C,A026201C,RW,dbg_reset,[0],0,bit 0 - Write 1 and then 0 to resets dbg whole module  ,ctrl.dbg_module_reset
+FPGA_BASE_ADDR_TOP_CTRL_CMN,FPGA_REG_CMN_SCRATCH,1FFC,A0263FFC,RW,com_scratch,[31:0],3333_cccc,common scratch,

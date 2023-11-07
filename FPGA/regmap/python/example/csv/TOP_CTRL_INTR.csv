@@ -1,0 +1,77 @@
+Base_addr,Register_Name,Reg_Addr_Offset_hex,REG_ADDR_hex,Reg_Type,Field_Name,Bit_Width,Reset_Value_hex,Description,signal_info
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_MASTER_IRQ_STATUS,0,A026E000,RO,irq_pl_master,[0],0,Self clearing. 1 = A sticky interrupt is high in the PL interrupt register.,ctrl.pl_master_irq
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_MASTER_IRQ_MASK,4,A026E004,RW,irq_pl_master_mask,[0],0,,ctrl.pl_master_irq_mask
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_STATUS,10,A026E010,RO,irq_reset_request,[0],0,Sticky. Reset request to software before cold reset is asserted,ctrl.pl_irq[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_STATUS,10,A026E010,RO,irq_rfdc,[1],0,Sticky - Interrupt from RF Data Converter,ctrl.pl_irq[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_STATUS,10,A026E010,RO,irq_adc_thresholds,[2],0,Sticky - Composite interrupt for adcXZ_over_threshold1-2 from all ADCs (except ORX ADCs). See FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,ctrl.pl_irq[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_STATUS,10,A026E010,RO,irq_sfp_faults,[3],0,"Sticky - SPF status (i.e. LOS, TX Fault, etc.). See FPGA_REG_SFP_STATUS_REGISTER",ctrl.pl_irq[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_STATUS,10,A026E010,RO,irq_ext_alarms,[4],0,Sticky - Customer alarms. See FPGA_REG_EXT_ALARM_INTR_STATUS_REGISTER,ctrl.pl_irq[4]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_STATUS,10,A026E010,RO,irq_psu_alarms,[5],0,Sticky - PSU Alarm,ctrl.pl_irq[5]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_STATUS,10,A026E010,RO,irq_debug,[31],0,Sticky - For debug purpose only,ctrl.pl_irq[31]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_MASK,14,A026E014,RW,mask_reset_request,[0],0,Write 1 to mask corresponding interrupt status bit,ctrl.pl_irq_mask[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_MASK,14,A026E014,RW,mask_rfdc,[1],0,Write 1 to mask corresponding interrupt status bit,ctrl.pl_irq_mask[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_MASK,14,A026E014,RW,mask_adc_thresholds,[2],0,Write 1 to mask corresponding interrupt status bit,ctrl.pl_irq_mask[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_MASK,14,A026E014,RW,mask_ext_alarms,[3],0,Write 1 to mask corresponding interrupt status bit,ctrl.pl_irq_mask[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_MASK,14,A026E014,RW,mask_sfp_faults,[4],0,Write 1 to mask corresponding interrupt status bit,ctrl.pl_irq_mask[4]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_MASK,14,A026E014,RW,mask_psu_alarms,[5],0,Write 1 to mask corresponding interrupt status bit,ctrl.pl_irq_mask[5]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_MASK,14,A026E014,RW,mask_debug,[31],0,Write 1 to mask corresponding interrupt status bit,ctrl.pl_irq_mask[31]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_CLEAR,18,A026E018,RW,clear_reset_request,[0],0,Write 1 and then 0 to clear irq status. The status will not clear if the interrupt condition still exists.,ctrl.pl_irq_clear[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_CLEAR,18,A026E018,RW,clear_rfdc,[1],0,Write 1 and then 0 to clear irq status. The status will not clear if the interrupt condition still exists.,ctrl.pl_irq_clear[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_CLEAR,18,A026E018,RW,clear_adc_thresholds,[2],0,Write 1 and then 0 to clear irq status. The status will not clear if the interrupt condition still exists.,ctrl.pl_irq_clear[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_CLEAR,18,A026E018,RW,clear_ext_alarms,[3],0,Write 1 and then 0 to clear irq status. The status will not clear if the interrupt condition still exists.,ctrl.pl_irq_clear[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_CLEAR,18,A026E018,RW,clear_sfp_faults,[4],0,Write 1 and then 0 to clear irq status. The status will not clear if the interrupt condition still exists.,ctrl.pl_irq_clear[4]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_CLEAR,18,A026E018,RW,clear_psu_alarms,[5],0,Write 1 and then 0 to clear irq status. The status will not clear if the interrupt condition still exists.,ctrl.pl_irq_clear[5]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_PL_IRQ_CLEAR,18,A026E018,RW,clear_debug,[31],0,Write 1 and then 0 to clear irq status. The status will not clear if the interrupt condition still exists.,ctrl.pl_irq_clear[31]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc0_01_over_threshold1,[0],0,ADC0 (Bank 224 ADC01) Threshold1 Interrupt Status,ctrl.adc_over_threshold1[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc0_23_over_threshold1,[1],0,ADC1 (Bank 224 ADC23) Threshold1 Interrupt Status,ctrl.adc_over_threshold1[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc1_01_over_threshold1,[2],0,ADC2 (Bank 225 ADC01) Threshold1 Interrupt Status,ctrl.adc_over_threshold1[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc1_23_over_threshold1,[3],0,ADC3 (Bank 225 ADC23) Threshold1 Interrupt Status,ctrl.adc_over_threshold1[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc2_01_over_threshold1,[4],0,ADC4 (Bank 226 ADC01) Threshold1 Interrupt Status,ctrl.adc_over_threshold1[4]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc2_23_over_threshold1,[5],0,ADC5 (Bank 226 ADC23) Threshold1 Interrupt Status,ctrl.adc_over_threshold1[5]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc3_01_over_threshold1,[6],0,ADC6 (Bank 227 ADC01) Threshold1 Interrupt Status,ctrl.adc_over_threshold1[6]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc3_23_over_threshold1,[7],0,ADC7 (Bank 227 ADC23) Threshold1 Interrupt Status,ctrl.adc_over_threshold1[7]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc0_01_over_threshold2,[8],0,ADC0 (Bank 224 ADC01) Threshold2 Interrupt Status,ctrl.adc_over_threshold2[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc0_23_over_threshold2,[9],0,ADC1 (Bank 224 ADC23) Threshold2 Interrupt Status,ctrl.adc_over_threshold2[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc1_01_over_threshold2,[10],0,ADC2 (Bank 225 ADC01) Threshold2 Interrupt Status,ctrl.adc_over_threshold2[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc1_23_over_threshold2,[11],0,ADC3 (Bank 225 ADC23) Threshold2 Interrupt Status,ctrl.adc_over_threshold2[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc2_01_over_threshold2,[12],0,ADC4 (Bank 226 ADC01) Threshold2 Interrupt Status,ctrl.adc_over_threshold2[4]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc2_23_over_threshold2,[13],0,ADC5 (Bank 226 ADC23) Threshold2 Interrupt Status,ctrl.adc_over_threshold2[5]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc3_01_over_threshold2,[14],0,ADC6 (Bank 227 ADC01) Threshold2 Interrupt Status,ctrl.adc_over_threshold2[6]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_STATUS_REGISTER,100,A026E100,RO,adc3_23_over_threshold2,[15],0,ADC7 (Bank 227 ADC23) Threshold2 Interrupt Status,ctrl.adc_over_threshold2[7]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc0_01_over_threshold1_mask,[0],0,ADC0 (Bank 224 ADC01) Threshold1 Interrupt Mask,ctrl.adc_over_threshold1_mask[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc0_23_over_threshold1_mask,[1],0,ADC1 (Bank 224 ADC23) Threshold1 Interrupt Mask,ctrl.adc_over_threshold1_mask[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc1_01_over_threshold1_mask,[2],0,ADC2 (Bank 225 ADC01) Threshold1 Interrupt Mask,ctrl.adc_over_threshold1_mask[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc1_23_over_threshold1_mask,[3],0,ADC3 (Bank 225 ADC23) Threshold1 Interrupt Mask,ctrl.adc_over_threshold1_mask[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc2_01_over_threshold1_mask,[4],0,ADC4 (Bank 226 ADC01) Threshold1 Interrupt Mask,ctrl.adc_over_threshold1_mask[4]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc2_23_over_threshold1_mask,[5],0,ADC5 (Bank 226 ADC23) Threshold1 Interrupt Mask,ctrl.adc_over_threshold1_mask[5]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc3_01_over_threshold1_mask,[6],0,ADC6 (Bank 227 ADC01) Threshold1 Interrupt Mask,ctrl.adc_over_threshold1_mask[6]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc3_23_over_threshold1_mask,[7],0,ADC7 (Bank 227 ADC23) Threshold1 Interrupt Mask,ctrl.adc_over_threshold1_mask[7]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc0_01_over_threshold2_mask,[8],0,ADC0 (Bank 224 ADC01) Threshold2 Interrupt Mask,ctrl.adc_over_threshold2_mask[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc0_23_over_threshold2_mask,[9],0,ADC1 (Bank 224 ADC23) Threshold2 Interrupt Mask,ctrl.adc_over_threshold2_mask[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc1_01_over_threshold2_mask,[10],0,ADC2 (Bank 225 ADC01) Threshold2 Interrupt Mask,ctrl.adc_over_threshold2_mask[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc1_23_over_threshold2_mask,[11],0,ADC3 (Bank 225 ADC23) Threshold2 Interrupt Mask,ctrl.adc_over_threshold2_mask[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc2_01_over_threshold2_mask,[12],0,ADC4 (Bank 226 ADC01) Threshold2 Interrupt Mask,ctrl.adc_over_threshold2_mask[4]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc2_23_over_threshold2_mask,[13],0,ADC5 (Bank 226 ADC23) Threshold2 Interrupt Mask,ctrl.adc_over_threshold2_mask[5]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc3_01_over_threshold2_mask,[14],0,ADC6 (Bank 227 ADC01) Threshold2 Interrupt Mask,ctrl.adc_over_threshold2_mask[6]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_THRESHOLD_INTR_MASK_REGISTER,104,A026E104,RW,adc3_23_over_threshold2_mask,[15],0,ADC7 (Bank 227 ADC23) Threshold2 Interrupt Mask,ctrl.adc_over_threshold2_mask[7]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_REAL_TIME_STATUS_REGISTER,108,A026E108,RO,adc_over_range,[7:0],0,"Over Range, Bit 0:ADC0 (Bank 224 ADC01), 1: ADC1 (Bank 224 ADC23), 2:ADC2 (Bank 225 ADC 01), ...",ctrl.adc_over_range
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_ADC_REAL_TIME_STATUS_REGISTER,108,A026E108,RO,adc_over_voltage,[15:8],0,"Over Voltage, Bit 0:ADC0 (Bank 224 ADC01), 1: ADC1 (Bank 224 ADC23), 2:ADC2 (Bank 225 ADC 01), …",ctrl.adc_over_voltage
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_EXT_ALARM_INTR_STATUS_REGISTER,110,A026E110,RO,ext_alarm_0,[0],0,External Alarm Interrupt Status,ctrl.ext_alarm[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_EXT_ALARM_INTR_STATUS_REGISTER,110,A026E110,RO,ext_alarm_1,[1],0,,ctrl.ext_alarm[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_EXT_ALARM_INTR_STATUS_REGISTER,110,A026E110,RO,ext_alarm_2,[2],0,,ctrl.ext_alarm[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_EXT_ALARM_INTR_STATUS_REGISTER,110,A026E110,RO,ext_alarm_3,[3],0,,ctrl.ext_alarm[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_EXT_ALARM_INTR_MASK_REGISTER,114,A026E114,RW,ext_alarm_0_mask,[0],0,External Alarm Interrupt Masks,ctrl.ext_alarm_mask[0]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_EXT_ALARM_INTR_MASK_REGISTER,114,A026E114,RW,ext_alarm_1_mask,[1],0,,ctrl.ext_alarm_mask[1]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_EXT_ALARM_INTR_MASK_REGISTER,114,A026E114,RW,ext_alarm_2_mask,[2],0,,ctrl.ext_alarm_mask[2]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_EXT_ALARM_INTR_MASK_REGISTER,114,A026E114,RW,ext_alarm_3_mask,[3],0,,ctrl.ext_alarm_mask[3]
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_STATUS_REGISTER,120,A026E120,RO,sfp0_los,[0],0,SFP0 LOS,ctrl.sfp0_los
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_STATUS_REGISTER,120,A026E120,RO,sfp1_los,[1],0,SFP1 LOS,ctrl.sfp1_los
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_STATUS_REGISTER,120,A026E120,RO,sfp0_tx_fault,[8],0,SFP0 TX FAULT,ctrl.sfp0_tx_fault
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_STATUS_REGISTER,120,A026E120,RO,sfp1_tx_fault,[9],0,SFP1 TX FAULT,ctrl.sfp1_tx_fault
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_MASK_REGISTER,124,A026E124,RW,sfp0_los_mask,[0],0,SFP0 los mask,ctrl.sfp0_los_mask
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_MASK_REGISTER,124,A026E124,RW,sfp1_los_mask,[1],0,SFP1 los mask,ctrl.sfp1_los_mask
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_MASK_REGISTER,124,A026E124,RW,sfp0_tx_fault_mask,[8],0,SFP0 tx fault mask,ctrl.sfp0_tx_fault_mask
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_MASK_REGISTER,124,A026E124,RW,sfp1_tx_fault_mask,[9],0,SFP1 tx fault mask,ctrl.sfp1_tx_fault_mask
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_DETECT_REGISTER,128,A026E128,RO,sfp0_detect_n,[0],0,SFP0 Detect active low,ctrl.sfp0_detect_n
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_SFP_DETECT_REGISTER,128,A026E128,RO,sfp1_detect_n,[1],0,SFP1 Detect active low,ctrl.sfp1_detect_n
+FPGA_BASE_ADDR_TOP_CTRL_INTR,FPGA_REG_INTR_SCRATCH,1FFC,A026FFFC,RW,irq_scratch,[31:0],4444_dddd,,

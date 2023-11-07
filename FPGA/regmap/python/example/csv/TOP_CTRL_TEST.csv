@@ -1,0 +1,68 @@
+Base_addr,Register_Name,Reg_Addr_Offset_hex,REG_ADDR_hex,Reg_Type,Field_Name,Bit_Width,Reset_Value_hex,Description,signal_info
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_RFBUF_CFG0,F0,A026A0F0,RW,rfbuf_trig_align_en,[0],0,Not for software use. Enable alignment of trigger with PTP marker,ctrl.rfbuf_trig_align_en
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_RFBUF_CFG,100,A026A100,RW,rfbuf_num_samples,[19:0],0,Number of samples to be written or read from the Debug buffer,ctrl.dfe_adcdac_test_num_samples
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_RFBUF_CFG,100,A026A100,RW,rfbuf_mode,[24],0,"1: Continuous mode, 0: Single shot",ctrl.dfe_adcdac_test_mode
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_RFBUF_CFG,100,A026A100,RW,rfbuf_path_select,[30:28],0,"3'b000: Test mode disable (normal operation), 3'b001: dbgbuf_to_dac, 3'b010: dldfe_to_dbgbuf, 3'b011:adc_to_dbgbuf, 3'b100: dbgbuf_to_uldfe, 3'b101 to 3'b111 : reserved",ctrl.dfe_adcdac_test_path_select
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_RFBUF_TRIGGER,104,A026A104,RW,rfbuf_trigger,[0],0,"1: Start the test with the testpath defined by test_path_select defined in DFE_ADCDAC_TEST_CFG  Register. In single shot mode,  to trigger it for subsequent test, write 0 and then write 1, A rising edge is on this bit is used for triggering the test.",ctrl.dfe_adcdac_test_trigger
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_RFBUF_RESET,108,A026A108,RW,rfbuf_reset,[0],0,"1: Reset the test, This bit can be used to reset the State machine when it is in continuous mode. It has to be set back to 0 to restart the test again",ctrl.dfe_adcdac_test_reset
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_CPRI_DFE_TEST_CFG,10C,A026A10C,RW,first_4_ants_uldfe_to_dldfe_lpbk,[0],0,1: route UL DFE output to DL DFE input,ctrl.uldfe_to_dldfe_lpbk[0]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_CPRI_DFE_TEST_CFG,10C,A026A10C,RW,last_4_ants_uldfe_to_dldfe_lpbk,[1],0,1: route UL DFE output to DL DFE input,ctrl.uldfe_to_dldfe_lpbk[1]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_CPRI_DFE_TEST_CFG,10C,A026A10C,RW,fh_dbg_mode,[5:4],0,"2'b00: Normal operation, 2'b01: Drive data from dbg Buffer,  2'b10: lphy Dl to lphy UL, 2'b11: Reserved",ctrl.fh_dbg_mode
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_CPRI_DFE_TEST_CFG,10C,A026A10C,RW,first_4_ants_orx_to_uldfe_en,[8],0,1: Route Orx Path to RX DFE Path,ctrl.orx_to_uldfe_en[0]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_CPRI_DFE_TEST_CFG,10C,A026A10C,RW,first_4_ants_rx0_to_all_ul_paths,[9],0,1: Route Orx Path to RX DFE Path,ctrl.rx0_to_all_ul_paths[0]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_CPRI_DFE_TEST_CFG,10C,A026A10C,RW,last_4_ants_orx_to_uldfe_en,[8],0,1: Route Orx Path to RX DFE Path,ctrl.orx_to_uldfe_en[1]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_CPRI_DFE_TEST_CFG,10C,A026A10C,RW,last_4_ants_rx0_to_all_ul_paths,[9],0,1: Route Orx Path to RX DFE Path,ctrl.rx0_to_all_ul_paths[1]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_CPRI_DFE_TEST_CFG,10C,A026A10C,RW,rx_antenna_dgb_sel,[16:12],0,"0x0: Rx Ant0 , 0x1: Rx Ant1, 0x2: Rx Ant2, 0x3: Rx Ant3, 0x4: Rx Ant4 , 0x5: Rx Ant5, 0x6: Rx Ant6, 0x7: Rx Ant7
+0x10: ORx Ant0, 0x11: ORx Ant1, 0x12: ORx Ant2, 0x13: ORx Ant3,0x14: ORx Ant4, 0x15: ORx Ant5, 0x16: ORx Ant6, 0x17: ORx Ant7",ctrl.rx_antenna_dgb_sel
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_TEST_CFG,110,A026A110,RW,adc_invert_q,[0],0,"1: Invert Q on UL Path at ADC output, ",ctrl.adc_invert_q
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_FHBUF_CFG,120,A026A120,RW,fhbuf_num_samples,[19:0],0,"Number of samples to be driven at DL DFE input, Currently FH BUffer is 128KBytes, Bits [14:0] are valid, Maximum number of samples is 30720.",ctrl.dl_test_mode_num_samples
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_FHBUF_CFG,120,A026A120,RW,fhbuf_ants_sel,[25:24],0,"0 = first four ants, 1 = last four ants",ctrl.dl_test_ants_sel
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_FHBUF_CFG,120,A026A120,RW,fhbuf_store_en,[29],0,"1. Store the Data into Buffer, 0:Load the Data from the Buffer (Buffer as a waveform generator)",ctrl.dl_test_store_en
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_FHBUF_CFG,120,A026A120,RW,fhbuf_mode,[30],0,"1: Continuous mode, 0: Single shot",ctrl.dl_test_mode
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_FHBUF_CFG,120,A026A120,RW,fhbuf_en,[31],0,1: Enable the test mode,ctrl.dl_test_mode_en
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_FHBUF_TRIGGER,124,A026A124,RW,fhbuf_trigger,[0],0,1: Start driving the data into DL DFE chain,ctrl.dl_test_mode_trigger
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DL_ANT0_TSSI,200,A026A200,RO,ant0_tssi,[31:0],0,Antenna 0 Path TSSI,ctrl.ant_tssi[0]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DL_ANT1_TSSI,204,A026A204,RO,ant1_tssi,[31:0],0,Antenna 1 Path TSSI,ctrl.ant_tssi[1]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DL_ANT2_TSSI,208,A026A208,RO,ant2_tssi,[31:0],0,Antenna 2 Path TSSI,ctrl.ant_tssi[2]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DL_ANT3_TSSI,20C,A026A20C,RO,ant3_tssi,[31:0],0,Antenna 3 Path TSSI,ctrl.ant_tssi[3]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DL_ANT4_TSSI,210,A026A210,RO,ant4_tssi,[31:0],0,Antenna 4 Path TSSI,ctrl.ant_tssi[4]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DL_ANT5_TSSI,214,A026A214,RO,ant5_tssi,[31:0],0,Antenna 5 Path TSSI,ctrl.ant_tssi[5]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DL_ANT6_TSSI,218,A026A218,RO,ant6_tssi,[31:0],0,Antenna 6 Path TSSI,ctrl.ant_tssi[6]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DL_ANT7_TSSI,21C,A026A21C,RO,ant7_tssi,[31:0],0,Antenna 7 Path TSSI,ctrl.ant_tssi[7]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_ANT0_WRSSI_CFG,220,A026A220,RO,ul_ant0_wrssi,[31:0],0,Antenna 0 Path wrssi ,ctrl.ul_ant_wrssi[0]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_ANT1_WRSSI_CFG,224,A026A224,RO,ul_ant1_wrssi,[31:0],0,Antenna 1 Path wrssi ,ctrl.ul_ant_wrssi[1]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_ANT2_WRSSI_CFG,228,A026A228,RO,ul_ant2_wrssi,[31:0],0,Antenna 2 Path wrssi ,ctrl.ul_ant_wrssi[2]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_ANT3_WRSSI_CFG,22C,A026A22C,RO,ul_ant3_wrssi,[31:0],0,Antenna 3 Path wrssi ,ctrl.ul_ant_wrssi[3]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_ANT4_WRSSI_CFG,230,A026A230,RO,ul_ant4_wrssi,[31:0],0,Antenna 4 Path wrssi ,ctrl.ul_ant_wrssi[4]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_ANT5_WRSSI_CFG,234,A026A234,RO,ul_ant5_wrssi,[31:0],0,Antenna 5 Path wrssi ,ctrl.ul_ant_wrssi[5]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_ANT6_WRSSI_CFG,238,A026A238,RO,ul_ant6_wrssi,[31:0],0,Antenna 6 Path wrssi ,ctrl.ul_ant_wrssi[6]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_UL_ANT7_WRSSI_CFG,23C,A026A23C,RO,ul_ant7_wrssi,[31:0],0,Antenna 7 Path wrssi ,ctrl.ul_ant_wrssi[7]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ORX0_WRSSI,240,A026A240,RO,orx0_wrssi,[31:0],0,Observation Path Antenna 0 Path wrssi ,ctrl.orx_wrssi[0]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ORX1_WRSSI,244,A026A244,RO,orx1_wrssi,[31:0],0,Observation Path Antenna 1 Path wrssi ,ctrl.orx_wrssi[1]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ORX2_WRSSI,248,A026A248,RO,orx2_wrssi,[31:0],0,Observation Path Antenna 2 Path wrssi ,ctrl.orx_wrssi[2]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ORX3_WRSSI,24C,A026A24C,RO,orx3_wrssi,[31:0],0,Observation Path Antenna 3 Path wrssi ,ctrl.orx_wrssi[3]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ORX4_WRSSI,250,A026A250,RO,orx4_wrssi,[31:0],0,Observation Path Antenna 4 Path wrssi ,ctrl.orx_wrssi[4]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ORX5_WRSSI,254,A026A254,RO,orx5_wrssi,[31:0],0,Observation Path Antenna 5 Path wrssi ,ctrl.orx_wrssi[5]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ORX6_WRSSI,258,A026A258,RO,orx6_wrssi,[31:0],0,Observation Path Antenna 6 Path wrssi ,ctrl.orx_wrssi[6]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ORX7_WRSSI,25C,A026A25C,RO,orx7_wrssi,[31:0],0,Observation Path Antenna 7 Path wrssi ,ctrl.orx_wrssi[7]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RW_0,1F00,A026BF00,RW,debug_rw_0,[31:0],0,Temporary. Not for software. Debug RW Register.  Bit0 to send pa_odp_tssi to ant_tssi. Bit4-7 to insert pa_odp_tssi from debug_rw_1-4 regs,ctrl.debug_rw[0]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RW_1,1F04,A026BF04,RW,debug_rw_1,[31:0],0,Temporary. Not for software. Debug RW Register. PA_ODP_TSSI on selected antennas,ctrl.debug_rw[1]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RW_2,1F08,A026BF08,RW,debug_rw_2,[31:0],0,Temporary. Not for software. Debug RW Register,ctrl.debug_rw[2]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RW_3,1F0C,A026BF0C,RW,debug_rw_3,[31:0],0,Temporary. Not for software. Debug RW Register,ctrl.debug_rw[3]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RW_4,1F10,A026BF10,RW,debug_rw_4,[31:0],0,Temporary. Not for software. Debug RW Register,ctrl.debug_rw[4]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RW_5,1F14,A026BF14,RW,debug_rw_5,[31:0],0,Temporary. Not for software. Debug RW Register,ctrl.debug_rw[5]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RW_6,1F18,A026BF18,RW,debug_rw_6,[31:0],0,Temporary. Not for software. Debug RW Register,ctrl.debug_rw[6]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RW_7,1F1C,A026BF1C,RW,debug_rw_7,[31:0],0,Temporary. Not for software. Debug RW Register,ctrl.debug_rw[7]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RO_0,1F20,A026BF20,RO,debug_ro_0,[31:0],0,Temporary. Not for software. Debug Read-Only Register,ctrl.debug_ro[0]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RO_1,1F24,A026BF24,RO,debug_ro_1,[31:0],0,Temporary. Not for software. Debug Read-Only Register,ctrl.debug_ro[1]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RO_2,1F28,A026BF28,RO,debug_ro_2,[31:0],0,Temporary. Not for software. Debug Read-Only Register,ctrl.debug_ro[2]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RO_3,1F2C,A026BF2C,RO,debug_ro_3,[31:0],0,Temporary. Not for software. Debug Read-Only Register,ctrl.debug_ro[3]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RO_4,1F30,A026BF30,RO,debug_ro_4,[31:0],0,Temporary. Not for software. Debug Read-Only Register,ctrl.debug_ro[4]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RO_5,1F34,A026BF34,RO,debug_ro_5,[31:0],0,Temporary. Not for software. Debug Read-Only Register,ctrl.debug_ro[5]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RO_6,1F38,A026BF38,RO,debug_ro_6,[31:0],0,Temporary. Not for software. Debug Read-Only Register,ctrl.debug_ro[6]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DEBUG_RO_7,1F3C,A026BF3C,RO,debug_ro_7,[31:0],0,Temporary. Not for software. Debug Read-Only Register,ctrl.debug_ro[7]
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_VIO_CONFIG_UL,1F40,A026BF40,RW,vio_config_ul,[31:0],0,Temporary. Not for software,ctrl.vio_config_ul
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_VIO_CONFIG_DL,1F44,A026BF44,RW,vio_config_dl,[31:0],0,Temporary. Not for software,ctrl.vio_config_dl
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ILA_CONFIG_ADC,1F48,A026BF48,RW,ila_config_adc,[31:0],0,Temporary. Not for software,ctrl.ila_config_adc
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_ILA_CONFIG_DAC,1F4C,A026BF4C,RW,ila_config_dac,[31:0],0,Temporary. Not for software,ctrl.ila_config_dac
+FPGA_BASE_ADDR_TOP_CTRL_TEST,FPGA_REG_DBG_SCRATCH,1FFC,A026BFFC,RW,dbg_scratch,[31:0],4444_dddd,,

@@ -1,0 +1,172 @@
+
+`timescale 1ns / 1ps
+
+module jb_pa_odp (
+    input                               clk_3x,
+    input                               resetn_3x,
+    input           [31:0]              tssi,
+    input           [31:0]              tssi_threshold,
+    output  logic   [31:0]              tssi_violation,
+    output  logic                       rf_overdrive_mute,
+    input                               rf_overdrive_mute_mask,
+    input                               rf_overdrive_mute_clr,
+    output  logic                       rf_overdrive_irq,
+    input                               rf_overdrive_irq_mask,
+    input                               rf_overdrive_irq_clr
+);
+
+    // ------------------------------------------------------------------ //
+    // Internal Signals                                                   //
+    // ------------------------------------------------------------------ //
+    logic   [31:0]              tssi_violation_next;
+    logic                       rf_overdrive_det;
+    logic                       rf_overdrive_det_meta;
+    logic                       rf_overdrive_det_sync;
+    logic                       rf_overdrive_mute_next;
+    logic                       rf_overdrive_irq_next;
+    logic                       rf_overdrive_mute_clr_pp;
+    logic                       rf_overdrive_irq_clr_pp;
+
+    // ------------------------------------------------------------------ //
+    // TSSI                                                               //
+    // ------------------------------------------------------------------ //
+/*
+    // TSSI is calculated repeatedly.
+    jb_iq_rssi #(
+        .SAMPLE_BW          (16),                   // DFE_PRECISION
+        .USR_ID_BW          (1),
+        .N_USRS             (1),
+        .WRSSI              (1)
+    ) u_iq_tssi_odd  (
+        .clk_en             (1'b1),                 // i
+        .clk                (clk_3x),               // i
+        .resetn             (resetn_3x),            // i
+        .tvalid             (IFP_dfe_dl.tvalid),    // i
+        .tdata              (IFP_dfe_dl.tdata),     // i [31:0]
+        .tusr               (0),                    // i [1:0]
+	    .rssi_load          (tssi_load_en),         // i
+        .rssi_updated       (),                     // o
+	    .rssi_value         (tssi)                  // o [31:0]
+	  );
+*/
+    // ------------------------------------------------------------------ //
+    // Overdrive Detection                                                //
+    // ------------------------------------------------------------------ //
+    // Synchronize to avoid false detection
+
+    assign rf_overdrive_det = (tssi_threshold < tssi);
+    
+    always_ff @(posedge clk_3x) begin
+        if (!resetn_3x) begin
+            rf_overdrive_det_meta   <= 0;
+            rf_overdrive_det_sync   <= 0;
+        end
+        else begin
+            rf_overdrive_det_meta   <= rf_overdrive_det;
+            rf_overdrive_det_sync   <= rf_overdrive_det_meta;
+        end
+    end
+
+
+    // Always allow software to unmute regardless of current overdrive
+    // condition. If overdrive is still present after unmute, the tx path
+    // mutes again causing an interrupt.
+    // Mute tx path when overdrive is detected (unless mask is set) and
+    // keep it muted until requested by the software.
+    
+    // Clear Violating TSSI register once the mute is cleared, not when
+    // the IRQ is cleared.
+
+    jb_edge_det #(
+        .SYNC_EN            (1),    // Synchronize
+        .EDGES              (1),    // positive
+        .PULSE_WIDTH        (1),
+        .PULSE_POLARITY     (1)     // positive
+    ) u_mute_clr_pulse (
+        .clk                (clk_3x),
+        .mask               (0),
+        .din                (rf_overdrive_mute_clr),
+        .din_syncd          (/* open */),
+        .dout               (rf_overdrive_mute_clr_pp)
+    );
+
+    always_comb begin
+        if (rf_overdrive_mute_clr_pp) begin    // clear
+            rf_overdrive_mute_next  = 0;
+        end
+        else if (rf_overdrive_det_sync & ~rf_overdrive_mute_mask) begin // set
+            rf_overdrive_mute_next  = 1;
+        end
+        else begin  // maintain
+            rf_overdrive_mute_next  = rf_overdrive_mute;
+        end
+    end
+
+    // Always allow software to clear interrupt register, regardless of
+    // current overdrive condition.
+    // Fire (unless mask is set) interrupt only when overdrive is detected
+    // and the path is currently not muted.
+    // This is to avoid firing interrupt again immediately after it's cleared.
+    // Path is muted at the same time when the IRQ is fired. Software clears
+    // the irq first and then unmutes the path some time later. So wait for the
+    // software to unmute the path.
+
+    jb_edge_det #(
+        .SYNC_EN            (1),    // Synchronize
+        .EDGES              (1),    // positive
+        .PULSE_WIDTH        (1),
+        .PULSE_POLARITY     (1)     // positive
+    ) u_irq_clr_pulse (
+        .clk                (clk_3x),
+        .mask               (0),
+        .din                (rf_overdrive_irq_clr),
+        .din_syncd          (/* open */),
+        .dout               (rf_overdrive_irq_clr_pp)
+    );
+
+    always_comb begin
+        if (rf_overdrive_irq_clr_pp) begin // clear
+            rf_overdrive_irq_next   = 0;
+        end
+        else if (rf_overdrive_det_sync & ~rf_overdrive_irq_mask & ~rf_overdrive_mute) begin // set
+            rf_overdrive_irq_next   = 1;
+        end
+        else begin  // maintain
+            rf_overdrive_irq_next   = rf_overdrive_irq;
+        end
+    end
+
+
+    // Latch violating TSSI when overdrive is first detected and do
+    // not update again until after tx path is unmuted.
+    // Clear violation register when overdrive mute is cleared.
+
+    always_comb begin
+        if (rf_overdrive_mute_clr_pp) begin // clear
+            tssi_violation_next     = 0;
+        end
+        else if (rf_overdrive_det_sync & ~rf_overdrive_irq_mask & ~rf_overdrive_mute) begin // set
+            tssi_violation_next     = tssi;
+        end
+        else begin  // maintain
+            tssi_violation_next     = tssi_violation;
+        end
+    end
+
+
+    // Registers
+    always_ff @(posedge clk_3x) begin
+        if (!resetn_3x) begin
+            rf_overdrive_mute   <= 0;
+            rf_overdrive_irq    <= 0;
+            tssi_violation      <= 0;
+        end
+        else begin
+            rf_overdrive_mute   <= rf_overdrive_mute_next;
+            rf_overdrive_irq    <= rf_overdrive_irq_next;
+            tssi_violation      <= tssi_violation_next;
+        end
+    end
+
+endmodule
+
