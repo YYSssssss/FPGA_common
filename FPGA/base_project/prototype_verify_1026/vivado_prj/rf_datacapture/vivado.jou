@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sat Oct  7 10:22:08 2023
+# Process ID: 10620
+# Current directory: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5240 D:\work\shangjian\vivado2021\RCI_Yu_0928_mmwreg\vivado_prj\rf_datacapture\rf_datacapture.xpr
+# Log file: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/vivado.log
+# Journal file: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+reset_run design_0_v_demosaic_0_0_synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+reset_run design_0_v_demosaic_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+reset_run design_0_v_demosaic_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+reset_run design_0_v_demosaic_0_0_synth_1

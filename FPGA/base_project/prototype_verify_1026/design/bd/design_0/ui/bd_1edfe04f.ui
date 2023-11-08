@@ -1,0 +1,22 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-632,-263",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port IFP_TEST_CTRL -pg 1 -lvl 3 -x 610 -y 90 -defaultsOSRD
+preplace port port-id_clk_100M -pg 1 -lvl 0 -x -50 -y 60 -defaultsOSRD
+preplace port port-id_aresetn_100M -pg 1 -lvl 0 -x -50 -y 80 -defaultsOSRD
+preplace inst clockgen -pg 1 -lvl 1 -x 130 -y 70 -defaultsOSRD
+preplace inst axi_interconnect -pg 1 -lvl 2 -x 440 -y 90 -defaultsOSRD
+preplace netloc ACLK_1 1 0 1 NJ 60
+preplace netloc aresetn_100M_1 1 0 1 NJ 80
+preplace netloc clockgen_axi_clk_100M 1 1 1 N 80
+preplace netloc clockgen_peripheral_aresetn 1 1 1 290 60n
+preplace netloc axi_interconnect_IF_TEST_CTRL 1 2 1 N 90
+levelinfo -pg 1 -50 130 440 610
+pagesize -pg 1 -db -bbox -sgen -190 0 760 830
+"
+}
+0

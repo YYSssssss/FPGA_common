@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Sep 28 17:52:22 2023
+# Process ID: 18248
+# Current directory: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30532 D:\work\shangjian\vivado2021\RCI_Yu_0928_mmwreg\vivado_prj\rf_datacapture\rf_datacapture.xpr
+# Log file: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/vivado.log
+# Journal file: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.xpr
+INFO: [Project 1-313] Project file moved from 'D:/work/shangjian/vivado2021/RCI_Yu_0913_add_inter/vivado_prj/rf_datacapture' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/software/xilinx/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_s00_mmu_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_s00_mmu_0/design_0_s00_mmu_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_s00_mmu_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_s00_mmu_0/design_0_s00_mmu_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_s00_mmu_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_s00_mmu_0/design_0_s00_mmu_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_s00_mmu_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_s00_mmu_0/design_0_s00_mmu_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_s00_mmu_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_s00_mmu_0/design_0_s00_mmu_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 1411.746 ; gain = 190.809
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 28 18:14:23 2023...

@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sat Oct  7 10:22:08 2023
+# Process ID: 10620
+# Current directory: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5240 D:\work\shangjian\vivado2021\RCI_Yu_0928_mmwreg\vivado_prj\rf_datacapture\rf_datacapture.xpr
+# Log file: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/vivado.log
+# Journal file: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/software/xilinx/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_0_v_demosaic_0_0' generated file not found 'd:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/bd/design_0/ip/design_0_v_demosaic_0_0/design_0_v_demosaic_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:30 . Memory (MB): peak = 1446.031 ; gain = 226.047
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/udp_axis_data_fifo/udp_axis_data_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/udp_buffer_stage1/udp_buffer_stage1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/ddr4_0/ddr4_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/reset/proc_sys_reset_2/proc_sys_reset_2.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/reset/proc_sys_reset_1/proc_sys_reset_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/fifo_16X16_1024FULL/fifo_16X16_1024FULL.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/IR/mipi_dphy_0/mipi_dphy_0.xci' is already up-to-date
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_0_v_demosaic_0_0, cache-ID = ba4471ccd51ff372; cache size = 1728.697 MB.
+[Sat Oct  7 10:38:53 2023] Launched design_0_v_demosaic_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_0_v_demosaic_0_0_synth_1: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/design_0_v_demosaic_0_0_synth_1/runme.log
+synth_1: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/synth_1/runme.log
+[Sat Oct  7 10:38:54 2023] Launched impl_1...
+Run output will be captured here: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/impl_1/runme.log
+reset_run synth_1
+reset_run design_0_v_demosaic_0_0_synth_1
+launch_runs synth_1 -jobs 16
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/udp_axis_data_fifo/udp_axis_data_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/udp_buffer_stage1/udp_buffer_stage1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/ddr4_0/ddr4_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/reset/proc_sys_reset_2/proc_sys_reset_2.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/reset/proc_sys_reset_1/proc_sys_reset_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/fifo_16X16_1024FULL/fifo_16X16_1024FULL.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/IR/mipi_dphy_0/mipi_dphy_0.xci' is already up-to-date
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_0_v_demosaic_0_0, cache-ID = ba4471ccd51ff372; cache size = 1728.697 MB.
+[Sat Oct  7 10:41:21 2023] Launched design_0_v_demosaic_0_0_synth_1...
+Run output will be captured here: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/design_0_v_demosaic_0_0_synth_1/runme.log
+[Sat Oct  7 10:41:21 2023] Launched synth_1...
+Run output will be captured here: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/synth_1/runme.log
+reset_run synth_1
+reset_run design_0_v_demosaic_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/design_0_v_demosaic_0_0_synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/udp_axis_data_fifo/udp_axis_data_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/udp_buffer_stage1/udp_buffer_stage1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/ddr4_0/ddr4_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/reset/proc_sys_reset_2/proc_sys_reset_2.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/reset/proc_sys_reset_1/proc_sys_reset_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/fifo_16X16_1024FULL/fifo_16X16_1024FULL.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/IR/mipi_dphy_0/mipi_dphy_0.xci' is already up-to-date
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_0_v_demosaic_0_0, cache-ID = ba4471ccd51ff372; cache size = 1728.697 MB.
+[Sat Oct  7 10:42:02 2023] Launched design_0_v_demosaic_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_0_v_demosaic_0_0_synth_1: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/design_0_v_demosaic_0_0_synth_1/runme.log
+synth_1: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/synth_1/runme.log
+[Sat Oct  7 10:42:02 2023] Launched impl_1...
+Run output will be captured here: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/impl_1/runme.log
+reset_run synth_1
+reset_run design_0_v_demosaic_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/design_0_v_demosaic_0_0_synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/udp_axis_data_fifo/udp_axis_data_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/udp_buffer_stage1/udp_buffer_stage1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/ddr4_0/ddr4_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/reset/proc_sys_reset_2/proc_sys_reset_2.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/reset/proc_sys_reset_1/proc_sys_reset_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/fifo/fifo_16X16_1024FULL/fifo_16X16_1024FULL.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/design/ip/IR/mipi_dphy_0/mipi_dphy_0.xci' is already up-to-date
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_0_v_demosaic_0_0, cache-ID = ba4471ccd51ff372; cache size = 1728.697 MB.
+[Sat Oct  7 10:47:41 2023] Launched design_0_v_demosaic_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_0_v_demosaic_0_0_synth_1: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/design_0_v_demosaic_0_0_synth_1/runme.log
+synth_1: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/synth_1/runme.log
+[Sat Oct  7 10:47:42 2023] Launched impl_1...
+Run output will be captured here: D:/work/shangjian/vivado2021/RCI_Yu_0928_mmwreg/vivado_prj/rf_datacapture/rf_datacapture.runs/impl_1/runme.log
+reset_run synth_1
+reset_run design_0_v_demosaic_0_0_synth_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Oct  7 11:25:53 2023...

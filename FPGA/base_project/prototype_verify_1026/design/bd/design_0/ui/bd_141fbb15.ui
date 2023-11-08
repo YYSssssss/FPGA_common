@@ -1,0 +1,52 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.23846",
+   "Default View_TopLeft":"-623,266",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace portBus Din_7_0 -pg 1 -lvl 0 -x -20 -y 60 -defaultsOSRD
+preplace portBus Din_9 -pg 1 -lvl 0 -x -20 -y 680 -defaultsOSRD
+preplace portBus Dout_0 -pg 1 -lvl 2 -x 550 -y 60 -defaultsOSRD
+preplace portBus FrameStart -pg 1 -lvl 2 -x 550 -y 680 -defaultsOSRD
+preplace portBus out_8 -pg 1 -lvl 0 -x -20 -y 320 -defaultsOSRD
+preplace portBus Op1 -pg 1 -lvl 0 -x -20 -y 480 -defaultsOSRD
+preplace portBus dp_aux_data_oe_n_0 -pg 1 -lvl 2 -x 550 -y 480 -defaultsOSRD
+preplace portBus Din_10 -pg 1 -lvl 0 -x -20 -y 780 -defaultsOSRD
+preplace portBus AP_RST_N -pg 1 -lvl 2 -x 550 -y 780 -defaultsOSRD
+preplace portBus Dout_11 -pg 1 -lvl 2 -x 550 -y 870 -defaultsOSRD
+preplace portBus Din_12 -pg 1 -lvl 0 -x -20 -y 970 -defaultsOSRD
+preplace portBus Din_13 -pg 1 -lvl 0 -x -20 -y 1070 -defaultsOSRD
+preplace portBus Dout_12 -pg 1 -lvl 2 -x 550 -y 970 -defaultsOSRD
+preplace portBus Dout_13 -pg 1 -lvl 2 -x 550 -y 1070 -defaultsOSRD
+preplace portBus Din_11 -pg 1 -lvl 0 -x -20 -y 880 -defaultsOSRD
+preplace portBus dout -pg 1 -lvl 2 -x 550 -y 260 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 170 -y 540 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 1 -x 170 -y 260 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 1 -x 170 -y 20 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 1 -x 170 -y 670 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 1 -x 170 -y 770 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 1 -x 170 -y 870 -defaultsOSRD
+preplace inst xlslice_4 -pg 1 -lvl 1 -x 170 -y 970 -defaultsOSRD
+preplace inst xlslice_5 -pg 1 -lvl 1 -x 170 -y 1070 -defaultsOSRD
+preplace netloc Din0_1 1 0 1 0J 20n
+preplace netloc Din1_1 1 0 1 0J 670n
+preplace netloc Din_1 1 0 1 0 770n
+preplace netloc Din_11_1 1 0 1 0 870n
+preplace netloc Din_12_1 1 0 1 N 970
+preplace netloc Din_13_1 1 0 1 N 1070
+preplace netloc In8_1 1 0 1 0J 280n
+preplace netloc Op1_1 1 0 1 0J 480n
+preplace netloc util_vector_logic_0_Res 1 1 1 320J 480n
+preplace netloc xlconcat_1_dout 1 1 1 N 260
+preplace netloc xlslice_0_Dout 1 1 1 320J 20n
+preplace netloc xlslice_1_Dout 1 1 1 320J 670n
+preplace netloc xlslice_2_Dout 1 1 1 320 770n
+preplace netloc xlslice_3_Dout 1 1 1 N 870
+preplace netloc xlslice_4_Dout 1 1 1 N 970
+preplace netloc xlslice_5_Dout 1 1 1 N 1070
+levelinfo -pg 1 -20 170 550
+pagesize -pg 1 -db -bbox -sgen -170 -40 770 1130
+"
+}
+0
