@@ -12,8 +12,8 @@
 //-----------------------------------------------------------------------------
 
 `timescale 1ns / 1ps
-`include "rsp_s1_prep_define.svh"
-`include "rsp_s1_prep_op_info.svh"
+//`include "rsp_s1_prep_define.svh"
+//`include "rsp_s1_prep_op_info.svh"
 
 module commmon_tb;
 
@@ -287,14 +287,14 @@ rsp_s1_prep_read_ram #(
 
 //******************** wrapper ********************//
 // ahb_if_cfg #(.AHB_WDW(32), .AHB_RDW(32), .AHB_AW(32)) ahb_if_cfg();
-logic [`RSP_S1_PREP_DATA_WIDTH-1:0]    i_m0_rd_data_A;
-logic                         o_m0_rd_en_A;
-logic [`RSP_S1_PREP_ADDR_WIDTH-1:0]    o_m0_rd_addr_A;
+//logic [`RSP_S1_PREP_DATA_WIDTH-1:0]    i_m0_rd_data_A;
+//logic                         o_m0_rd_en_A;
+//logic [`RSP_S1_PREP_ADDR_WIDTH-1:0]    o_m0_rd_addr_A;
 
-logic [`RSP_S1_PREP_STRB_WIDTH-1:0]    o_m1_wea_A;
-logic [`RSP_S1_PREP_DATA_WIDTH-1:0]    o_m1_wr_data_A;
-logic                         o_m1_wr_en_A;
-logic [`RSP_S1_PREP_ADDR_WIDTH-1:0]    o_m1_wr_addr_A;
+//logic [`RSP_S1_PREP_STRB_WIDTH-1:0]    o_m1_wea_A;
+//logic [`RSP_S1_PREP_DATA_WIDTH-1:0]    o_m1_wr_data_A;
+//logic                         o_m1_wr_en_A;
+//logic [`RSP_S1_PREP_ADDR_WIDTH-1:0]    o_m1_wr_addr_A;
 
 logic                         o_finish;
 
