@@ -1,0 +1,476 @@
+ 
+****************************************
+Report : cell
+Design : chirp_processing_core
+Version: R-2020.09-SP4
+Date   : Fri Nov 17 11:17:36 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U29                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U30                       XOR2V1_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U31                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U32                       NOR3CV2_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U33                       NAND4CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U34                       BUFV3_12TR40    scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U35                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U36                       NOR2CV1_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U37                       NAND4CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U38                       NOR2CV1_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U39                       NAND4CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U40                       AND2V1RD_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U41                       NOR2V4_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U42                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U43                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U44                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U45                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U46                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U47                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U48                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U49                       XOR2V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U50                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U51                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U52                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U53                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U54                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U55                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U56                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U57                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U58                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U59                       ADH1V2C_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            3.1920  r
+U60                       ADH1V2C_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            3.1920  r
+U61                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U62                       ADH1V2C_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            3.1920  r
+U63                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U64                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U65                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U66                       XOR2V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U67                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U68                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U69                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U70                       XOR2V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U71                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U72                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U73                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U74                       XOR2V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U75                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U76                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U77                       XNOR2V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.5536  
+U78                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U79                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U80                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U81                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U82                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U83                       XOR2V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U84                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U85                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U86                       XNOR2V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.5536  
+U87                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U88                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U89                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U90                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U91                       XNOR2V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.5536  
+U92                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U93                       XOR2V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U94                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U95                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U96                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U97                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U98                       XOR2V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U99                       AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U100                      CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U101                      XNOR2V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.5536  
+U102                      AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U103                      XNOR2V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.5536  
+U104                      AO22V0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+cnt_valid_reg_0_          DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_1_          DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_2_          DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_3_          DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_4_          DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_5_          DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_6_          DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_7_          DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_8_          DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_9_          DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_10_         DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_11_         DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_12_         DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_13_         DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_14_         DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+cnt_valid_reg_15_         DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+delay_i_x0_valid          delay_DELAY1_32                   6.0648  h, n, p
+i_s_x0_reg_0_             DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_1_             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_2_             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_3_             DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_4_             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_5_             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_6_             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_7_             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_8_             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_9_             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_10_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_11_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_12_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_13_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_14_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_15_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_16_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_17_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_18_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_19_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_20_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_21_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_22_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_23_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_24_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_25_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_26_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_27_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_28_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_29_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_30_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_31_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_32_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_33_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_34_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_35_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_36_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_37_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_38_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_39_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_40_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_41_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_42_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_43_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_44_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_45_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_46_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_47_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_48_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_49_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_50_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_51_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_52_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_53_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_54_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_55_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_56_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_57_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_58_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_59_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_60_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_61_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_62_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_63_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_64_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_65_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_66_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_67_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_68_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_69_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_70_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_71_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_72_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_73_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_74_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_75_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_76_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_77_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_78_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_79_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_80_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_81_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_82_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_83_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_84_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_85_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_86_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_87_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_88_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_89_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_90_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_91_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_92_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_93_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_94_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_95_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_96_            DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_97_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_98_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_99_            DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_100_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_101_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_102_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_103_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_104_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_105_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_106_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_107_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_108_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_109_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_110_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_111_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_112_           DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_113_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_114_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_115_           DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_116_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_117_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_118_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_119_           DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_120_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_121_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_122_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_123_           DRNQV2_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_124_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_125_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_126_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_reg_127_           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+i_s_x0_valid_reg          DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+u_axi4_master_read        axi4_master_read_I_m_axi_rd_axi_v4_rd_if_master_
+                                                          1497.3672 h, n, p
+u_axi4_master_write       axi4_master_write_I_m_axi_wr_axi_v4_wr_if_master_
+                                                          1369.6872 h, n, p
+u_chirp_processing_top    chirp_processing_top_READ_RAM_WIDTH128_SAMPLE_WIDTH32
+                                                          130519.9217
+                                                                    b, h, n, p, u
+u_core_fifo               fifo_cp_WIDTH128_1              19512.3770
+                                                                    h, n, p
+u_master_read             delay_data_DEPTH2_DATA_WIDTH128 1552.5887 h, n, p
+x0_last_reg               DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+--------------------------------------------------------------------------------
+Total 228 cells                                           155458.6986
+1

@@ -1,0 +1,189 @@
+ 
+****************************************
+Report : area
+Design : chirp_processing_core
+Version: R-2020.09-SP4
+Date   : Fri Nov 17 11:17:41 2023
+****************************************
+
+Library(s) Used:
+
+    scc40nll_vhsc40_rvt_ss_v0p99_125c_basic (File: /iceng/lib/stdcell/smic40/scc40nll_vhsc40_rvt_ss_v0p99_125c_basic.db)
+
+Number of ports:                         7405
+Number of nets:                         62114
+Number of cells:                        55643
+Number of combinational cells:          39472
+Number of sequential cells:             16076
+Number of macros/black boxes:               0
+Number of buf/inv:                       6840
+Number of references:                      22
+
+Combinational area:              57091.793265
+Buf/Inv area:                     5149.015314
+Noncombinational area:           98366.905360
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                155458.698626
+Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area             Local cell area
+                                  --------------------  ------------------------------ 
+Hierarchical cell                 Absolute     Percent  Combi-      Noncombi-   Black-
+                                  Total        Total    national    national    boxes   Design
+--------------------------------  -----------  -------  ----------  ----------  ------  ----------------------------------------------------------------------------------------------------------------------------------------------------
+chirp_processing_core             155458.6986    100.0    115.2312    885.4608  0.0000  chirp_processing_core
+delay_i_x0_valid                       6.0648      0.0      0.0000      6.0648  0.0000  delay_DELAY1_32
+u_axi4_master_read                  1497.3672      1.0    381.4440   1103.7936  0.0000  axi4_master_read_I_m_axi_rd_axi_v4_rd_if_master_
+u_axi4_master_read/delay_arready      12.1296      0.0      0.0000     12.1296  0.0000  delay_DELAY2_15
+u_axi4_master_write                 1369.6872      0.9    307.7088   1061.9784  0.0000  axi4_master_write_I_m_axi_wr_axi_v4_wr_if_master_
+u_chirp_processing_top            130519.9217     84.0      9.5760   3117.9455  0.0000  chirp_processing_top_READ_RAM_WIDTH128_SAMPLE_WIDTH32
+u_chirp_processing_top/delay_buffer_valid
+                                      25.5360      0.0      0.0000     25.5360  0.0000  delay_DELAY4_12
+u_chirp_processing_top/delay_i_x0_last
+                                       6.0648      0.0      0.0000      6.0648  0.0000  delay_DELAY1_31
+u_chirp_processing_top/delay_i_x0_valid
+                                      18.1944      0.0      0.0000     18.1944  0.0000  delay_DELAY3_8
+u_chirp_processing_top/genblk1_0__multiplier0
+                                    1983.5088      1.3   1042.5072    788.4240  0.0000  chirp_processing_multiplier0_SAMPLE_WIDTH32_MUL_COMPLEX_VALID6_MUL_REAL_VALID3_3
+u_chirp_processing_top/genblk1_0__multiplier0/delay_complex_valid
+                                      36.7080      0.0      0.0000     36.7080  0.0000  delay_DELAY6_3
+u_chirp_processing_top/genblk1_0__multiplier0/delay_real_valid
+                                      18.8328      0.0      0.0000     18.8328  0.0000  delay_DELAY3_3
+u_chirp_processing_top/genblk1_0__multiplier0/u_delay_t8
+                                      97.0368      0.1      0.0000     97.0368  0.0000  delay_data_DEPTH1_DATA_WIDTH32_3
+u_chirp_processing_top/genblk1_1__multiplier0
+                                    1938.5016      1.2   1053.0408    788.4240  0.0000  chirp_processing_multiplier0_SAMPLE_WIDTH32_MUL_COMPLEX_VALID6_MUL_REAL_VALID3_2
+u_chirp_processing_top/genblk1_1__multiplier0/u_delay_t8
+                                      97.0368      0.1      0.0000     97.0368  0.0000  delay_data_DEPTH1_DATA_WIDTH32_2
+u_chirp_processing_top/genblk1_2__multiplier0
+                                    1944.2472      1.3   1058.7864    788.4240  0.0000  chirp_processing_multiplier0_SAMPLE_WIDTH32_MUL_COMPLEX_VALID6_MUL_REAL_VALID3_1
+u_chirp_processing_top/genblk1_2__multiplier0/u_delay_t8
+                                      97.0368      0.1      0.0000     97.0368  0.0000  delay_data_DEPTH1_DATA_WIDTH32_1
+u_chirp_processing_top/genblk1_3__multiplier0
+                                    1939.7784      1.2   1054.3176    788.4240  0.0000  chirp_processing_multiplier0_SAMPLE_WIDTH32_MUL_COMPLEX_VALID6_MUL_REAL_VALID3_0
+u_chirp_processing_top/genblk1_3__multiplier0/u_delay_t8
+                                      97.0368      0.1      0.0000     97.0368  0.0000  delay_data_DEPTH1_DATA_WIDTH32_0
+u_chirp_processing_top/u_DC_estimation
+                                    8805.1319      5.7   4022.2392   4642.1255  0.0000  estimation_READ_RAM_WIDTH128_DATA_WIDTH16_1
+u_chirp_processing_top/u_DC_estimation/delay_complex_last
+                                      30.9624      0.0      0.0000     30.9624  0.0000  delay_DELAY5_1
+u_chirp_processing_top/u_DC_estimation/delay_complex_last0
+                                      24.2592      0.0      0.0000     24.2592  0.0000  delay_DELAY4_11
+u_chirp_processing_top/u_DC_estimation/delay_real_last
+                                      18.8328      0.0      0.0000     18.8328  0.0000  delay_DELAY3_7
+u_chirp_processing_top/u_DC_estimation/delay_real_last0
+                                      12.1296      0.0      0.0000     12.1296  0.0000  delay_DELAY2_14
+u_chirp_processing_top/u_DC_estimation/delay_sum0_valid
+                                      12.1296      0.0      0.0000     12.1296  0.0000  delay_DELAY2_13
+u_chirp_processing_top/u_DC_estimation/delay_valid0
+                                      18.1944      0.0      0.0000     18.1944  0.0000  delay_DELAY3_6
+u_chirp_processing_top/u_DC_estimation/delay_valid1
+                                      24.2592      0.0      0.0000     24.2592  0.0000  delay_DELAY4_10
+u_chirp_processing_top/u_HF_abs    11664.2063      7.5    776.2944   2177.9016  0.0000  abs_cmp_READ_RAM_WIDTH128_SAMPLE_WIDTH32_DATA_WIDTH16_NUM8_ABS_CMP_X1_RVALID1_ABS_CMP_X1_CVALID1_0
+u_chirp_processing_top/u_HF_abs/delay_complex_abs
+                                       6.0648      0.0      0.0000      6.0648  0.0000  delay_DELAY1_24
+u_chirp_processing_top/u_HF_abs/delay_real_abs
+                                       6.0648      0.0      0.0000      6.0648  0.0000  delay_DELAY1_25
+u_chirp_processing_top/u_HF_abs/genblk1_0__u_abs_real
+                                     173.3256      0.1     70.2240     97.0368  0.0000  abs_real_WIDTH16_7
+u_chirp_processing_top/u_HF_abs/genblk1_0__u_abs_real/u_abs_rdy
+                                       6.0648      0.0      0.0000      6.0648  0.0000  delay_DELAY1_11
+u_chirp_processing_top/u_HF_abs/genblk1_1__u_abs_real
+                                     167.2608      0.1     70.2240     97.0368  0.0000  abs_real_WIDTH16_6
+u_chirp_processing_top/u_HF_abs/genblk1_2__u_abs_real
+                                     167.2608      0.1     70.2240     97.0368  0.0000  abs_real_WIDTH16_5
+u_chirp_processing_top/u_HF_abs/genblk1_3__u_abs_real
+                                     167.2608      0.1     70.2240     97.0368  0.0000  abs_real_WIDTH16_4
+u_chirp_processing_top/u_HF_abs/genblk1_4__u_abs_real
+                                     166.9416      0.1     69.9048     97.0368  0.0000  abs_real_WIDTH16_3
+u_chirp_processing_top/u_HF_abs/genblk1_5__u_abs_real
+                                     166.3032      0.1     69.2664     97.0368  0.0000  abs_real_WIDTH16_2
+u_chirp_processing_top/u_HF_abs/genblk1_6__u_abs_real
+                                     167.2608      0.1     70.2240     97.0368  0.0000  abs_real_WIDTH16_1
+u_chirp_processing_top/u_HF_abs/genblk1_7__u_abs_real
+                                     166.9416      0.1     69.9048     97.0368  0.0000  abs_real_WIDTH16_0
+u_chirp_processing_top/u_HF_abs/genblk2_0__u_abs_m2_complex
+                                    1842.4224      1.2   1078.2576    739.9056  0.0000  abs_complex_WIDTH16_3
+u_chirp_processing_top/u_HF_abs/genblk2_0__u_abs_m2_complex/u_abs_rdy
+                                      24.2592      0.0      0.0000     24.2592  0.0000  delay_DELAY4_3
+u_chirp_processing_top/u_HF_abs/genblk2_2__u_abs_m2_complex
+                                    1827.1008      1.2   1087.1952    739.9056  0.0000  abs_complex_WIDTH16_2
+u_chirp_processing_top/u_HF_abs/genblk2_4__u_abs_m2_complex
+                                    1887.1104      1.2   1147.2048    739.9056  0.0000  abs_complex_WIDTH16_1
+u_chirp_processing_top/u_HF_abs/genblk2_6__u_abs_m2_complex
+                                    1798.6920      1.2   1058.7864    739.9056  0.0000  abs_complex_WIDTH16_0
+u_chirp_processing_top/u_INTF_estimation
+                                    8457.5231      5.4   4013.6208   4302.1775  0.0000  estimation_READ_RAM_WIDTH128_DATA_WIDTH16_0
+u_chirp_processing_top/u_INTF_estimation/delay_complex_last
+                                      31.6008      0.0      0.0000     31.6008  0.0000  delay_DELAY5_0
+u_chirp_processing_top/u_INTF_estimation/delay_complex_last0
+                                      24.2592      0.0      0.0000     24.2592  0.0000  delay_DELAY4_9
+u_chirp_processing_top/u_INTF_estimation/delay_real_last
+                                      18.8328      0.0      0.0000     18.8328  0.0000  delay_DELAY3_5
+u_chirp_processing_top/u_INTF_estimation/delay_real_last0
+                                      12.1296      0.0      0.0000     12.1296  0.0000  delay_DELAY2_12
+u_chirp_processing_top/u_INTF_estimation/delay_sum0_valid
+                                      12.1296      0.0      0.0000     12.1296  0.0000  delay_DELAY2_11
+u_chirp_processing_top/u_INTF_estimation/delay_valid0
+                                      18.1944      0.0      0.0000     18.1944  0.0000  delay_DELAY3_4
+u_chirp_processing_top/u_INTF_estimation/delay_valid1
+                                      24.5784      0.0      0.0000     24.5784  0.0000  delay_DELAY4_8
+u_chirp_processing_top/u_LF_abs    11601.6431      7.5    818.4288   2167.6872  0.0000  abs_cmp_READ_RAM_WIDTH128_SAMPLE_WIDTH32_DATA_WIDTH16_NUM8_ABS_CMP_X1_RVALID1_ABS_CMP_X1_CVALID1_1
+u_chirp_processing_top/u_LF_abs/genblk1_0__u_abs_real
+                                     167.2608      0.1     70.2240     97.0368  0.0000  abs_real_WIDTH16_15
+u_chirp_processing_top/u_LF_abs/genblk1_1__u_abs_real
+                                     167.8992      0.1     70.8624     97.0368  0.0000  abs_real_WIDTH16_14
+u_chirp_processing_top/u_LF_abs/genblk1_2__u_abs_real
+                                     167.2608      0.1     70.2240     97.0368  0.0000  abs_real_WIDTH16_13
+u_chirp_processing_top/u_LF_abs/genblk1_3__u_abs_real
+                                     167.2608      0.1     70.2240     97.0368  0.0000  abs_real_WIDTH16_12
+u_chirp_processing_top/u_LF_abs/genblk1_4__u_abs_real
+                                     166.6224      0.1     69.5856     97.0368  0.0000  abs_real_WIDTH16_11
+u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real
+                                     167.8992      0.1     70.8624     97.0368  0.0000  abs_real_WIDTH16_10
+u_chirp_processing_top/u_LF_abs/genblk1_6__u_abs_real
+                                     168.5376      0.1     71.5008     97.0368  0.0000  abs_real_WIDTH16_9
+u_chirp_processing_top/u_LF_abs/genblk1_7__u_abs_real
+                                     167.8992      0.1     70.8624     97.0368  0.0000  abs_real_WIDTH16_8
+u_chirp_processing_top/u_LF_abs/genblk2_0__u_abs_m2_complex
+                                    1813.0560      1.2   1073.1504    739.9056  0.0000  abs_complex_WIDTH16_7
+u_chirp_processing_top/u_LF_abs/genblk2_2__u_abs_m2_complex
+                                    1790.7120      1.2   1050.8064    739.9056  0.0000  abs_complex_WIDTH16_6
+u_chirp_processing_top/u_LF_abs/genblk2_4__u_abs_m2_complex
+                                    1827.4200      1.2   1087.5144    739.9056  0.0000  abs_complex_WIDTH16_5
+u_chirp_processing_top/u_LF_abs/genblk2_6__u_abs_m2_complex
+                                    1843.6992      1.2   1103.7936    739.9056  0.0000  abs_complex_WIDTH16_4
+u_chirp_processing_top/u_buffer_8data
+                                   28459.2337     18.3   3511.8384  24947.3953  0.0000  buffer_8data_READ_RAM_WIDTH128_SAMPLE_WIDTH32_NUM8
+u_chirp_processing_top/u_combination
+                                    1193.8080      0.8     24.8976    865.6704  0.0000  combination_READ_RAM_WIDTH128_NUM8_DATA_WIDTH16_COMB_Y0_VALID2_COMB_S_LF_REAL_CMP3_COMB_S_HF_REAL_CMP1_COMB_S_LF_COMPLEX_CMP3_COMB_S_HF_COMPLEX_CMP1
+u_chirp_processing_top/u_combination/delay_i_x0_valid
+                                      12.1296      0.0      0.0000     12.1296  0.0000  delay_DELAY2_8
+u_chirp_processing_top/u_combination/u_HF_complex_cmp
+                                      24.2592      0.0      0.0000     24.2592  0.0000  delay_data_DEPTH1_DATA_WIDTH8_0
+u_chirp_processing_top/u_combination/u_HF_real_cmp
+                                      48.5184      0.0      0.0000     48.5184  0.0000  delay_data_DEPTH1_DATA_WIDTH8_1
+u_chirp_processing_top/u_combination/u_LF_complex_cmp
+                                      72.7776      0.0      0.0000     72.7776  0.0000  delay_data_DEPTH3_DATA_WIDTH8_0
+u_chirp_processing_top/u_combination/u_LF_real_cmp
+                                     145.5552      0.1      0.0000    145.5552  0.0000  delay_data_DEPTH3_DATA_WIDTH8_1
+u_chirp_processing_top/u_diff      29897.8675     19.2  12688.2001  17185.4082  0.0000  diff_READ_RAM_WIDTH128_SAMPLE_WIDTH32_NUM8_DIFF_X0_LAST_DATA1_DIFF_X0_DIFF_VALID1_DIFF_X0_LAST2_TOP_X0_DIFF_VALID2_CNT_LEN8
+u_chirp_processing_top/u_diff/delay_diff_HF_cvalid
+                                      12.1296      0.0      0.0000     12.1296  0.0000  delay_DELAY2_9
+u_chirp_processing_top/u_diff/delay_diff_last
+                                      12.1296      0.0      0.0000     12.1296  0.0000  delay_DELAY2_10
+u_chirp_processing_top/u_fifo      19457.1554     12.5   8174.0736  11283.0818  0.0000  fifo_cp_WIDTH128_0
+u_core_fifo                        19512.3770     12.6   8228.3376  11284.0394  0.0000  fifo_cp_WIDTH128_1
+u_master_read                       1552.5887      1.0      0.0000   1552.5887  0.0000  delay_data_DEPTH2_DATA_WIDTH128
+--------------------------------  -----------  -------  ----------  ----------  ------  ----------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                   57091.7933  98366.9054  0.0000
+
+1

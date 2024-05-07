@@ -1,0 +1,53 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : chirp_processing_core
+Version: R-2020.09-SP4
+Date   : Fri Nov 17 11:17:40 2023
+****************************************
+
+
+Library(s) Used:
+
+    scc40nll_vhsc40_rvt_ss_v0p99_125c_basic (File: /iceng/lib/stdcell/smic40/scc40nll_vhsc40_rvt_ss_v0p99_125c_basic.db)
+
+
+Operating Conditions: ss_v0p99_125c   Library: scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.99 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  =  98.2668 mW    (9%)
+  Net Switching Power  = 945.9781 mW   (91%)
+                         ---------
+Total Dynamic Power    =   1.0442  W  (100%)
+
+Cell Leakage Power     = 114.1248 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.6669          944.1910            4.4673          944.8616  (  90.47%)
+register          96.6540            0.3107           61.9261           97.0267  (   9.29%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.9451            1.4781           47.7314            2.4709  (   0.24%)
+--------------------------------------------------------------------------------------------------
+Total             98.2660 mW       945.9798 mW       114.1248 uW     1.0444e+03 mW
+1

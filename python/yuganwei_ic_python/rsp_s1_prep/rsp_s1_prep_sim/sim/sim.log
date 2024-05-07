@@ -1,0 +1,38 @@
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version Q-2020.03-SP2_Full64; Runtime version Q-2020.03-SP2_Full64;  Mar 11 17:45 2024
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_twiddle.U_sync_s2m_0.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_twiddle.U_sync_s2m_1.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_twiddle.U_sync_s2m_2.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_twiddle.U_sync_s2m_3.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_twiddle.U_sync_m2s_0.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_entry.U_sync_s2m_0.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_entry.U_sync_s2m_1.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_entry.U_sync_s2m_2.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_entry.U_sync_s2m_3.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_entry.U_sync_m2s_0.BCM_GEN.U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+
+Warning-[STASKW_RMIEAFL] Illegal entry
+../tb1/common_tb.sv, 234
+  Illegal entry found at file 
+  /home/users/yuyushan/work/rsp_s1_prep/twiddle/twiddle_txt.txt line 1025 
+  while executing $readmem.
+  Please ensure that the file has proper entries.
+
+*Verdi* Loading libsscore_vcs202003.so
+FSDB Dumper for VCS, Release Verdi_Q-2020.03-SP2, Linux x86_64/64bit, 08/31/2020
+(C) 1996 - 2020 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'tb_common_wave.fsdb'
+*Verdi* : Begin traversing the scope (commmon_tb), layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+$finish called from file "../tb1/common_tb.sv", line 205.
+$finish at simulation time                39355
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 39355 ps
+CPU Time:      1.230 seconds;       Data structure size:   1.3Mb
+Mon Mar 11 17:45:18 2024

@@ -1,0 +1,369 @@
+system m_map0 {
+    bytes 4;
+    block rsp_s2_dma_glb_reg @'h0 {
+        bytes 4;
+        register IRQ_STATUS @0x0 {
+            bytes 4;
+            field reserved @'h2 {
+                bits 30;
+            }
+            field FCNT_FINISH @'h1 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    FCNT_FINISH
+                }
+            }
+            field PCNT_FINISH @'h0 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    PCNT_FINISH
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register IRQ_MASK @0x4 {
+            bytes 4;
+            field reserved @'h2 {
+                bits 30;
+            }
+            field FCNT_FINISH @'h1 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    FCNT_FINISH
+                }
+            }
+            field PCNT_FINISH @'h0 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    PCNT_FINISH
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register IRQ_ENABLE @0x8 {
+            bytes 4;
+            field reserved @'h2 {
+                bits 30;
+            }
+            field FCNT_FINISH @'h1 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    FCNT_FINISH
+                }
+            }
+            field PCNT_FINISH @'h0 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    PCNT_FINISH
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register CMD0 @0xc {
+            bytes 4;
+            field reserved @'h1c {
+                bits 4;
+            }
+            field CS @'h18 {
+                bits 4;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    CURRENT STATUS
+                }
+            }
+            field TRIG_CS @'h15 {
+                bits 3;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    TRIG CURRENT STATUS
+                }
+            }
+            field TRIG_WORD_COUNTER @'h11 {
+                bits 4;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    TRIG_WORD_COUNTER
+                }
+            }
+            field TTL @'h5 {
+                bits 12;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    TTL
+                }
+            }
+            field OP_ID @'h0 {
+                bits 5;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    OP_ID
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register CMD1 @0x10 {
+            bytes 4;
+            field reserved @'h18 {
+                bits 8;
+            }
+            field TRIG_IN @'h0 {
+                bits 24;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    CMD_TRIG_IN
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register CMD2 @0x14 {
+            bytes 4;
+            field reserved @'h18 {
+                bits 8;
+            }
+            field TRIG_OUT @'h0 {
+                bits 24;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    CMD_TRIG_OUT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register SW0 @0x18 {
+            bytes 4;
+            field reserved @'h12 {
+                bits 14;
+            }
+            field CMD_TTL @'h6 {
+                bits 12;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW CMD_TTL
+                }
+            }
+            field CMD_OP_ID @'h1 {
+                bits 5;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW CMD_OP_ID
+                }
+            }
+            field CMD_REQ @'h0 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW CMD REQ
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register SW1 @0x1c {
+            bytes 4;
+            field reserved @'h18 {
+                bits 8;
+            }
+            field CMD_TRIG_IN @'h0 {
+                bits 24;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW CMD_TRIG IN
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register SW2 @0x20 {
+            bytes 4;
+            field reserved @'h18 {
+                bits 8;
+            }
+            field CMD_TRIG_OUT @'h0 {
+                bits 24;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW CMD_TRIG OUT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register SW3 @0x24 {
+            bytes 4;
+            field reserved @'h9 {
+                bits 23;
+            }
+            field MEM_ALLOC @'h8 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW MEM_ALLOC
+                }
+            }
+            field FINISH_ACK @'h7 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW FINISH_ACK
+                }
+            }
+            field FINISH_REQ_MASK @'h6 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW FINISH REQ MASK
+                }
+            }
+            field START_FID @'h4 {
+                bits 2;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW START_FRAMID
+                }
+            }
+            field START_PIPO @'h1 {
+                bits 3;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW START_PIPO
+                }
+            }
+            field START @'h0 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    SW START REQ
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register FIDX @0x28 {
+            bytes 4;
+            field reserved @'h10 {
+                bits 16;
+            }
+            field DATA @'h8 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    FRAME IDX DATA
+                }
+            }
+            field reserved @'h1 {
+                bits 7;
+            }
+            field EN @'h0 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    FRAME IDX WR EN
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register STS0 @0x2c {
+            bytes 4;
+            field reserved @'hc {
+                bits 20;
+            }
+            field TTL_COUNTER @'h0 {
+                bits 12;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    TTL_COUNTER
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register STS1 @0x30 {
+            bytes 4;
+            field RC_UPDATE @'h10 {
+                bits 16;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    RC_UPDATE
+                }
+            }
+            field RC_RESUME @'h0 {
+                bits 16;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    RC_RESUME
+                }
+            }
+            doc {
+                RC_UPDATERC_UPDATE
+            }
+        }
+        register STS2 @0x34 {
+            bytes 4;
+            field WC_UPDATE @'h10 {
+                bits 16;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    WC_UPDATE
+                }
+            }
+            field WC_RESUME @'h0 {
+                bits 16;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    WC_RESUME
+                }
+            }
+            doc {
+                WC_UPDATEWC_UPDATE
+            }
+        }
+        doc {
+            rsp_s2_dma_glb_reg_registers
+        }
+    }
+}
+

@@ -1,0 +1,119 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rsp_s1_prep
+Version: R-2020.09-SP4
+Date   : Tue Nov 14 23:05:57 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_v0p99_125c   Library: scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/c_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/data_arr_reg_0__35_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/c_reg_0_/CK (DRNQV8_12TR40)
+                                                        0.0000 #   0.0000 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/c_reg_0_/Q (DRNQV8_12TR40)
+                                                        0.1914     0.1914 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/B[0] (rsp_s1_prep_mult_DELAY3_A_width32_B_width24_P_width56_0)
+                                                        0.0000     0.1914 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3550/ZN (NOR2CV16_12TR40)
+                                                        0.0373     0.2287 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3548/ZN (CLKNAND2V16_12TR40)
+                                                        0.0471     0.2758 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3663/Z (OR2V10RD_12TR40)
+                                                        0.0880     0.3638 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3015/ZN (INV16_12TR40)
+                                                        0.0348     0.3987 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U970/ZN (AOAI211V8_12TR40)
+                                                        0.0805     0.4792 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U855/ZN (OAI22V16_12TR40)
+                                                        0.0586     0.5378 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3524/ZN (XNOR2V8_12TR40)
+                                                        0.0583     0.5962 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3654/Z (BUFV16RQ_12TR40)
+                                                        0.0885     0.6847 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U1148/ZN (NOR2V6_12TR40)
+                                                        0.0543     0.7390 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3107/Z (XOR2V6_12TR40)
+                                                        0.0862     0.8252 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U1360/ZN (XNOR2V8_12TR40)
+                                                        0.0813     0.9065 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U933/Z (XOR2V8_12TR40)
+                                                        0.0909     0.9975 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U932/ZN (INV8SR_12TR40)
+                                                        0.0312     1.0286 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U2969/Z (XOR2V6_12TR40)
+                                                        0.0451     1.0737 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U667/Z (XOR2V4_12TR40)
+                                                        0.1005     1.1742 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U243/Z (XOR2V4_12TR40)
+                                                        0.0960     1.2702 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U2839/Z (XOR2V6_12TR40)
+                                                        0.1100     1.3802 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U904/ZN (NOR2V6_12TR40)
+                                                        0.0414     1.4216 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U174/ZN (NOR2V6_12TR40)
+                                                        0.0511     1.4727 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U2992/ZN (NAND2V4_12TR40)
+                                                        0.0435     1.5162 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U911/ZN (NAND3CV6_12TR40)
+                                                        0.0417     1.5578 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U902/ZN (NAND3CV6_12TR40)
+                                                        0.0400     1.5978 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U901/ZN (CLKNAND2V8_12TR40)
+                                                        0.0385     1.6363 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3185/ZN (AOI21V12_12TR40)
+                                                        0.0363     1.6727 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U71/ZN (INV2SR_12TR40)
+                                                        0.0506     1.7233 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U2542/ZN (AOI21V3_12TR40)
+                                                        0.0437     1.7670 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U2370/Z (XOR2V1_12TR40)
+                                                        0.0676     1.8347 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U2259/ZN (NAND3BBV4_12TR40)
+                                                        0.1130     1.9477 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3137/ZN (NOR2CV8_12TR40)
+                                                        0.0467     1.9943 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3036/ZN (NAND3CV6_12TR40)
+                                                        0.0489     2.0433 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3035/ZN (NOR2CV8_12TR40)
+                                                        0.0549     2.0982 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U962/ZN (AOI21V12_12TR40)
+                                                        0.0494     2.1476 f
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U1240/ZN (INV12SR_12TR40)
+                                                        0.0541     2.2016 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/U3972/ZN (MUX2NV2_12TR40)
+                                                        0.0616     2.2633 r
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/data_arr_reg_0__35_/D (DQV0_12TR40)
+                                                        0.0000     2.2633 r
+  data arrival time                                                2.2633
+
+  clock clk (rise edge)                                 1.2000     1.2000
+  clock network delay (ideal)                           0.0000     1.2000
+  u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4/data_arr_reg_0__35_/CK (DQV0_12TR40)
+                                                        0.0000     1.2000 r
+  library setup time                                   -0.0592     1.1408
+  data required time                                               1.1408
+  --------------------------------------------------------------------------
+  data required time                                               1.1408
+  data arrival time                                               -2.2633
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -1.1225
+
+
+1

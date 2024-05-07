@@ -1,0 +1,18 @@
+#!/bin/sh
+#BSUB -J test
+##BSUB -q normal
+#BSUB -n 2
+#BSUB -Is
+
+##vcs +incdir+../rtl -sverilog -f tb.f -full64 +v2k -override_timescale=1ps/1ps -l run.log -debug_acc+all -fsdb 
+##./simv +fsdb+sva_success | tee sim.log
+verdi -f tb.f +incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header +incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src -sverilog -ssf *.fsdb -sswr signal.rc & 
+
+##dc
+##dc_shell-t -g syn.tcl | run.log
+
+##git simrun for verification
+##python3 /cad/dv/simrun.py -cfg compile_sim.cfg -testlist tl_rsp_s1_fft_normal -test 0 -dump 1 -wave vd -dir 
+
+##git verdi
+##verdi -ssf *.fsdb

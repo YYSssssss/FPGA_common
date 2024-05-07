@@ -1,0 +1,4 @@
+Command Line: /home/tools/synopsys/verdi/Q-2020.03-SP2/platform/LINUXAMD64/bin/Novas -f tb.f +incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header +incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src -sverilog -ssf tb_common_wave.fsdb -sswr signal.rc
+uname(Linux shzj-11 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020 x86_64)
+Disabled AskUser2 Message (Response 0): Close all windows and exit verdi?
+au time 574215.062116 4341.144809 4861.253809 delta 688173056 688173056 total 1141256192 1141256192

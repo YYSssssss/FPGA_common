@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!--  Purpose             : XML file, defining an interconnect for AHB bus matrix -->
+<!--                                                                        -->
+<!--  Note                : This information will overwrite parameters      -->
+<!--                         specified on the command line                  -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+<cfgfile>
+
+  <!-- - - - - *** DO NOT MODIFY THIS LINE *** - - - - - - - - - - -  -->
+
+  <!-- Global definitions -->
+
+  <architecture_version>ahb2</architecture_version>
+  <arbitration_scheme>fixed</arbitration_scheme>
+  <routing_data_width>32</routing_data_width>
+  <routing_address_width>32</routing_address_width>
+  <user_signal_width>0</user_signal_width>
+  <bus_matrix_name>rsp_s2_prep_ahbic</bus_matrix_name>
+  <input_stage_name>rsp_s2_prep_ahbic_in</input_stage_name>
+  <matrix_decode_name>rsp_s2_prep_ahbic_dec</matrix_decode_name>
+  <output_arbiter_name>rsp_s2_prep_ahbic_arb</output_arbiter_name>
+  <output_stage_name>rsp_s2_prep_ahbic_out</output_stage_name>
+
+
+  <!-- Slave interface definitions -->
+
+<slave_interface name="S0">
+  <sparse_connect interface="M0"/>
+  <sparse_connect interface="M1"/>
+  <sparse_connect interface="M2"/>
+  <address_region interface="M0" mem_lo="00000000" mem_hi="0fffffff" remapping='none'/>
+  <address_region interface="M1" mem_lo="10000000" mem_hi="1fffffff" remapping='none'/>
+  <address_region interface="M2" mem_lo="20000001" mem_hi="2fffffff" remapping='none'/>
+</slave_interface>
+
+
+<!-- Master interface definitions -->
+
+<master_interface name="M0"/>
+<master_interface name="M1"/>
+<master_interface name="M2"/>
+
+</cfgfile>
+

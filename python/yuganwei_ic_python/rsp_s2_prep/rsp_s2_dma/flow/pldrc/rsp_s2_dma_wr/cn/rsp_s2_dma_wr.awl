@@ -1,0 +1,2 @@
+waive -msg "(Unsynchronized|Synchronized) reset crossing detected .*? \((Set|Reset): '.*?.hreset', Clock: '.*?.hclk'\) to .*? \((Set|Reset): '.*?.rst_n', Clock: '.*?.clk'\).*?(found|technique)" -regexp -rules "Ar_resetcross01"  -comment "Created by jtwang on 06-Nov-2023 16:51:13"
+waive -msg "(Unsynchronized|Synchronized) reset crossing detected .*? \((Set|Reset): '.*?.rst_n'\) to .*?(spram|tpram|fifo_fwft).*? \((Set|Reset): 'NULL'\).*?(found|technique)" -regexp -rules "Ar_resetcross01"  -comment "Created by jtwang on 06-Nov-2023 16:51:13"

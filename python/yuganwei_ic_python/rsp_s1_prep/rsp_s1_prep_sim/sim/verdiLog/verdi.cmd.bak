@@ -1,0 +1,575 @@
+debImport "-f" "tb.f" \
+          "+incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header" \
+          "+incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src" \
+          "-sverilog"
+debLoadSimResult \
+           /home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim/tb_common_wave.fsdb
+wvCreateWindow
+wvRestoreSignal -win $_nWave2 "signal.rc" -overWriteAutoAlias on -appendSignals \
+           on
+srcDeselectAll -win $_nTrace1
+srcHBSelect "commmon_tb" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb" -delim "."
+srcHBSelect "commmon_tb" -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb.u_rsp_s1_prep" -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep" -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core" -delim \
+           "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core" -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcAction -pos 755 1 4 -win $_nTrace1 -name "save_file_tb" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcHBDrag -win $_nTrace1
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.delay_i_x0_valid" \
+           -win $_nTrace1
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.Unnamed_\$rsp_s1_prep_top_sv_299" \
+           -win $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.Unnamed_\$rsp_s1_prep_top_sv_299" \
+           -delim "."
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.Unnamed_\$rsp_s1_prep_top_sv_299" \
+           -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+wvSetCursor -win $_nWave2 14485.857287 -snap {("G2" 4)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+debReload
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcAction -pos 796 1 6 -win $_nTrace1 -name "save_file_tb" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 813 -pos 6 -win $_nTrace1
+debReload
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+wvSetCursor -win $_nWave2 14487.216971 -snap {("G2" 4)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcAction -pos 751 1 7 -win $_nTrace1 -name "save_file_tb" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcAction -pos 751 1 7 -win $_nTrace1 -name "save_file_tb" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcAction -pos 751 1 7 -win $_nTrace1 -name "save_file_tb" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcAction -pos 646 1 7 -win $_nTrace1 -name "rsp_s1_prep_multiplier0" -ctrlKey \
+          off
+debReload
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -win $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -delim "."
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -win $_nTrace1
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 2 3 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 2 3 4 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G3}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G2}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSelectGroup -win $_nWave2 {G2}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "save_file" -line 102 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "data" -line 102 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 \
+           "/commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_X_u_data/data\[127:0\]"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "s_delay_valid" -line 86 -pos 1 -win $_nTrace1
+srcSearchString "s_delay_valid" -win $_nTrace1 -next -case
+srcSearchString "s_delay_valid" -win $_nTrace1 -next -case
+srcSearchString "s_delay_valid" -win $_nTrace1 -next -case
+srcSearchString "s_delay_valid" -win $_nTrace1 -next -case
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cnt_valid" -line 81 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvAddSignal -win $_nWave2 \
+           "/commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_X_u_data/cnt_valid\[15:0\]"
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {89 106 1 2 1 1} -backward
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "save_file" -line 97 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvAddSignal -win $_nWave2 \
+           "/commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_X_u_data/save_file\[31:0\]"
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 3)}
+srcSearchString "save_file" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {91 91 4 5 1 1}
+srcSearchString "save_file" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {90 90 2 3 1 1}
+srcSearchString "save_file" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {41 41 3 4 1 1}
+srcSearchString "save_file" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {23 23 3 3 1 10}
+srcSearchString "save_file" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {8 8 1 1 17 26}
+srcSearchString "save_file" -win $_nTrace1 -next -case
+srcSearchString "save_file" -win $_nTrace1 -next -case
+srcSearchString "save_file" -win $_nTrace1 -next -case
+srcSearchString "save_file" -win $_nTrace1 -next -case
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "packet_select" -line 97 -pos 1 -win $_nTrace1
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+debReload
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 3 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 2 3 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G3}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G2}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSelectGroup -win $_nWave2 {G2}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "save_file" -line 97 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -win $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -delim "."
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cnt_packet" -line 97 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 \
+           "/commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_X_u_data/cnt_packet\[15:0\]"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "data" -line 102 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 \
+           "/commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_X_u_data/data\[127:0\]"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetCursor -win $_nWave2 26741.324783 -snap {("G2" 2)}
+wvZoom -win $_nWave2 25536.243624 27984.662488
+wvZoom -win $_nWave2 26639.092544 26826.435470
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -win $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -delim "."
+srcHBSelect \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top.u_X_u_data" \
+           -win $_nTrace1
+wvSetCursor -win $_nWave2 14460.973917 -snap {("G2" 1)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "valid" -line 32 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cnt_packet" -line 61 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cnt_valid" -line 81 -pos 2 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+wvSelectGroup -win $_nWave2 {G3}
+debReload
+wvSetCursor -win $_nWave2 14480.102190 -snap {("G2" 2)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvZoom -win $_nWave2 12643.788041 18037.960852
+wvZoom -win $_nWave2 14281.768332 14795.746299
+wvZoom -win $_nWave2 14452.187398 14565.470319
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 2 3 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G2}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSelectGroup -win $_nWave2 {G3}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcDeselectAll -win $_nTrace1
+debReload
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectGroup -win $_nWave2 {G1}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetCursor -win $_nWave2 10363.916913 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+debReload
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvSelectGroup -win $_nWave2 {G2}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcHBSelect "commmon_tb" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb" -delim "."
+srcHBSelect "commmon_tb" -win $_nTrace1
+srcHBSelect "commmon_tb.u_XW" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb.u_XW" -delim "."
+srcHBSelect "commmon_tb.u_XW" -win $_nTrace1
+debReload
+wvSelectGroup -win $_nWave2 {G2}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+srcHBSelect "commmon_tb.u_XW" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb.u_XW" -delim "."
+srcHBSelect "commmon_tb.u_XW" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "data" -line 102 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "s_delay_valid" -line 86 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSelectGroup -win $_nWave2 {G2}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G1}
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectGroup -win $_nWave2 {G2}
+srcDeselectAll -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep" -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb.u_rsp_s1_prep" -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "o_m1_wr_en_B" -line 74 -pos 1 -win $_nTrace1
+srcSelect -signal "o_m1_wr_data_B" -line 73 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 "/commmon_tb/u_rsp_s1_prep/o_m1_wr_en_B" \
+           "/commmon_tb/u_rsp_s1_prep/o_m1_wr_data_B\[127:0\]"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "o_m1_wr_en_B" -line 74 -pos 1 -win $_nTrace1
+srcSearchString "o_m1_wr_en_B" -win $_nTrace1 -next -case
+srcSearchString "o_m1_wr_en_B" -win $_nTrace1 -next -case
+srcSearchString "o_m1_wr_en_B" -win $_nTrace1 -next -case
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 2 3 4 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G3}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectGroup -win $_nWave2 {G2}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSetPosition -win $_nWave2 {("G1/ahb_cfg(slave)" 27)}
+wvSelectGroup -win $_nWave2 {G2}
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_ahb2ahb_async_DW_ahb_h2h_entry" -win \
+           $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb.u_rsp_s1_prep" -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep" -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core" -win $_nTrace1
+srcSetScope -win $_nTrace1 "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core" -delim \
+           "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core" -win $_nTrace1
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+wvSetCursor -win $_nWave2 2004.313359 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcSetScope -win $_nTrace1 \
+           "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" \
+           -delim "."
+srcHBSelect "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top" -win \
+           $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "o_w\[i\]\[55:32\]" -line 636 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "s_comb_valid" -line 662 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 \
+           "/commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/s_comb_valid"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetCursor -win $_nWave2 14634.432251 -snap {("G2" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "o_w\[k\]\[55:32\]" -line 661 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "s_comb_data\[i\]" -line 634 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvAddSignal -win $_nWave2 \
+           "/commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/s_comb_data\[0:3\]"
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "o_w\[i\]\[55:32\]" -line 636 -pos 1 -win $_nTrace1
+srcSearchString "o_w" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {636 636 7 7 1 4}
+srcSearchString "o_w" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {635 635 2 2 54 57}
+srcSearchString "o_w" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {635 635 2 2 43 46}
+srcSearchString "o_w" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {635 635 2 2 29 32}
+srcSearchString "o_w" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {635 635 2 2 18 21}
+srcSearchString "o_w" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {596 596 6 7 1 1}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvAddSignal -win $_nWave2 \
+           "/commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/o_w\[3:0\]"
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 3)}
+wvSetCursor -win $_nWave2 14508.828858 -snap {("G2" 3)}
+wvZoom -win $_nWave2 13755.208505 17104.632299
+wvZoom -win $_nWave2 14393.501008 14881.891485
+wvSetCursor -win $_nWave2 14600.091590 -snap {("G2" 1)}
+wvSetCursor -win $_nWave2 14600.796677 -snap {("G3" 0)}
+wvSetCursor -win $_nWave2 14600.326619 -snap {("G2" 2)}
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSetCursor -win $_nWave2 14600.796677 -snap {("G2" 2)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 3 )} 
+wvExpandBus -win $_nWave2

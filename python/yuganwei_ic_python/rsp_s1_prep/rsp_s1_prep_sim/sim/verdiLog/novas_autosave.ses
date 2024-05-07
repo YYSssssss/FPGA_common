@@ -1,0 +1,88 @@
+@verdi rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_Q-2020.03-SP2
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = FALSE
+powerDumped = 0
+[fusa]
+fdb_server = 
+fdb_proj = 
+fdb_campaign = 
+fdb_tool = 
+[hb]
+postSimFile = /home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim/tb_common_wave.fsdb
+syncTime = 15375
+viewport = 0 27 2560 1337 0 0 79 2558
+activeNode = "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top"
+activeScope = "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top"
+activeFile = "../src1/rsp_s1_prep_top.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 591
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+amsAnnot = True
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top"
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-f" "tb.f" "+incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header" "+incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src" "-sverilog" 
+invokeDir = /home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim
+[hb.sourceTab.1]
+scope = commmon_tb.u_rsp_s1_prep.u_rsp_s1_prep_core.u_rsp_s1_prep_top
+File = /home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/src1/rsp_s1_prep_top.sv
+Line = 592
+[nMemoryManager]
+WaveformFile = /home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim/tb_common_wave.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 25 2560 355 370 86
+primaryWindow = TRUE
+SessionFile = /home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim/verdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSyncCursorMarker = FALSE
+waveformSyncHorizontalRange = FALSE
+waveformSyncVerticalscroll = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE

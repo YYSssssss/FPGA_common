@@ -1,0 +1,130 @@
+ 
+****************************************
+Report : cell
+Design : rsp_s1_prep
+Version: R-2020.09-SP4
+Date   : Tue Nov 14 23:05:57 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U42                       NOR2V6_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.2344  
+U43                       NAND4XXXBV0_12TR40
+                                          scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.9152  
+U44                       CLKINV2_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U45                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U46                       NOR3BBV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U47                       NOR4CV1_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U48                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U49                       NAND2BV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U50                       OAOI211V0_12TR40
+                                          scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U51                       NOR2BV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U52                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U53                       NAND3BBV0_12TR40
+                                          scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U54                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U55                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U56                       INV0_12TR40     scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U57                       NOR4BV1_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.9152  
+U58                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U59                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U60                       NOR3CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U61                       NAND2CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U62                       OAI22V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U63                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U64                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U65                       OAI22V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U66                       NAND3CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U67                       AO1B2V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U68                       AO31V1_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.9152  
+U69                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U70                       NAND3CV0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U71                       OAI21V0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.2768  
+U72                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U73                       OAI211V0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.5960  
+U74                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+U75                       AO31V1_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            1.9152  
+U76                       NOR2CV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.9576  
+U77                       OAI222V0_12TR40 scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            2.5536  
+U78                       CLKINV0_12TR40  scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            0.6384  
+o_cmd_ack_reg             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+o_finish_reg              DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+o_mem_req_reg             DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+o_start_ack_reg           DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+state_reg_0_              DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+state_reg_1_              DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+state_reg_2_              DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+state_reg_3_              DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+state_reg_4_              DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+state_reg_5_              DRNQV0_12TR40   scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+                                                            6.0648  n
+u_ahb2ahb_async_DW_ahb_h2h_ram0
+                          ahb2ahb_async_DW_ahb_h2h_SAW32_SDW32_SBE0_MAW32_MDW32_MBE0_1
+                                                          667.4472  h, n, p
+u_ahb2ahb_async_DW_ahb_h2h_ram1
+                          ahb2ahb_async_DW_ahb_h2h_SAW32_SDW32_SBE0_MAW32_MDW32_MBE0_0
+                                                          572.3256  h, n, p
+u_ahb2en1                 ahb2en_SAW32_SDW32_DW64         588.2856  h, n, p
+u_ahb2en2                 ahb2en_SAW32_SDW32_DW32         307.7088  h, n, p
+u_rsp_s1_prep_ahbic       rsp_s1_prep_ahbic               725.8608  h, n
+u_rsp_s1_prep_core        rsp_s1_prep_core_DELAY2         148214.6813
+                                                                    b, h, n, p
+u_rsp_s1_prep_reg         rsp_s1_prep_reg                 8251.3200 h, n
+--------------------------------------------------------------------------------
+Total 54 cells                                            159434.5613
+1

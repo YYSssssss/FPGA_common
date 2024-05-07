@@ -1,0 +1,298 @@
+ 
+****************************************
+Report : area
+Design : rsp_s1_prep
+Version: R-2020.09-SP4
+Date   : Tue Nov 14 23:06:02 2023
+****************************************
+
+Library(s) Used:
+
+    scc40nll_vhsc40_rvt_ss_v0p99_125c_basic (File: /iceng/lib/stdcell/smic40/scc40nll_vhsc40_rvt_ss_v0p99_125c_basic.db)
+    ts1n28hpcpsvtb32x32m4sw_ssg0p81v125c (File: /iceng/lib/memory/tsmc28/0.1/DB/ts1n28hpcpsvtb32x32m4sw_130a_ssg0p81v125c.db)
+    ts1n28hpcpuhdsvtb136x64m2sw_ssg0p9v0c (File: /iceng/lib/memory/tsmc28/0.1/DB/ts1n28hpcpuhdsvtb136x64m2sw_170a_ssg0p9v0c.db)
+
+Number of ports:                        19124
+Number of nets:                         66139
+Number of cells:                        56525
+Number of combinational cells:          47099
+Number of sequential cells:              9208
+Number of macros/black boxes:               5
+Number of buf/inv:                       9158
+Number of references:                      30
+
+Combinational area:              89082.337007
+Buf/Inv area:                     7889.347342
+Noncombinational area:           55579.103337
+Macro/Black Box area:            14773.120972
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                159434.561316
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area               Local cell area
+                                  --------------------  ---------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-      Noncombi-   Black-
+                                  Total        Total    national    national    boxes       Design
+--------------------------------  -----------  -------  ----------  ----------  ----------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+rsp_s1_prep                       159434.5613    100.0     46.2840     60.6480      0.0000  rsp_s1_prep
+u_ahb2ahb_async_DW_ahb_h2h_ram0      667.4472      0.4      0.0000      0.0000      0.0000  ahb2ahb_async_DW_ahb_h2h_SAW32_SDW32_SBE0_MAW32_MDW32_MBE0_1
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core
+                                     593.3928      0.4      0.0000      0.0000      0.0000  ahb2ahb_async_DW_ahb_h2h_core_SAW32_SDW32_SBE0_MAW32_MDW32_MBE0_1
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core/U_mbiu
+                                     488.0568      0.3      5.1072     14.0448      0.0000  ahb2ahb_async_DW_ahb_h2h_mbiu_SAW32_SDW32_SBE0_MAW32_MDW32_MBE0_1
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core/U_mbiu/U_mfsm
+                                     100.5480      0.1     64.1592     36.3888      0.0000  ahb2ahb_async_DW_ahb_h2h_mfsm_1
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core/U_mbiu/U_r_dreg
+                                      90.6528      0.1     18.1944     63.2016      0.0000  ahb2ahb_async_DW_ahb_h2h_dreg_IDW32_ODW32_IBE0_OBE0_ADDR_MSB1_2
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core/U_mbiu/U_r_dreg/U_begen
+                                       9.2568      0.0      9.2568      0.0000      0.0000  ahb2ahb_async_DW_ahb_h2h_begen_DATA_WIDTH32_BIG_ENDIAN0_N_BYTE4_LOG_N2_2
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core/U_mbiu/U_w_dreg
+                                     277.7040      0.2     77.8848    190.5624      0.0000  ahb2ahb_async_DW_ahb_h2h_dreg_IDW32_ODW32_IBE0_OBE0_ADDR_MSB1_3
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core/U_mbiu/U_w_dreg/U_begen
+                                       9.2568      0.0      9.2568      0.0000      0.0000  ahb2ahb_async_DW_ahb_h2h_begen_DATA_WIDTH32_BIG_ENDIAN0_N_BYTE4_LOG_N2_3
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core/U_sbiu
+                                     105.3360      0.1     22.0248     74.0544      0.0000  ahb2ahb_async_DW_ahb_h2h_sbiu_SAW32_SDW32_1
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_core/U_sbiu/U_sfsm
+                                       9.2568      0.0      3.5112      5.7456      0.0000  ahb2ahb_async_DW_ahb_h2h_sfsm_1
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_sync_m2s_0
+                                      19.4712      0.0      0.6384      6.0648      0.0000  ahb2ahb_async_DW_ahb_h2h_sync_NUM_FLOPS2_5
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_sync_m2s_0/BCM_GEN_U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr
+                                      12.7680      0.0      0.6384     12.1296      0.0000  ahb2ahb_async_DW_ahb_h2h_bcm21_F_SYNC_TYPE1_VERIF_EN1_5
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_sync_s2m_0
+                                      18.1944      0.0      0.0000      6.0648      0.0000  ahb2ahb_async_DW_ahb_h2h_sync_NUM_FLOPS2_9
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_sync_s2m_0/BCM_GEN_U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr
+                                      12.1296      0.0      0.0000     12.1296      0.0000  ahb2ahb_async_DW_ahb_h2h_bcm21_F_SYNC_TYPE1_VERIF_EN1_9
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_sync_s2m_1
+                                      18.1944      0.0      0.0000      6.0648      0.0000  ahb2ahb_async_DW_ahb_h2h_sync_NUM_FLOPS2_8
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_sync_s2m_1/BCM_GEN_U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr
+                                      12.1296      0.0      0.0000     12.1296      0.0000  ahb2ahb_async_DW_ahb_h2h_bcm21_F_SYNC_TYPE1_VERIF_EN1_8
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_sync_s2m_3
+                                      18.1944      0.0      0.0000      6.0648      0.0000  ahb2ahb_async_DW_ahb_h2h_sync_NUM_FLOPS2_6
+u_ahb2ahb_async_DW_ahb_h2h_ram0/U_sync_s2m_3/BCM_GEN_U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr
+                                      12.1296      0.0      0.0000     12.1296      0.0000  ahb2ahb_async_DW_ahb_h2h_bcm21_F_SYNC_TYPE1_VERIF_EN1_6
+u_ahb2ahb_async_DW_ahb_h2h_ram1      572.3256      0.4      0.0000      0.0000      0.0000  ahb2ahb_async_DW_ahb_h2h_SAW32_SDW32_SBE0_MAW32_MDW32_MBE0_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core
+                                     535.9368      0.3      0.0000      0.0000      0.0000  ahb2ahb_async_DW_ahb_h2h_core_SAW32_SDW32_SBE0_MAW32_MDW32_MBE0_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core/U_mbiu
+                                     445.9224      0.3      5.1072     14.0448      0.0000  ahb2ahb_async_DW_ahb_h2h_mbiu_SAW32_SDW32_SBE0_MAW32_MDW32_MBE0_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core/U_mbiu/U_mfsm
+                                      58.4136      0.0     34.1544     24.2592      0.0000  ahb2ahb_async_DW_ahb_h2h_mfsm_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core/U_mbiu/U_r_dreg
+                                      90.6528      0.1     18.1944     63.2016      0.0000  ahb2ahb_async_DW_ahb_h2h_dreg_IDW32_ODW32_IBE0_OBE0_ADDR_MSB1_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core/U_mbiu/U_r_dreg/U_begen
+                                       9.2568      0.0      9.2568      0.0000      0.0000  ahb2ahb_async_DW_ahb_h2h_begen_DATA_WIDTH32_BIG_ENDIAN0_N_BYTE4_LOG_N2_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core/U_mbiu/U_w_dreg
+                                     277.7040      0.2     77.8848    190.5624      0.0000  ahb2ahb_async_DW_ahb_h2h_dreg_IDW32_ODW32_IBE0_OBE0_ADDR_MSB1_1
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core/U_mbiu/U_w_dreg/U_begen
+                                       9.2568      0.0      9.2568      0.0000      0.0000  ahb2ahb_async_DW_ahb_h2h_begen_DATA_WIDTH32_BIG_ENDIAN0_N_BYTE4_LOG_N2_1
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core/U_sbiu
+                                      90.0144      0.1     21.3864     60.0096      0.0000  ahb2ahb_async_DW_ahb_h2h_sbiu_SAW32_SDW32_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_core/U_sbiu/U_sfsm
+                                       8.6184      0.0      2.8728      5.7456      0.0000  ahb2ahb_async_DW_ahb_h2h_sfsm_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_sync_m2s_0
+                                      18.1944      0.0      0.0000      6.0648      0.0000  ahb2ahb_async_DW_ahb_h2h_sync_NUM_FLOPS2_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_sync_m2s_0/BCM_GEN_U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr
+                                      12.1296      0.0      0.0000     12.1296      0.0000  ahb2ahb_async_DW_ahb_h2h_bcm21_F_SYNC_TYPE1_VERIF_EN1_0
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_sync_s2m_0
+                                      18.1944      0.0      0.0000      6.0648      0.0000  ahb2ahb_async_DW_ahb_h2h_sync_NUM_FLOPS2_4
+u_ahb2ahb_async_DW_ahb_h2h_ram1/U_sync_s2m_0/BCM_GEN_U_DW_ahb_h2h_bcm21_async2hl_async_hsyzr
+                                      12.1296      0.0      0.0000     12.1296      0.0000  ahb2ahb_async_DW_ahb_h2h_bcm21_F_SYNC_TYPE1_VERIF_EN1_4
+u_ahb2en1                            588.2856      0.4     35.4312    552.8544      0.0000  ahb2en_SAW32_SDW32_DW64
+u_ahb2en2                            307.7088      0.2     22.3440    285.3648      0.0000  ahb2en_SAW32_SDW32_DW32
+u_rsp_s1_prep_ahbic                  725.8608      0.5      0.0000      0.0000      0.0000  rsp_s1_prep_ahbic
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_decs0
+                                     157.6848      0.1    116.8272     23.9400      0.0000  rsp_s1_prep_ahbic_decS0
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_decs0/u_rsp_s1_prep_ahbic_default_slave
+                                      16.9176      0.0      3.1920     13.7256      0.0000  rsp_s1_prep_ahbic_default_slave
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_in_0
+                                     434.4312      0.3    127.0416    307.3896      0.0000  rsp_s1_prep_ahbic_in
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_out_0
+                                      53.6256      0.0     44.0496      0.0000      0.0000  rsp_s1_prep_ahbic_out_3
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_out_0/u_output_arb
+                                       9.5760      0.0      1.9152      7.6608      0.0000  rsp_s1_prep_ahbic_arb_3
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_out_1
+                                      29.6856      0.0     14.0448      6.0648      0.0000  rsp_s1_prep_ahbic_out_2
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_out_1/u_output_arb
+                                       9.5760      0.0      1.9152      7.6608      0.0000  rsp_s1_prep_ahbic_arb_2
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_out_2
+                                      29.0472      0.0     13.4064      6.0648      0.0000  rsp_s1_prep_ahbic_out_1
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_out_2/u_output_arb
+                                       9.5760      0.0      1.9152      7.6608      0.0000  rsp_s1_prep_ahbic_arb_1
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_out_3
+                                      21.3864      0.0      5.7456      6.0648      0.0000  rsp_s1_prep_ahbic_out_0
+u_rsp_s1_prep_ahbic/u_rsp_s1_prep_ahbic_out_3/u_output_arb
+                                       9.5760      0.0      1.9152      7.6608      0.0000  rsp_s1_prep_ahbic_arb_0
+u_rsp_s1_prep_core                148214.6813     93.0      0.0000      0.0000      0.0000  rsp_s1_prep_core_DELAY2
+u_rsp_s1_prep_core/u_rsp_s1_prep_read_ram
+                                    1171.7832      0.7    169.1760    984.4128      0.0000  rsp_s1_prep_read_ram_DELAY_DATA_ARRIVE2_READ_RAM_WIDTH128_SAMPLE_WIDTH32_RD_INTERVAL50_ADD_ADDR16
+u_rsp_s1_prep_core/u_rsp_s1_prep_read_ram/delay_data_last
+                                       6.0648      0.0      0.0000      6.0648      0.0000  delay_DELAY1_40
+u_rsp_s1_prep_core/u_rsp_s1_prep_read_ram/delay_rd_en
+                                      12.1296      0.0      0.0000     12.1296      0.0000  delay_DELAY2_20
+u_rsp_s1_prep_core/u_rsp_s1_prep_top
+                                  145735.4550     91.4      5.7456   3893.6015      0.0000  rsp_s1_prep_top_READ_RAM_WIDTH128_SAMPLE_WIDTH32_DATA_NUM1024_PACKET_SELECT3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/delay_buffer_rd_en
+                                      30.6432      0.0      0.0000     30.6432      0.0000  delay_DELAY5_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/delay_buffer_valid
+                                      18.8328      0.0      0.0000     18.8328      0.0000  delay_DELAY3_34
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/delay_i_diff_valid
+                                      12.1296      0.0      0.0000     12.1296      0.0000  delay_DELAY2_18
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/delay_phase_last
+                                     121.2960      0.1      0.0000    121.2960      0.0000  delay_DELAY20
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk1_0__u_add_u_H16_0
+                                      56.8176      0.0     56.8176      0.0000      0.0000  rsp_s1_prep_add_u_DATA_WIDTH17_3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk1_0__u_add_u_L16_0
+                                      48.1992      0.0     48.1992      0.0000      0.0000  rsp_s1_prep_add_u_DATA_WIDTH16_3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk1_2__u_add_u_H16_0
+                                      56.8176      0.0     56.8176      0.0000      0.0000  rsp_s1_prep_add_u_DATA_WIDTH17_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk1_2__u_add_u_L16_0
+                                      51.7104      0.0     51.7104      0.0000      0.0000  rsp_s1_prep_add_u_DATA_WIDTH16_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk1_4__u_add_u_H16_0
+                                      56.8176      0.0     56.8176      0.0000      0.0000  rsp_s1_prep_add_u_DATA_WIDTH17_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk1_4__u_add_u_L16_0
+                                      48.1992      0.0     48.1992      0.0000      0.0000  rsp_s1_prep_add_u_DATA_WIDTH16_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk1_6__u_add_u_H16_0
+                                      56.8176      0.0     56.8176      0.0000      0.0000  rsp_s1_prep_add_u_DATA_WIDTH17_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk1_6__u_add_u_L16_0
+                                      51.7104      0.0     51.7104      0.0000      0.0000  rsp_s1_prep_add_u_DATA_WIDTH16_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_0__multiplier1
+                                   35695.4980     22.4   1335.2136   2265.3623      0.0000  rsp_s1_prep_multiplier0_TWIDDLE_WIDTH48_SAMPLE_WIDTH64_NUM8_MUL_COMPLEX_VALID7_MUL_REAL_VALID1_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_0__multiplier1/delay_complex_valid
+                                      42.4536      0.0      0.0000     42.4536      0.0000  delay_DELAY7_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_0__multiplier1/u_delay_t8
+                                     188.0088      0.1      0.0000    188.0088      0.0000  rsp_s1_prep_delay_data_DEPTH1_DATA_WIDTH32_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_0__multiplier1/u_t3
+                                   10436.8825      6.5  10005.9625    430.9200      0.0000  rsp_s1_prep_mult_DELAY3_A_width32_B_width24_P_width56_3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_0__multiplier1/u_t4
+                                   10467.5257      6.6  10036.6057    430.9200      0.0000  rsp_s1_prep_mult_DELAY3_A_width32_B_width24_P_width56_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_0__multiplier1/u_t5
+                                   10960.0513      6.9  10514.7673    445.2840      0.0000  rsp_s1_prep_mult_DELAY3_A_width33_B_width25_P_width58_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1
+                                   35960.4340     22.6   1334.8944   2272.7039      0.0000  rsp_s1_prep_multiplier0_TWIDDLE_WIDTH48_SAMPLE_WIDTH64_NUM8_MUL_COMPLEX_VALID7_MUL_REAL_VALID1_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_delay_t8
+                                     188.0088      0.1      0.0000    188.0088      0.0000  rsp_s1_prep_delay_data_DEPTH1_DATA_WIDTH32_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t3
+                                   10951.4329      6.9  10520.5129    430.9200      0.0000  rsp_s1_prep_mult_DELAY3_A_width32_B_width24_P_width56_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t4
+                                   10248.2353      6.4   9814.7617    433.4736      0.0000  rsp_s1_prep_mult_DELAY3_A_width32_B_width24_P_width56_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/genblk4_2__multiplier1/u_t5
+                                   10965.1585      6.9  10519.8745    445.2840      0.0000  rsp_s1_prep_mult_DELAY3_A_width33_B_width25_P_width58_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_HF_abs
+                                    7950.3143      5.0     51.0720    842.3688      0.0000  rsp_s1_prep_abs_cmp_READ_RAM_WIDTH128_SAMPLE_WIDTH32_DATA_WIDTH16_NUM8_ABS_CMP_X1_RVALID1_ABS_CMP_X1_CVALID1_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_HF_abs/delay_complex_abs
+                                       6.0648      0.0      0.0000      6.0648      0.0000  delay_DELAY1_34
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_HF_abs/genblk2_0__u_rsp_s1_prep_abs_m2_complex
+                                      24.2592      0.0      0.0000      0.0000      0.0000  rsp_s1_prep_abs_complex_WIDTH16_3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_HF_abs/genblk2_0__u_rsp_s1_prep_abs_m2_complex/u_abs_rdy
+                                      24.2592      0.0      0.0000     24.2592      0.0000  delay_DELAY4_13
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_HF_abs/genblk3_0__u_rsp_s1_prep_abs_32bit_complex
+                                    3531.9480      2.2   2015.1096   1516.8383      0.0000  rsp_s1_prep_abs_complex_WIDTH32_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_HF_abs/genblk3_2__u_rsp_s1_prep_abs_32bit_complex
+                                    3494.6016      2.2   1977.7632   1516.8383      0.0000  rsp_s1_prep_abs_complex_WIDTH32_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_LF_abs
+                                    7912.9679      5.0     50.4336    836.3040      0.0000  rsp_s1_prep_abs_cmp_READ_RAM_WIDTH128_SAMPLE_WIDTH32_DATA_WIDTH16_NUM8_ABS_CMP_X1_RVALID1_ABS_CMP_X1_CVALID1_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_LF_abs/genblk3_0__u_rsp_s1_prep_abs_32bit_complex
+                                    3500.9856      2.2   1984.1472   1516.8383      0.0000  rsp_s1_prep_abs_complex_WIDTH32_3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_LF_abs/genblk3_2__u_rsp_s1_prep_abs_32bit_complex
+                                    3525.2448      2.2   2008.4064   1516.8383      0.0000  rsp_s1_prep_abs_complex_WIDTH32_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_combination
+                                    1163.8032      0.7    168.5376    789.0624      0.0000  rsp_s1_prep_combination_READ_RAM_WIDTH128_NUM8_DATA_WIDTH16_COMB_Y0_VALID2_COMB_S_LF_REAL_CMP10_COMB_S_HF_REAL_CMP6_COMB_S_LF_COMPLEX_CMP10_COMB_S_HF_COMPLEX_CMP6
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_combination/delay_i_x0_valid
+                                      12.1296      0.0      0.0000     12.1296      0.0000  delay_DELAY2_12
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_combination/u_HF_c64_cmp
+                                      72.7776      0.0      0.0000     72.7776      0.0000  rsp_s1_prep_delay_data_DEPTH6_DATA_WIDTH8_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_combination/u_LF_c64_cmp
+                                     121.2960      0.1      0.0000    121.2960      0.0000  rsp_s1_prep_delay_data_DEPTH10_DATA_WIDTH8_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_diff
+                                    5336.7047      3.3   1711.5504   3600.8951      0.0000  rsp_s1_prep_diff_READ_RAM_WIDTH128_SAMPLE_WIDTH32_DATA_NUM1024_BURST_LEN8
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_diff/delay_y0_valid
+                                      24.2592      0.0      0.0000     24.2592      0.0000  delay_DELAY4_20
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_fifo
+                                   19746.6698     12.4      0.0000      0.0000      0.0000  rsp_s1_prep_fifo_WIDTH128
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_fifo/inst_fifo_fwft_small_u_fifo_fwft_small
+                                   19746.6698     12.4   8455.9272  11290.7426      0.0000  fifo_fwft_small_WIDTH128_DEPTH_FULL18_THRESH_FULL9
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation
+                                   27459.7248     17.2    256.3176    915.7848      0.0000  rsp_s1_prep_phase_generation_RAM_DELAY2_RAM0_ADDR_WIDTH11_RAM1_ADDR_WIDTH6_RAM_DATA_WIDTH64_TWIDDLE_WIDTH64_DATA_NUM1024
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data
+                                    6535.1359      4.1   1156.4616   2013.1944      0.0000  rsp_s1_prep_pg_select_ram_data_RAM_DELAY2_RAM0_ADDR_WIDTH11_RAM1_ADDR_WIDTH6_RAM_DATA_WIDTH64_TWIDDLE_WIDTH64_DATA_NUM1024_TWIDDLE_NUM136_3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_i_data_last
+                                      24.2592      0.0      0.0000     24.2592      0.0000  delay_DELAY4_6
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_region0
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_31
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_region1
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_30
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_region2
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_29
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_region3
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_28
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_region4
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_27
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_region5
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_26
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_region6
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_25
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/delay_region7
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_24
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/u_ram0
+                                    3195.6655      2.0      0.0000      0.0000      0.0000  spram_136x64_3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_0__u_pg_select_ram_data/u_ram0/inst_spram_uhdsvt_136x64m2s_u_spram_uhdsvt_136x64m2s
+                                    3195.6655      2.0      0.6384      0.0000   3195.0271  spram_uhdsvt_136x64m2s_3
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_1__u_pg_select_ram_data
+                                    5561.2567      3.5    595.9464   1745.3856      0.0000  rsp_s1_prep_pg_select_ram_data_RAM_DELAY2_RAM0_ADDR_WIDTH11_RAM1_ADDR_WIDTH6_RAM_DATA_WIDTH64_TWIDDLE_WIDTH64_DATA_NUM1024_TWIDDLE_NUM136_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_1__u_pg_select_ram_data/delay_i_data_last
+                                      24.2592      0.0      0.0000     24.2592      0.0000  delay_DELAY4_4
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_1__u_pg_select_ram_data/u_ram0
+                                    3195.6655      2.0      0.0000      0.0000      0.0000  spram_136x64_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_1__u_pg_select_ram_data/u_ram0/inst_spram_uhdsvt_136x64m2s_u_spram_uhdsvt_136x64m2s
+                                    3195.6655      2.0      0.6384      0.0000   3195.0271  spram_uhdsvt_136x64m2s_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data
+                                    6537.6895      4.1   1158.6960   2013.1944      0.0000  rsp_s1_prep_pg_select_ram_data_RAM_DELAY2_RAM0_ADDR_WIDTH11_RAM1_ADDR_WIDTH6_RAM_DATA_WIDTH64_TWIDDLE_WIDTH64_DATA_NUM1024_TWIDDLE_NUM136_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_i_data_last
+                                      24.2592      0.0      0.0000     24.2592      0.0000  delay_DELAY4_2
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_region0
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_15
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_region1
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_14
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_region2
+                                      18.5136      0.0      0.0000     18.5136      0.0000  delay_DELAY3_13
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_region3
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_12
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_region4
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_11
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_region5
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_10
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_region6
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_9
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/delay_region7
+                                      18.1944      0.0      0.0000     18.1944      0.0000  delay_DELAY3_8
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/u_ram0
+                                    3195.6655      2.0      0.0000      0.0000      0.0000  spram_136x64_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_2__u_pg_select_ram_data/u_ram0/inst_spram_uhdsvt_136x64m2s_u_spram_uhdsvt_136x64m2s
+                                    3195.6655      2.0      0.6384      0.0000   3195.0271  spram_uhdsvt_136x64m2s_1
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_3__u_pg_select_ram_data
+                                    5561.2567      3.5    596.2656   1745.0664      0.0000  rsp_s1_prep_pg_select_ram_data_RAM_DELAY2_RAM0_ADDR_WIDTH11_RAM1_ADDR_WIDTH6_RAM_DATA_WIDTH64_TWIDDLE_WIDTH64_DATA_NUM1024_TWIDDLE_NUM136_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_3__u_pg_select_ram_data/delay_i_data_last
+                                      24.2592      0.0      0.0000     24.2592      0.0000  delay_DELAY4_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_3__u_pg_select_ram_data/u_ram0
+                                    3195.6655      2.0      0.0000      0.0000      0.0000  spram_136x64_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/genblk1_3__u_pg_select_ram_data/u_ram0/inst_spram_uhdsvt_136x64m2s_u_spram_uhdsvt_136x64m2s
+                                    3195.6655      2.0      0.6384      0.0000   3195.0271  spram_uhdsvt_136x64m2s_0
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/u_ram_entry
+                                    2092.2838      1.3      0.0000     98.6328      0.0000  spram_TYPERAM_VTSVT_CM4_SEGS_DATA_DEPTH32_DATA_WIDTH32
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/u_ram_entry/ins_spram_32x32_u_spram_32x32
+                                    1993.6510      1.3      0.0000      0.0000      0.0000  spram_32x32_TYPERAM_VTSVT_UHD_CM4_SEGS
+u_rsp_s1_prep_core/u_rsp_s1_prep_top/u_rsp_s1_prep_phase_generation/u_ram_entry/ins_spram_32x32_u_spram_32x32/inst_spram_svt_32x32m4s_u_spram_svt_32x32m4s
+                                    1993.6510      1.3      0.6384      0.0000   1993.0126  spram_svt_32x32m4s
+u_rsp_s1_prep_core/u_rsp_s1_prep_write_ram
+                                    1307.4432      0.8    336.4368    206.8416      0.0000  rsp_s1_prep_write_ram_DELAY_DATA_ARRIVE1_READ_RAM_WIDTH128_SAMPLE_WIDTH32_ADD_ADDR16
+u_rsp_s1_prep_core/u_rsp_s1_prep_write_ram/u_delay_data
+                                     764.1648      0.5      0.0000    764.1648      0.0000  rsp_s1_prep_delay_data_DEPTH1_DATA_WIDTH128
+u_rsp_s1_prep_reg                   8251.3200      5.2   1046.6568   7204.6632      0.0000  rsp_s1_prep_reg
+--------------------------------  -----------  -------  ----------  ----------  ----------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                   89082.3370  55579.1033  14773.1210
+
+1

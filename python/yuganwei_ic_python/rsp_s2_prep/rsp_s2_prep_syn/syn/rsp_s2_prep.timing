@@ -1,0 +1,125 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rsp_s2_prep
+Version: R-2020.09-SP4
+Date   : Fri Nov 17 14:27:41 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_v0p99_125c   Library: scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/t2_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/data_arr_reg_0__45_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/t2_reg_3_/CK (DRNQV8_12TR40)
+                                                        0.0000 #   0.0000 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/t2_reg_3_/Q (DRNQV8_12TR40)
+                                                        0.1853     0.1853 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/B[3] (rsp_s2_prep_mult_DELAY3_A_width33_B_width25_P_width58_0)
+                                                        0.0000     0.1853 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U1178/ZN (NOR2CV8_12TR40)
+                                                        0.0411     0.2264 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U1177/ZN (NAND2V4_12TR40)
+                                                        0.0335     0.2599 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U1176/ZN (CLKINV6_12TR40)
+                                                        0.0332     0.2932 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U736/ZN (CLKNAND2V16_12TR40)
+                                                        0.0449     0.3381 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U482/Z (BUFV20RD_12TR40)
+                                                        0.0526     0.3907 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3569/ZN (MUX2NV6_12TR40)
+                                                        0.0430     0.4336 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U434/ZN (NOR2V8_12TR40)
+                                                        0.0582     0.4919 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3297/Z (XOR2V6_12TR40)
+                                                        0.0711     0.5630 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U790/ZN (NAND2V6_12TR40)
+                                                        0.0585     0.6214 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U2066/Z (BUFV16_12TR40)
+                                                        0.0772     0.6986 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U253/ZN (OAI22V2_12TR40)
+                                                        0.0958     0.7944 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U2933/ZN (INV4SR_12TR40)
+                                                        0.0473     0.8417 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3269/Z (XOR2V4_12TR40)
+                                                        0.0743     0.9161 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3702/Z (XOR2V4_12TR40)
+                                                        0.0876     1.0036 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3079/S (AD1V3_12TR40)
+                                                        0.2060     1.2096 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3314/ZN (INV4SR_12TR40)
+                                                        0.0376     1.2472 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U985/ZN (OAI21V6_12TR40)
+                                                        0.0427     1.2899 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U1010/Z (XOR2V6_12TR40)
+                                                        0.0755     1.3654 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U646/ZN (INV8SR_12TR40)
+                                                        0.0326     1.3980 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3315/Z (XOR2V6_12TR40)
+                                                        0.0498     1.4478 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3202/Z (XOR2V6_12TR40)
+                                                        0.0916     1.5394 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U2851/ZN (NOR2V6_12TR40)
+                                                        0.0493     1.5887 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U2150/ZN (NOR2V6_12TR40)
+                                                        0.0662     1.6549 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3020/ZN (NAND3CV4_12TR40)
+                                                        0.0490     1.7039 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U671/ZN (NAND3CV6_12TR40)
+                                                        0.0476     1.7516 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U1020/ZN (NAND3CV8_12TR40)
+                                                        0.0417     1.7932 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U858/ZN (NAND3CV12_12TR40)
+                                                        0.0433     1.8365 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3352/ZN (NAND2CV3_12TR40)
+                                                        0.0391     1.8756 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3792/ZN (NAND3CV6_12TR40)
+                                                        0.0355     1.9110 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3791/Z (XOR2V6_12TR40)
+                                                        0.0522     1.9632 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U2993/ZN (NAND2V4_12TR40)
+                                                        0.0618     2.0250 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3547/ZN (NOR2CV8_12TR40)
+                                                        0.0451     2.0702 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3460/ZN (NAND3CV6_12TR40)
+                                                        0.0472     2.1174 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3459/ZN (CLKNAND2V8_12TR40)
+                                                        0.0386     2.1560 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U1171/ZN (INV8SR_12TR40)
+                                                        0.0213     2.1773 f
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U3878/ZN (CLKINV6_12TR40)
+                                                        0.0333     2.2106 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/U4250/ZN (MUX2NV2_12TR40)
+                                                        0.0550     2.2655 r
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/data_arr_reg_0__45_/D (DQV0_12TR40)
+                                                        0.0000     2.2655 r
+  data arrival time                                                2.2655
+
+  clock clk (rise edge)                                 1.2000     1.2000
+  clock network delay (ideal)                           0.0000     1.2000
+  u_rsp_s2_prep_core/u_rsp_s2_prep_top/genblk4_2__multiplier1/u_t5/data_arr_reg_0__45_/CK (DQV0_12TR40)
+                                                        0.0000     1.2000 r
+  library setup time                                   -0.0591     1.1409
+  data required time                                               1.1409
+  --------------------------------------------------------------------------
+  data required time                                               1.1409
+  data arrival time                                               -2.2655
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -1.1247
+
+
+1

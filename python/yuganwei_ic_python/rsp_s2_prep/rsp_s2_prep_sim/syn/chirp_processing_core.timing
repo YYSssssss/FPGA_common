@@ -1,0 +1,81 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : chirp_processing_core
+Version: R-2020.09-SP4
+Date   : Fri Nov 17 11:17:36 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_v0p99_125c   Library: scc40nll_vhsc40_rvt_ss_v0p99_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: u_chirp_processing_top/u_LF_abs/x1_rdata_reg_5__0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/abs_value_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  u_chirp_processing_top/u_LF_abs/x1_rdata_reg_5__0_/CK (EDRNQV2_12TR40)
+                                                        0.0000 #   0.0000 r
+  u_chirp_processing_top/u_LF_abs/x1_rdata_reg_5__0_/Q (EDRNQV2_12TR40)
+                                                        0.2508     0.2508 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/s_real[0] (abs_real_WIDTH16_10)
+                                                        0.0000     0.2508 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U14/ZN (CLKINV2_12TR40)
+                                                        0.0321     0.2829 r
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U8/ZN (NAND2CV0_12TR40)
+                                                        0.0521     0.3350 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U13/ZN (NOR2CV3_12TR40)
+                                                        0.0494     0.3844 r
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U3/ZN (NAND2V2_12TR40)
+                                                        0.0441     0.4284 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U19/ZN (NOR2CV3_12TR40)
+                                                        0.0446     0.4730 r
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U12/ZN (NAND2XBV2_12TR40)
+                                                        0.0400     0.5130 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U20/ZN (NOR2CV3_12TR40)
+                                                        0.0441     0.5571 r
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U11/ZN (NAND2XBV2_12TR40)
+                                                        0.0399     0.5970 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U21/ZN (NOR2CV3_12TR40)
+                                                        0.0517     0.6487 r
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U4/ZN (NAND2V4_12TR40)
+                                                        0.0359     0.6846 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U22/ZN (NOR2CV3_12TR40)
+                                                        0.0419     0.7265 r
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U17/ZN (NAND2V2_12TR40)
+                                                        0.0387     0.7652 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U18/ZN (NOR2CV1_12TR40)
+                                                        0.0644     0.8296 r
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U7/ZN (NOR2CV2_12TR40)
+                                                        0.0514     0.8810 f
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/U6/Z (XOR2V1_12TR40)
+                                                        0.0505     0.9315 r
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/abs_value_reg_14_/D (DRNQV0_12TR40)
+                                                        0.0000     0.9315 r
+  data arrival time                                                0.9315
+
+  clock clk (rise edge)                                 1.0000     1.0000
+  clock network delay (ideal)                           0.0000     1.0000
+  u_chirp_processing_top/u_LF_abs/genblk1_5__u_abs_real/abs_value_reg_14_/CK (DRNQV0_12TR40)
+                                                        0.0000     1.0000 r
+  library setup time                                   -0.0685     0.9315
+  data required time                                               0.9315
+  --------------------------------------------------------------------------
+  data required time                                               0.9315
+  data arrival time                                               -0.9315
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                    0.0000
+
+
+1

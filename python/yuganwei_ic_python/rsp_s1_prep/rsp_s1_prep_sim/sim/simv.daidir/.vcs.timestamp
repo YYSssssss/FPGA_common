@@ -1,0 +1,398 @@
+11       
+0 rsp_common_defines.vh
+0 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/etc/systemverilog/rsp_common_defines.vh
+0 rsp_s1_op_info.svh
+0 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/etc/systemverilog/rsp_s1_op_info.svh
+0 rsp_s2_op_info.svh
+0 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/etc/systemverilog/rsp_s2_op_info.svh
+0 rsp_s3_op_info.svh
+0 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/etc/systemverilog/rsp_s3_op_info.svh
+0 rsp_s1_prep_defines.vh
+0 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/etc/systemverilog/rsp_s1_prep_defines.vh
+0 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header/rsp_s1_prep_defines.vh
+38
++incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header
++incdir+/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src
++itf+/home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/vcsdp_lite.tab
++v2k
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/home/tools/synopsys/VCS2020/Q-2020.03-SP2/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/libvirsim.so /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/liberrorinf.so /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/libsnpsmalloc.so /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/home/tools/synopsys/verdi/Q-2020.03-SP2/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/home/tools/synopsys/VCS2020/Q-2020.03-SP2/include
+-Mxllcflags=
+-P
+-debug_acc+all
+-debug_acc+fsdb
+-f tb.f
+-fsdb
+-full64
+-gen_obj
+-l
+-override_timescale=1ps/1ps
+-picarchive
+-sverilog
+/home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/bin/vcs1
+run.log
+/home/tools/synopsys/verdi/Q-2020.03-SP2/share/PLI/VCS/LINUX64/verdi.tab
+tb.f
+229
+wv=/home/tools/synopsys/wv/Q-2020.03-SP2
+vobs=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs
+transpose_common=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/transpose_common
+t28_mem_wrap=/iceng/lib/tsmcn28/memory/latest/t28_mem_wrap
+t28_mem=/iceng/lib/tsmcn28/memory/latest/VERILOG
+syn=/home/tools/synopsys/syn/R-2020.09-SP4
+stdcell=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/stdcell
+starrc=/home/tools/synopsys/starrc/R-2020.09-SP1
+sstlib_t28_uhp=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/stdcell/sub/sstlib_t28_uhp
+sstlib_t28_uhd=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/stdcell/sub/sstlib_t28_uhd
+sstlib_t28_hd=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/stdcell/sub/sstlib_t28_hd
+spyglass=/home/tools/synopsys/spyglass/SPYGLASS2019.06/SPYGLASS_HOME
+siliconsmart=/home/tools/synopsys/siliconsmart/P-2019.06-2
+s1_dma_common=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/s1_dma_common
+rsp_wdt=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_wdt
+rsp_uart=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_uart
+rsp_transpose=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_transpose
+rsp_top=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_top
+rsp_timer=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_timer
+rsp_spi=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_spi
+rsp_s3_transpose=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s3/sub/rsp_s3_transpose
+rsp_s3_ram_banks=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s3/sub/rsp_s3_ram_banks
+rsp_s3_power_cfar=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s3/sub/rsp_s3_power_cfar
+rsp_s3_nic=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/rsp_s3_nic
+rsp_s3_dmac_core=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_s3_dmac/sub
+rsp_s3_dmac=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_s3_dmac
+rsp_s3_dbf=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s3/sub/rsp_s3_dbf
+rsp_s3=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s3
+rsp_s2_transpose=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_transpose
+rsp_s2_ram_banks=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_ram_banks
+rsp_s2_prep=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_prep
+rsp_s2_power=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_power
+rsp_s2_nic=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/rsp_s2_nic
+rsp_s2_histogram=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_histogram
+rsp_s2_extract=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_extract
+rsp_s2_dmac_core=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_s2_dmac/sub
+rsp_s2_dmac=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_s2_dmac
+rsp_s2_dma=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_dma
+rsp_s2_dispatch=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_dispatch
+rsp_s2_ddma=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_ddma
+rsp_s2_dbf=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_dbf
+rsp_s2_cfar=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_cfar
+rsp_s2_atb=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2/sub/rsp_s2_atb
+rsp_s2=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s2
+rsp_s1_top=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1_top
+rsp_s1_ram_banks=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_ram_banks
+rsp_s1_prep=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep
+rsp_s1_fft=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_fft
+rsp_s1_dma=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_dma
+rsp_s1_dispatch=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_dispatch
+rsp_s1_data_format=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_data_format
+rsp_s1_comp=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_comp
+rsp_s1_atb=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_atb
+rsp_s1=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1
+rsp_nic_top=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/rsp_nic_top
+rsp_i2c=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores/rsp_i2c
+rsp_header=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header
+rsp_dsp_lib=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib
+rsp_dma_common=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/dma_common
+rsp_cores=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_cores
+rsp_config_nic=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/rsp_config_nic
+rsp_common=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common
+rsp_cdc=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/cdc_demet
+rsp_amba=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/amba_if
+rsp=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp
+rpss_top=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rpss_top
+rpss_periph_nic=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/rpss_periph_nic
+rpss_config_nic=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/rpss_config_nic
+ram=/iceng/lib/tsmcn28/memory/latest/wrapper
+pt=/home/tools/synopsys/pt/R-2020.09-SP5-1
+powerArtist=/home/tools/ansys/powerArtist/PowerArtist_linux-x86_64_rhel6_2021R1.4
+pll=/iceng/ip/tsmcn28/pll
+pcie_phy=/iceng/ip/tsmcn28/synopsys/dwc_pcie4phy_tsmc28hpcp_x4ns_3.00a
+modelsim=/home/tools/mentor/modelsim/modelsim10.3/modelsim_dlx
+mipi_radar=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/mipi_radar
+mem=/iceng/lib/tsmcn28/memory/latest/wrapper
+lc=/home/tools/synopsys/lc/R-2020.09
+isp_gdc=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/isp/design/gdc
+isp=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/isp
+include=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/chips/include
+hspice=/home/tools/synopsys/hspice/Q-2020.03-SP1/hspice
+gic400=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/gic400
+fm=/home/tools/synopsys/fmR-2020/R-2020.09-SP2
+finesim=/home/tools/synopsys/finesim/P-2019.06
+fifos=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos
+dw=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/dw
+dsp_lib=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib
+ddr=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ddr
+crg_cell=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/crg_cell
+coresight=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/coresight
+conformal=/home/tools/cadence/conformal/CONFRML201
+cdc_demet=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/cdc_demet
+canfd=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/canfd
+backbone_nic=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/backbone_nic
+axi2axi_async_128=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/axi2axi_async_128
+axi2axi_async=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/axi2axi_async
+axi2ahb_sync=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/axi2ahb_sync
+axi2ahb_async=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/axi2ahb_async
+apss=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/chips/apss
+amba_if=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/amba_if
+ahb2apb_4ch_sync=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2apb_4ch_sync
+ahb2ahb_sync=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_sync
+ahb2ahb_async=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async
+a53_core=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/a53_core
+a53_cfg_bm=/prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/chips/apss/sub/a53_cfg_bm
+__LSF_JOB_TMPDIR__=/tmp/366100.tmpdir
+_LMFILES_=/usr/share/Modules/modulefiles/venus_asic_1.0
+XMODIFIERS=@im=ibus
+XILINX_VIVADO=/home/xilinx/Vivado/2021.1
+XILINX_HLS=/home/xilinx/Vitis_HLS/2021.1
+XDG_SESSION_ID=23866
+XDG_MENU_PREFIX=gnome-
+XDG_CURRENT_DESKTOP=GNOME
+VTE_VERSION=5204
+VNCDESKTOP=shzj-03:16 (yuyushan)
+VMR_MODE_FLAG=64
+VIP_HOME=/cad/vip/svt_202003_vip
+VERDI_HOME=/home/tools/synopsys/verdi/Q-2020.03-SP2
+VERA_HOME=/home/tools/synopsys/vera_vI-2014.03-1.auth/linux/vera_vI-2014.03-1_linux
+VENDOR=unknown
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LOG_FILE=run.log
+VCS_HOME=/home/tools/synopsys/VCS2020/Q-2020.03-SP2
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UVM_HOME=/home/tools/synopsys/VCS2020/Q-2020.03-SP2/etc/uvm-1.2
+UNAME=/bin/uname
+TOOL_HOME=/home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64
+SYNPATH=/home/tools/synopsys/finesim/P-2019.06/bin:/home/tools/synopsys/fmR-2020/R-2020.09-SP2/bin:/home/tools/synopsys/hspice/Q-2020.03-SP1/hspice/bin:/home/tools/synopsys/lc/R-2020.09/bin:/home/tools/synopsys/pt/R-2020.09-SP5-1/bin:/home/tools/synopsys/siliconsmart/P-2019.06-2/bin:/home/tools/synopsys/spyglass/SPYGLASS2019.06/SPYGLASS_HOME/bin:/home/tools/synopsys/starrc/R-2020.09-SP1/bin:/home/tools/synopsys/starrc/R-2020.09-SP1/linux64_starrc/bin:/home/tools/synopsys/syn/R-2020.09-SP4/bin:/home/tools/synopsys/VCS2020/Q-2020.03-SP2/bin:/home/tools/synopsys/verdi/Q-2020.03-SP2/bin:/home/tools/synopsys/wv/Q-2020.03-SP2/bin
+SSH_AUTH_SOCK=/home/users/yuyushan/.cache/keyring-SV2JJ2/ssh
+SSH_AGENT_PID=2886
+SPYGLASS_HOME=/home/tools/synopsys/spyglass/SPYGLASS2019.06/SPYGLASS_HOME
+SITE=pvg
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2766,unix/unix:/tmp/.ICE-unix/2766
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SBD_KRB5CCNAME_VAL=
+RTL_UTIL=/cad/rtl_util/1.0
+REMOTEHOST=gateway
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PYTHONPATH=/cad/rtl_util/1.0/sconn:/cad/rtl_util/1.0/reg:/cad/rtl_util/1.0/mypylib
+PROJECT=venus
+PERL5LIB=/cad/rtl_util/1.0/ARM_AHB_BusMatrix_Gen/bin/lib
+OVA_UUM=0
+OSTYPE=linux
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+MGLS_LICENSE_FILE=27001@sensemi
+MEM_VERSION=latest
+LS_SUBCWD=/home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim
+LS_JOBPID=913
+LS_EXEC_T=START
+LS_EXECCWD=/home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim
+LSF_VERSION=34
+LSF_SERVERDIR=/data/lsf/10.1/linux3.10-glibc2.17-x86_64/etc
+LSF_LOGDIR=/data/lsf/log
+LSF_LIM_API_NTRIES=1
+LSF_LIBDIR=/data/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+LSF_JOB_TIMESTAMP_VALUE=1710150305
+LSF_INVOKE_CMD=bsub
+LSF_ENVDIR=/data/lsf/conf
+LSF_CGROUP_TOPDIR_KEY=cluster1
+LSF_BINDIR=/data/lsf/10.1/linux3.10-glibc2.17-x86_64/bin
+LSFUSER=yuyushan
+LSB_XFER_OP=
+LSB_UNIXGROUP_INT=rsp
+LSB_TRAPSIGS=trap # 15 10 12 2 1
+LSB_SUB_USER=yuyushan
+LSB_SUB_HOST=shzj-03
+LSB_RES_GET_FANOUT_INFO=Y
+LSB_QUEUE=interactive
+LSB_PROJECT_NAME=default
+LSB_OUTDIR=/home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim
+LSB_MCPU_HOSTS=shzj-09 2 
+LSB_MAX_NUM_PROCESSORS=2
+LSB_JOB_EXECUSER=yuyushan
+LSB_JOBRES_PID=913
+LSB_JOBRES_CALLBACK=40530@shzj-09
+LSB_JOBNAME=test
+LSB_JOBINDEX=0
+LSB_JOBID=366100
+LSB_JOBFILENAME=/home/users/yuyushan/.lsbatch/1710150305.366100
+LSB_JOBEXIT_STAT=0
+LSB_INTERACTIVE=Y
+LSB_HOSTS=shzj-09 shzj-09
+LSB_EXIT_PRE_ABORT=99
+LSB_EXEC_HOSTTYPE=X86_64
+LSB_EXEC_CLUSTER=cluster1
+LSB_EFFECTIVE_RSRCREQ=select[type == local] order[r15s:pg] 
+LSB_EEXEC_REAL_UID=
+LSB_EEXEC_REAL_GID=
+LSB_ECHKPNT_RSH_CMD=ssh
+LSB_DJOB_RANKFILE=/home/users/yuyushan/.lsbatch/1710150305.366100.hostfile
+LSB_DJOB_NUMPROC=2
+LSB_DJOB_HOSTFILE=/home/users/yuyushan/.lsbatch/1710150305.366100.hostfile
+LSB_CHKFILENAME=/home/users/yuyushan/.lsbatch/1710150305.366100
+LSB_BATCH_JID=366100
+LSB_AFFINITY_HOSTFILE=/home/users/yuyushan/.lsbatch/1710150305.366100.hostAffinityFile
+LSB_ACCT_FILE=/tmp/366100.tmpdir/.1710150305.366100.acct
+LOADEDMODULES=venus_asic_1.0
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KDEDIRS=/usr
+JOB_TERMINATE_INTERVAL=10
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+HOSTTYPE=X86_64
+GROUP=rsp
+GNOME_TERMINAL_SERVICE=:1.100
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8ac78b3c_efb2_4d0c_914d_a2060ef10a58
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_KEYRING_CONTROL=/home/users/yuyushan/.cache/keyring-SV2JJ2
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+DW_LICENSE_FILE=27007@10.0.0.204
+DESIGNWARE_HOME=/cad/vip/svt_202003
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Y1yo1xqjPQ,guid=b9ea1cd3c21d6103baacb23265dc2c76
+COLORTERM=truecolor
+CDS_LIC_FILE=5280@sensemi
+CDSPATH=/home/tools/cadence/conformal/CONFRML201/bin:/data/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/data/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/home/xilinx/Vitis_HLS/2021.1/bin:/home/xilinx/Model_Composer/2021.1/bin:/home/xilinx/Vivado/2021.1/bin:/home/xilinx/DocNav:/home/tools/synopsys/vera201404/vera_vI-2014.03_linux/bin:/home/tools/synopsys/finesim/P-2019.06/bin:/home/tools/synopsys/fmR-2020/R-2020.09-SP2/bin:/home/tools/synopsys/hspice/Q-2020.03-SP1/hspice/bin:/home/tools/synopsys/lc/R-2020.09/bin:/home/tools/synopsys/pt/R-2020.09-SP5-1/bin:/home/tools/synopsys/siliconsmart/P-2019.06-2/bin:/home/tools/synopsys/spyglass/SPYGLASS2019.06/SPYGLASS_HOME/bin:/home/tools/synopsys/starrc/R-2020.09-SP1/bin:/home/tools/synopsys/starrc/R-2020.09-SP1/linux64_starrc/bin:/home/tools/synopsys/syn/R-2020.09-SP4/bin:/home/tools/synopsys/VCS2020/Q-2020.03-SP2/bin:/home/tools/synopsys/verdi/Q-2020.03-SP2/bin:/home/tools/synopsys/wv/Q-2020.03-SP2/bin:/home/tools/cadence/conformal/CONFRML201/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tools/mentor/modelsim/modelsim10.3/modelsim_dlx/bin:/home/tools/ansys/powerArtist/PowerArtist_linux-x86_64_rhel6_2021R1.4/bin:/data/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/data/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tools/synopsys/fpga/Q-2020.03-SP1/bin
+BSUB_BLOCK_EXEC_HOST=
+ARM_AHB_BusMatrix_Gen=/cad/rtl_util/1.0/ARM_AHB_BusMatrix_Gen
+0
+108
+1706081362 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header/rsp_s3_op_info.svh
+1704985436 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header/rsp_s2_op_info.svh
+1699001480 ../tb1/rd_txt_data_tb.sv
+1698813887 ../tb1/save_file_tb.sv
+1710148391 ../tb1/common_tb.sv
+1698813887 ../tb1/delay.v
+1698813887 ../tb1/spram_136x64.v
+1698813887 ../tb1/tpram.v
+1698813887 ../tb1/spram.v
+1710150299 ../src1/rsp_s1_prep.sv
+1700122440 ../src1/rsp_s1_prep_add_u.sv
+1698813887 ../src1/rsp_s1_prep_abs_complex.sv
+1710150252 ../src1/rsp_s1_prep_phase_generation.sv
+1710143123 ../src1/rsp_s1_prep_write_ram.sv
+1698813887 ../src1/rsp_s1_prep_abs_real.sv
+1710148930 ../src1/rsp_s1_prep_top.sv
+1709543142 ../src1/rsp_s1_prep_multiplier0.sv
+1709542090 ../src1/rsp_s1_prep_diff.sv
+1710148989 ../src1/rsp_s1_prep_core.sv
+1710148838 ../src1/rsp_s1_prep_read_ram.sv
+1710143190 ../src1/rsp_s1_prep_delay_data.sv
+1709542984 ../src1/rsp_s1_prep_combination.sv
+1709542919 ../src1/rsp_s1_prep_abs_cmp.sv
+1710150170 ../src1/rsp_s1_prep_pg_select_ram_data.sv
+1710126784 ../src1/rsp_s1_prep_estimation.sv
+1698813887 ../src1/rsp_s1_prep_fifo.v
+1698813887 ../src1/rsp_s1_prep_mult.v
+1709514034 ../src1/rsp_s1_prep_ahb_mux.v
+1709173596 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../reg/rsp_s1_prep_glb_reg.v
+1709173586 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../reg/rsp_s1_prep_csr_reg.v
+1709121321 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../ahb_ic/src/rsp_s1_prep_ahbic_in.v
+1709121321 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../ahb_ic/src/rsp_s1_prep_ahbic.v
+1709121321 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../ahb_ic/src/rsp_s1_prep_ahbic_decS0.v
+1709121321 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../ahb_ic/src/rsp_s1_prep_ahbic_arb.v
+1709121321 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../ahb_ic/src/rsp_s1_prep_ahbic_lite.v
+1709121321 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../ahb_ic/src/rsp_s1_prep_ahbic_default_slave.v
+1709121321 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/../ahb_ic/src/rsp_s1_prep_ahbic_out.v
+1704985253 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h-undef.v
+1704985253 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_sync.v
+1704985253 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_bcm99.v
+1704985253 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_bcm21.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_core.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_mbiu.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_mfsm.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_dreg.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_begen.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_sbiu.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_sfsm.v
+1704985253 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_bcm02.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_bcm_params.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_constants.v
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/ahb2ahb_async/src/ahb2ahb_async_DW_ahb_h2h_cc_constants.v
+1707095261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib/src/rsp_s3_op_fsm.sv
+1708864889 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib/src/radix2_shared_tw_ce.sv
+1708864889 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib/src/pipelined_radix2_shared_tw.sv
+1707193206 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib/src/radix2_shared_tw.sv
+1709954072 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib/src/rsp_s2_op_fsm.sv
+1704985436 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib/src/rsp_irq.v
+1708864889 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib/src/radix2_opt.v
+1709885442 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/rsp_dsp_lib/src/radix2_3mul.v
+1704985262 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/sfifo_ctrl.sv
+1704985262 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/reg_afifo.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/afifo_ctrl.sv
+1704985262 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/reg_sfifo.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/fifo_standard.v
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/fifo_fwft.v
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/fifo_standard_large.v
+1708217916 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/fifo_fwft_large.v
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/fifo_fwft_with_update.v
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/fifo_standard_small.v
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/fifos/src/fifo_fwft_small.v
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/mux.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/frac_divider.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/data_select_2d.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/abs.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/log2.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/demux.sv
+1709690891 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/rsp_s1_op_fsm.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/interpolation.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/handshake_pipe_backward.v
+1707193227 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/delay_ce.v
+1707264629 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/tcbn28hpcplusbwp35p140hvt.v
+1708480148 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/complex_multiplier_3mult.v
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/handshake_pipe_forward.v
+1707193227 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/data_delay_ce.v
+1708525208 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/adder.v
+1707264629 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/mult.v
+1706968635 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/dsp_lib/src/data_delay.v
+1613788502 /home/tools/synopsys/syn/R-2020.09-SP4/dw/sim_ver/DW02_mult_5_stage.v
+1613788502 /home/tools/synopsys/syn/R-2020.09-SP4/dw/sim_ver/DW02_mult_3_stage.v
+1613788502 /home/tools/synopsys/syn/R-2020.09-SP4/dw/sim_ver/DW02_mult_6_stage.v
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/cdc_demet/src/cdc_demet_ares_m.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/cdc_demet/src/cdc_demet_aset.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/cdc_demet/src/cdc_demet_aset_m.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/cdc_demet/src/pulse_sync.sv
+1704985261 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/cdc_demet/src/cdc_demet_ares.sv
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/amba_if/src/axi_v4_if.sv
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/amba_if/src/axi_v4_rd_if.sv
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/amba_if/src/ahb_if_cfg.sv
+1704985254 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/amba_if/src/axi_v4_wr_if.sv
+1706092170 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/cores/amba_if/src/ahb2fifo.v
+1710149228 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_s1/sub/rsp_s1_prep/src/rsp_s1_prep_defines.vh
+1706081362 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header/rsp_common_defines.vh
+1704985436 /prj/chips/pvg/venus/yuyushan/jade_venus_3/vobs/ip/rsp/design/rsp_common/header/rsp_s1_op_info.svh
+1709388452 tb.f
+1598867968 /home/tools/synopsys/verdi/Q-2020.03-SP2/share/PLI/VCS/LINUX64/verdi.tab
+1599016237 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/vcsdp_lite.tab
+4
+1599016945 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/libvirsim.so
+1599016702 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/liberrorinf.so
+1599016660 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/libsnpsmalloc.so
+1599016699 /home/tools/synopsys/VCS2020/Q-2020.03-SP2/linux64/lib/libvfs.so
+1710150316 simv.daidir
+-1 partitionlib

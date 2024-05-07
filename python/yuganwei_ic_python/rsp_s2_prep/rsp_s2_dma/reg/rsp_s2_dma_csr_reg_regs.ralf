@@ -1,0 +1,448 @@
+system m_map0 {
+    bytes 4;
+    block rsp_s2_dma_csr_reg @'h0 {
+        bytes 4;
+        register GM0 @0x0 {
+            bytes 4;
+            field reserved @'h10 {
+                bits 16;
+            }
+            field SLEN @'h0 {
+                bits 16;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM SELN
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register GM1 @0x4 {
+            bytes 4;
+            field reserved @'he {
+                bits 18;
+            }
+            field SCNT @'h0 {
+                bits 14;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM SCNT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register GM2 @0x8 {
+            bytes 4;
+            field reserved @'he {
+                bits 18;
+            }
+            field FCNT @'h0 {
+                bits 14;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM FCNT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register GM3 @0xc {
+            bytes 4;
+            field reserved @'h8 {
+                bits 24;
+            }
+            field PCNT @'h0 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM PCNT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register GM4 @0x10 {
+            bytes 4;
+            field reserved @'h10 {
+                bits 16;
+            }
+            field OUTS_MAX @'h8 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM OUTS MAX
+                }
+            }
+            field BURST_LEN @'h0 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM BURST LEN
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register GM5 @0x14 {
+            bytes 4;
+            field GM5 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM BASE ADDRESS
+                }
+            }
+            doc {
+                GM BASE ADDRESSGM BASE ADDRESS
+            }
+        }
+        register GM6 @0x18 {
+            bytes 4;
+            field GM6 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM SIDX
+                }
+            }
+            doc {
+                GM SIDXGM SIDX
+            }
+        }
+        register GM7 @0x1c {
+            bytes 4;
+            field GM7 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM FIDX
+                }
+            }
+            doc {
+                GM FIDXGM FIDX
+            }
+        }
+        register GM8 @0x20 {
+            bytes 4;
+            field reserved @'hc {
+                bits 20;
+            }
+            field TIMEOUT_CNT @'h0 {
+                bits 12;
+                access rw;
+                hard_reset 'h7ff;
+                doc {
+                    GM TIME OUT CNT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register GM9 @0x24 {
+            bytes 4;
+            field reserved @'h8 {
+                bits 24;
+            }
+            field AXI_ID @'h0 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    GM AXI ID
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM0 @0x30 {
+            bytes 4;
+            field reserved @'h10 {
+                bits 16;
+            }
+            field SLEN @'h0 {
+                bits 16;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM SELN
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM1 @0x34 {
+            bytes 4;
+            field reserved @'he {
+                bits 18;
+            }
+            field SCNT @'h0 {
+                bits 14;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM SCNT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM2 @0x38 {
+            bytes 4;
+            field reserved @'he {
+                bits 18;
+            }
+            field FCNT @'h0 {
+                bits 14;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM FCNT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM3 @0x3c {
+            bytes 4;
+            field reserved @'h8 {
+                bits 24;
+            }
+            field PCNT @'h0 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM PCNT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM4 @0x40 {
+            bytes 4;
+            field reserved @'h10 {
+                bits 16;
+            }
+            field OUTS_MAX @'h8 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM OUTS MAX
+                }
+            }
+            field BURST_LEN @'h0 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM BURST LEN
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM5 @0x44 {
+            bytes 4;
+            field reserved @'h1c {
+                bits 4;
+            }
+            field BASE_ADDR @'h0 {
+                bits 28;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM BASE ADDRESS
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM6 @0x48 {
+            bytes 4;
+            field reserved @'h1c {
+                bits 4;
+            }
+            field SIDX @'h0 {
+                bits 28;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM SIDX
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM7 @0x4c {
+            bytes 4;
+            field reserved @'h1c {
+                bits 4;
+            }
+            field FIDX @'h0 {
+                bits 28;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM FIDX
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM8 @0x50 {
+            bytes 4;
+            field reserved @'hc {
+                bits 20;
+            }
+            field TIMEOUT_CNT @'h0 {
+                bits 12;
+                access rw;
+                hard_reset 'h7ff;
+                doc {
+                    LM TIME OUT CNT
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register LM9 @0x54 {
+            bytes 4;
+            field reserved @'h8 {
+                bits 24;
+            }
+            field AXI_ID @'h0 {
+                bits 8;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    LM AXI ID
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register EN @0x58 {
+            bytes 4;
+            field reserved @'h9 {
+                bits 23;
+            }
+            field DECOMP @'h8 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    ENABLE DECOMPRESS
+                }
+            }
+            field reserved @'h1 {
+                bits 7;
+            }
+            field INDEX @'h0 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    ENABLE INDEX
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register INDEX @0x5c {
+            bytes 4;
+            field reserved @'h1c {
+                bits 4;
+            }
+            field BASE_ADDR @'h0 {
+                bits 28;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    INDEX BASE ADDRESS
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        register FSM @0x60 {
+            bytes 4;
+            field reserved @'h11 {
+                bits 15;
+            }
+            field MEM_CLAIM @'h10 {
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    MEM CLAIM
+                }
+            }
+            field MEM_PIPO_NUM_WR @'hd {
+                bits 3;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    MEM PING PONG WR NUM
+                }
+            }
+            field MEM_PIPO_NUM_RD @'ha {
+                bits 3;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    MEM PING PONG RD NUM
+                }
+            }
+            field MEM_BASE_IDX_WR @'h5 {
+                bits 5;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    MEM PING PONG BASE WRITE
+                }
+            }
+            field MEM_BASE_IDX_RD @'h0 {
+                bits 5;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    MEM PING PONG BASE READ
+                }
+            }
+            doc {
+                NoneNone
+            }
+        }
+        doc {
+            rsp_s2_dma_csr_reg_registers
+        }
+    }
+}
+

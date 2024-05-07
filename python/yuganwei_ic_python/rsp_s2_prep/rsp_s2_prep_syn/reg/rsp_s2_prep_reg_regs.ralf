@@ -1,0 +1,500 @@
+system m_map0 {
+    bytes 4;
+    block rsp_s2_prep_reg @'h0 {
+        bytes 4;
+        register i_dc_est_cmp_cnt @0x0000 {
+            bytes 4;
+            field i_dc_est_cmp_cnt @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_dc_est_cmp_cnt
+                }
+            }
+            doc {
+                i_dc_est_cmp_cnti_dc_est_cmp_cnt
+            }
+        }
+        register i_dc_est_chp_cnt @0x0004 {
+            bytes 4;
+            field i_dc_est_chp_cnt @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_dc_est_chp_cnt
+                }
+            }
+            doc {
+                i_dc_est_chp_cnti_dc_est_chp_cnt
+            }
+        }
+        register i_dc_est_frm_cnt @0x0008 {
+            bytes 4;
+            field i_dc_est_frm_cnt @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_dc_est_frm_cnt
+                }
+            }
+            doc {
+                i_dc_est_frm_cnti_dc_est_frm_cnt
+            }
+        }
+        register i_dc_est_scale @0x000C {
+            bytes 4;
+            field i_dc_est_scale @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_dc_est_scale
+                }
+            }
+            doc {
+                i_dc_est_scalei_dc_est_scale
+            }
+        }
+        register i_dc_config_mode @0x0010 {
+            bytes 4;
+            field i_dc_config_mode @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_dc_config_mode
+                }
+            }
+            doc {
+                i_dc_config_modei_dc_config_mode
+            }
+        }
+        register i_dc_u @0x0014 {
+            bytes 4;
+            field i_dc_u @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_dc_u
+                }
+            }
+            doc {
+                i_dc_ui_dc_u
+            }
+        }
+        register o_dc_u @0x0018 {
+            bytes 4;
+            field o_dc_u @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    o_dc_u
+                }
+            }
+            doc {
+                o_dc_uo_dc_u
+            }
+        }
+        register i_intf_est_scale @0x001C {
+            bytes 4;
+            field i_intf_est_scale @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_intf_est_scale
+                }
+            }
+            doc {
+                i_intf_est_scalei_intf_est_scale
+            }
+        }
+        register i_intf_config_mode @0x0020 {
+            bytes 4;
+            field i_intf_config_mode @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_intf_config_mode
+                }
+            }
+            doc {
+                i_intf_config_modei_intf_config_mode
+            }
+        }
+        register i_intf_cmp @0x0024 {
+            bytes 4;
+            field i_intf_cmp @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_intf_cmp
+                }
+            }
+            doc {
+                i_intf_cmpi_intf_cmp
+            }
+        }
+        register o_intf_cmp @0x0028 {
+            bytes 4;
+            field o_intf_cmp @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    o_intf_cmp
+                }
+            }
+            doc {
+                o_intf_cmpo_intf_cmp
+            }
+        }
+        register i_combination_config_mode @0x002C {
+            bytes 4;
+            field i_combination_config_mode @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_combination_config_mode
+                }
+            }
+            doc {
+                i_combination_config_modei_combination_config_mode
+            }
+        }
+        register i_phase_config_mode @0x0030 {
+            bytes 4;
+            field i_phase_config_mode @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_phase_config_mode
+                }
+            }
+            doc {
+                i_phase_config_modei_phase_config_mode
+            }
+        }
+        register i_phase_w @0x0034 {
+            bytes 4;
+            field i_phase_w @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_phase_w
+                }
+            }
+            doc {
+                i_phase_wi_phase_w
+            }
+        }
+        register i_phase_coe @0x0038 {
+            bytes 4;
+            field i_phase_coe @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_phase_coe
+                }
+            }
+            doc {
+                i_phase_coei_phase_coe
+            }
+        }
+        register i_data_formatter @0x003C {
+            bytes 4;
+            field i_data_formatter @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_data_formatter
+                }
+            }
+            doc {
+                i_data_formatteri_data_formatter
+            }
+        }
+        register i_frame_num_format @0x0040 {
+            bytes 4;
+            field i_frame_num_format @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    i_frame_num_format
+                }
+            }
+            doc {
+                i_frame_num_formati_frame_num_format
+            }
+        }
+        register s1_prep_debug_0 @0x0044 {
+            bytes 4;
+            field s1_prep_debug_0 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_0
+                }
+            }
+            doc {
+                s1_prep_debug_0s1_prep_debug_0
+            }
+        }
+        register s1_prep_debug_1 @0x0048 {
+            bytes 4;
+            field s1_prep_debug_1 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_1
+                }
+            }
+            doc {
+                s1_prep_debug_1s1_prep_debug_1
+            }
+        }
+        register s1_prep_debug_2 @0x004C {
+            bytes 4;
+            field s1_prep_debug_2 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_2
+                }
+            }
+            doc {
+                s1_prep_debug_2s1_prep_debug_2
+            }
+        }
+        register s1_prep_debug_3 @0x0050 {
+            bytes 4;
+            field s1_prep_debug_3 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_3
+                }
+            }
+            doc {
+                s1_prep_debug_3s1_prep_debug_3
+            }
+        }
+        register s1_prep_debug_4 @0x0054 {
+            bytes 4;
+            field s1_prep_debug_4 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_4
+                }
+            }
+            doc {
+                s1_prep_debug_4s1_prep_debug_4
+            }
+        }
+        register s1_prep_debug_5 @0x0058 {
+            bytes 4;
+            field s1_prep_debug_5 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_5
+                }
+            }
+            doc {
+                s1_prep_debug_5s1_prep_debug_5
+            }
+        }
+        register s1_prep_debug_6 @0x005C {
+            bytes 4;
+            field s1_prep_debug_6 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_6
+                }
+            }
+            doc {
+                s1_prep_debug_6s1_prep_debug_6
+            }
+        }
+        register s1_prep_debug_7 @0x0060 {
+            bytes 4;
+            field s1_prep_debug_7 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_7
+                }
+            }
+            doc {
+                s1_prep_debug_7s1_prep_debug_7
+            }
+        }
+        register s1_prep_debug_8 @0x0064 {
+            bytes 4;
+            field s1_prep_debug_8 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_8
+                }
+            }
+            doc {
+                s1_prep_debug_8s1_prep_debug_8
+            }
+        }
+        register s1_prep_debug_9 @0x0068 {
+            bytes 4;
+            field s1_prep_debug_9 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_9
+                }
+            }
+            doc {
+                s1_prep_debug_9s1_prep_debug_9
+            }
+        }
+        register s1_prep_debug_10 @0x006C {
+            bytes 4;
+            field s1_prep_debug_10 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_10
+                }
+            }
+            doc {
+                s1_prep_debug_10s1_prep_debug_10
+            }
+        }
+        register s1_prep_debug_11 @0x0070 {
+            bytes 4;
+            field s1_prep_debug_11 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_11
+                }
+            }
+            doc {
+                s1_prep_debug_11s1_prep_debug_11
+            }
+        }
+        register s1_prep_debug_12 @0x0074 {
+            bytes 4;
+            field s1_prep_debug_12 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_12
+                }
+            }
+            doc {
+                s1_prep_debug_12s1_prep_debug_12
+            }
+        }
+        register s1_prep_debug_13 @0x0078 {
+            bytes 4;
+            field s1_prep_debug_13 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_13
+                }
+            }
+            doc {
+                s1_prep_debug_13s1_prep_debug_13
+            }
+        }
+        register s1_prep_debug_14 @0x007C {
+            bytes 4;
+            field s1_prep_debug_14 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_14
+                }
+            }
+            doc {
+                s1_prep_debug_14s1_prep_debug_14
+            }
+        }
+        register s1_prep_debug_15 @0x0080 {
+            bytes 4;
+            field s1_prep_debug_15 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_15
+                }
+            }
+            doc {
+                s1_prep_debug_15s1_prep_debug_15
+            }
+        }
+        register s1_prep_debug_16 @0x0084 {
+            bytes 4;
+            field s1_prep_debug_16 @'h0 {
+                bits 32;
+                access rw;
+                hard_reset 'h0;
+                doc {
+                    s1_prep_debug_16
+                }
+            }
+            doc {
+                s1_prep_debug_16s1_prep_debug_16
+            }
+        }
+        register last_register @0x0088 {
+            bytes 4;
+            field last_register @'h0 {
+                bits 32;
+                access ro;
+                hard_reset 'h0;
+                doc {
+                    last_register
+                }
+            }
+            doc {
+                last_registerlast_register
+            }
+        }
+        doc {
+            rsp_s2_prep_reg_registers
+        }
+    }
+}
+

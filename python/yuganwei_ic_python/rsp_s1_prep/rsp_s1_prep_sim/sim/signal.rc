@@ -1,0 +1,113 @@
+Magic 271485
+Revision Verdi_Q-2020.03-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 2560 427 370 86
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim/tb_common_wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 14377.354463 14942.439345
+cursor 14487.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 58
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1" -e FALSE
+activeDirFile "" "/home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/sim/tb_common_wave.fsdb"
+addSignal -h 15 /commmon_tb/u_rsp_s1_prep/rst_n
+addSignal -h 15 -holdScope clk
+addSignal -h 15 -holdScope i_cmd_req
+addSignal -h 15 -holdScope i_cmd_info
+addSignal -h 15 -holdScope o_cmd_ack
+addSignal -h 15 -holdScope i_start_req_op[15:0]
+addSignal -h 15 -holdScope i_start_info_op[15:0]
+addSignal -h 15 -holdScope o_start_ack
+addSignal -h 15 -holdScope o_finish_req
+addSignal -h 15 -holdScope o_finish_info
+addSignal -h 15 -holdScope i_finish_ack_op[15:0]
+addSignal -h 15 -holdScope i_init
+addSignal -h 15 -holdScope i_reset
+addSignal -h 15 -holdScope i_stop
+addSignal -h 15 -holdScope i_rerun
+addSignal -h 15 -holdScope o_mem_req
+addSignal -h 15 -holdScope o_mem_bm[13:0]
+addSignal -h 15 -holdScope i_mem_ack
+addSignal -h 15 -holdScope i_m0_rd_data_A[127:0]
+addSignal -h 15 -holdScope o_m0_rd_en_A
+addSignal -h 15 -holdScope o_m0_rd_addr_A[17:0]
+addSignal -h 15 -holdScope o_m1_wea_A[15:0]
+addSignal -h 15 -holdScope o_m1_wr_data_A[127:0]
+addSignal -h 15 -holdScope o_m1_wr_en_A
+addSignal -h 15 -holdScope o_m1_wr_addr_A[17:0]
+addSubGroup "ahb_cfg(slave)"
+addSignal -h 15 /commmon_tb/u_rsp_s1_prep/hclk
+addSignal -h 15 -holdScope hreset
+addSignal -h 15 /commmon_tb/u_rsp_s1_prep/ahb_cfg/hsel
+addSignal -h 15 -holdScope htrans[1:0]
+addSignal -h 15 -holdScope haddr[31:0]
+addSignal -h 15 -holdScope hburst[2:0]
+addSignal -h 15 -holdScope hsize[2:0]
+addSignal -h 15 -holdScope hwdata[31:0]
+addSignal -h 15 -holdScope hwrite
+addSignal -h 15 -holdScope hreadyin
+addSignal -h 15 -holdScope hrdata[31:0]
+addSignal -h 15 -holdScope hresp[1:0]
+addSignal -h 15 -holdScope hready
+addSignal -h 15 /commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_read_ram/clk
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -holdScope CSR_BURST_LEN[4:0]
+addSignal -h 15 -holdScope CSR_EST_SMP_CNT[12:0]
+addSignal -h 15 -holdScope CSR_EST_CHP_CNT[8:0]
+addSignal -h 15 -holdScope CSR_EST_FRM_CNT[2:0]
+addSignal -h 15 -holdScope CSR_RD_START_ADDR[17:0]
+addSignal -h 15 -holdScope i_start
+addSignal -h 15 -holdScope i_m0_rd_data[127:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope o_m0_rd_addr[17:0]
+addSignal -h 15 -holdScope o_m0_rd_en
+addSignal -h 15 -holdScope o_data[127:0]
+addSignal -h 15 -holdScope o_data_valid
+addSignal -h 15 -holdScope o_data_last
+endSubGroup "ahb_cfg(slave)"
+addGroup "G2"
+addSignal -h 15 /commmon_tb/u_rsp_s1_prep/u_rsp_s1_prep_core/u_rsp_s1_prep_top/rst_n
+addSignal -h 15 -holdScope clk
+addSignal -h 15 -holdScope x0_valid
+addSignal -h 15 -holdScope x_u_data[0][15:0]
+addGroup "G3"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

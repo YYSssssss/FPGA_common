@@ -1,0 +1,8 @@
+current_design rsp_s2_dma_wr
+
+clock -name clk -period 2 
+clock -name hclk -period 10
+
+reset -name rst_n -async -value 0 -soft
+reset -name hreset -async -value 1 -soft
+
