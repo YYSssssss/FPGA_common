@@ -27,16 +27,28 @@ module rd_txt_data_tb #(
   parameter FILE_ADDR        = "/home/users/yuyushan/work/XXX.txt",
   parameter DELAY_BIT_DEPTH  = 0,
   parameter DELAY_DATA_DEPTH = 0,
-  parameter DELAY_ADDR_DEPTH = 0
+  parameter DELAY_ADDR_DEPTH = 0,
+  parameter CFG_X_NUM        = 3840,
+  parameter CFG_Y_NUM        = 2160,
+  parameter VEDIO_DATA_WIDTH = 64
 )
 (
   input                          clk        ,
   input                          rst_n      ,
+  
   input                          rd_en      ,
-
   output                         rd_valid   ,
   output [DATA_WIDTH-1:0]        rd_data    ,
-  output [31:0]                  rd_addr       
+  output [31:0]                  rd_addr    ,
+  
+  output logic  [63 : 0]         video_tdata  ,
+  output logic                   video_tvalid ,
+  input  logic                   video_tready ,
+  output logic                   video_tuser  ,
+  output logic                   video_tlast  ,
+  output logic                   video_clk
+  
+    
 );
 
 //********************  localparam  ********************//
@@ -164,6 +176,35 @@ delay_data_tb #(
   .o_y0  (rd_addr)
 );
 
+
+//csi_to_axis #(
+//    .CFG_X_NUM (CFG_X_NUM) ,
+//    .CFG_Y_NUM (CFG_Y_NUM)  
+//) u_csi_to_axis(
+//    .clk                 (clk),
+//    .rstn                (rst_n),
+//    .m_axis_video_tdata  (video_tdata ),
+//    .m_axis_video_tvalid (video_tvalid),
+//    .m_axis_video_tready (video_tready),
+//    .m_axis_video_tuser  (video_tuser ),
+//    .m_axis_video_tlast  (video_tlast ),
+//    .m_axis_video_clk    (video_clk   )
+//);
+
+debug_fifo_data_gen U_debug_fifo_data_gen(
+  .aclk             (clk),
+  .aresetn          (rst_n),
+ 
+  .m_axis_tdata     (video_tdata), 
+  .m_axis_tvalid    (video_tvalid),
+  .m_axis_tready    (video_tready),
+  .m_axis_tuser     (video_tuser),
+  .m_axis_tlast     (video_tlast),
+  .m_axis_tkeep     (),
+
+  .done             ()
+);
+
 endmodule
 
 
@@ -226,5 +267,284 @@ always @(posedge clk or negedge rst_n) begin
   end
 end
 assign o_y0 = (DEPTH==0) ? i_x0 : s_delay_data[DEPTH-1];
+
+endmodule
+
+
+
+
+
+module debug_fifo_data_gen #(
+  parameter integer C_MASTER_ID = 0,
+  parameter width            = 64,
+  parameter CFG_X_NUM        = 3840 ,//屏幕X方向像素点数
+  parameter CFG_Y_NUM        = 2320 ,//屏幕Y方向像素点数
+  parameter WAIT_NUM         = 10
+)
+(
+  /**************** Stream Signals ****************/
+  output logic                            m_axis_tvalid ,
+  input  logic                            m_axis_tready ,
+  output logic [width-1:0]                m_axis_tdata  ,
+  output logic [width/8-1:0]              m_axis_tkeep  ,
+  output logic                            m_axis_tlast  ,
+  output logic                            m_axis_tuser  ,
+  /**************** System Signals ****************/
+  input  logic                            aclk          ,
+  input  logic                            aresetn       ,
+  /**************** Done Signal ****************/
+  output logic                            done
+);
+
+  /**************** Local Parameters ****************/
+  localparam integer  P_M_TDATA_BYTES = width / 8;
+  localparam integer  P_M_TUSER_BYTES = 1;
+  localparam [8-1:0]  P_M_PACKET_SIZE = (16 - 1);
+  localparam [16-1:0] P_M_PACKET_NUM = 16;
+  localparam [16-1:0] P_M_SINGLES_NUM = 256;
+  localparam [17-1:0] P_M_DONE_NUM = 255;
+
+  /**************** Internal Wires/Regs ****************/
+  genvar  i;
+  reg [8*P_M_TDATA_BYTES-1:0]  tdata_i = {P_M_TDATA_BYTES{8'h00}};
+  reg [16-1:0] pcnt_i = 16'h0000;
+  reg [16-1:0] tcnt_i = 16'h0000;
+  wire         done_i;
+  wire         transfer_i;
+  wire         areset = ~aresetn;
+  reg [2-1:0]  areset_i = 2'b00;
+  reg [31:0]   pixel_cnt = 0;
+  reg [31:0]   line_cnt  = 0;
+  reg [31:0]   wait_cnt  = 0;
+
+  /**************** Assign Signals ****************/
+  assign m_axis_tkeep = {P_M_TDATA_BYTES{1'b1}};
+  assign m_axis_tdata = tdata_i;
+  assign transfer_i = m_axis_tready && m_axis_tvalid;
+
+    assign done_i = (transfer_i && (pcnt_i == P_M_DONE_NUM - 1'b1) && (tcnt_i == P_M_PACKET_SIZE));
+
+
+  // Register Reset
+  always @(posedge aclk) begin
+    areset_i <= {areset_i[0], areset};
+  end
+
+  //**********************************************
+  // TDATA
+  //**********************************************
+
+//  generate
+//    for(i=0; i<P_M_DONE_NUM; i=i+1) begin: tdata_incr_g
+ always @(posedge aclk) begin
+   if(areset) begin
+     tdata_i <= 'h00;
+   end
+   else if(tdata_i == 'd959) begin
+     tdata_i <= 'h0;
+   end
+   else begin
+     tdata_i <= (transfer_i) ? tdata_i + 1'b1 : tdata_i;
+   end
+ end
+//    end
+//  endgenerate
+
+  //**********************************************
+  // TUSER
+  //**********************************************
+
+
+assign m_axis_tuser = (line_cnt == 'b0 & pixel_cnt == 'b0 & m_axis_tvalid & m_axis_tready);
+
+  //**********************************************
+  // TVALID
+  //**********************************************
+  always @(posedge aclk) begin
+    if(areset) begin
+      m_axis_tvalid <= 1'b0;
+    end
+    else
+    begin
+      // TVALID
+//      if(done_i) begin
+//        m_axis_tvalid <= 1'b0;
+//      end
+//      else 
+        if(areset == 'd0) begin
+        m_axis_tvalid <= 1'b1;
+      end
+      else begin
+        m_axis_tvalid <= m_axis_tvalid;
+      end
+    end
+  end
+
+  //**********************************************
+  // TLAST
+  //**********************************************
+assign m_axis_tlast = (pixel_cnt == CFG_X_NUM/4 - 1) ? 1'b1 : 1'b0;
+
+
+  //**********************************************
+  // PCNT, TCNT, DONE
+  //**********************************************
+  always@(posedge aclk) begin
+    if(areset)
+        wait_cnt <= 0;
+    else if(wait_cnt >= WAIT_NUM)
+        wait_cnt <= wait_cnt;
+    else
+        wait_cnt <= wait_cnt + 1'b1;
+end
+  
+  always@(posedge aclk) begin
+    if(areset)
+        pixel_cnt <= 0;
+    else if(m_axis_tvalid & m_axis_tready)begin
+        if(pixel_cnt < CFG_X_NUM/4 - 1)   
+              pixel_cnt <= pixel_cnt +1;
+        else
+            pixel_cnt <= 'b0;
+    end
+ end
+ 
+ always@(posedge aclk) begin
+    if(areset)
+        line_cnt <= 0;
+    else if(m_axis_tvalid & m_axis_tready)begin
+            if(pixel_cnt == CFG_X_NUM/4 - 1)begin
+                if(line_cnt < CFG_Y_NUM - 1)
+                    line_cnt <= line_cnt + 1;
+                else
+                    line_cnt <= 0;
+            end
+    end
+end
+  
+  
+  always @(posedge aclk) begin
+    if(areset) begin
+      pcnt_i <= 16'h0000;
+      tcnt_i <= 16'h0000;
+      done <= 1'b0;
+    end
+    else
+    begin
+      // DONE
+      done <= (done_i) ? 1'b1 : done;
+
+      // Increment counters
+      tcnt_i <= (transfer_i) ? (m_axis_tlast ? 16'h0000 : (tcnt_i + 1'b1)) : tcnt_i;
+      pcnt_i <= (transfer_i && m_axis_tlast) ? (pcnt_i + 1'b1) : pcnt_i;
+    end
+  end
+
+endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+module csi_to_axis #(
+    parameter CFG_X_NUM        = 3840 ,//屏幕X方向像素点数
+    parameter CFG_Y_NUM        = 2160 , //屏幕Y方向像素点数
+    parameter VEDIO_DATA_WIDTH = 64
+)(
+    input clk,
+    input rstn,
+//AXIS 接口，输出到video out IP核
+    output logic  [VEDIO_DATA_WIDTH : 0]   m_axis_video_tdata  ,
+    output logic             m_axis_video_tvalid ,
+    input  logic             m_axis_video_tready ,
+    output logic             m_axis_video_tuser  ,
+    output logic             m_axis_video_tlast  ,
+    output logic             m_axis_video_clk
+    );
+
+    parameter WAIT_NUM = 20;
+
+    reg [31:0] pixel_cnt = 0;
+    reg [31:0] line_cnt  = 0;
+    reg [31:0] wait_cnt  = 0;
+    reg tvalid;
+    
+    
+assign m_axis_video_clk =    clk;  
+
+always@(posedge clk) begin
+    if(!rstn) begin
+        tvalid <= 0;
+        m_axis_video_tvalid <= 0;
+    end
+    else if(wait_cnt < WAIT_NUM || !m_axis_video_tready) begin
+        tvalid <= 0;
+        m_axis_video_tvalid <= 0;
+    end
+    else begin
+        tvalid <= 1;
+        m_axis_video_tvalid <= 1;
+    end
+ end
+
+always@(posedge clk) begin
+    if(!rstn)
+        wait_cnt <= 0;
+    else if(wait_cnt >= WAIT_NUM)
+        wait_cnt <= wait_cnt;
+    else
+        wait_cnt <= wait_cnt + 1'b1;
+end
+
+
+always@(posedge clk) begin
+    if(!rstn)
+        m_axis_video_tdata <= 0;
+    else if(wait_cnt < WAIT_NUM)
+        m_axis_video_tdata <= 0;
+    else if(pixel_cnt == CFG_X_NUM/4 - 1)
+        m_axis_video_tdata <= 0;
+    else if(tvalid & m_axis_video_tready)
+        m_axis_video_tdata <= m_axis_video_tdata + 1;
+end
+
+always@(posedge clk) begin
+    if(!rstn)
+        pixel_cnt <= 0;
+    else if(wait_cnt < WAIT_NUM)
+        pixel_cnt <= 0;
+    else if(tvalid & m_axis_video_tready)begin
+        if(pixel_cnt < CFG_X_NUM/4 - 1)   
+              pixel_cnt <= pixel_cnt +1;
+        else
+            pixel_cnt <= 'b0;
+    end
+ end
+ 
+ always@(posedge clk) begin
+    if(!rstn)
+        line_cnt <= 0;
+    else if(wait_cnt < WAIT_NUM)
+        line_cnt <= 0;
+    else if(tvalid & m_axis_video_tready)begin
+            if(pixel_cnt == CFG_X_NUM/4 - 1)begin
+                if(line_cnt < CFG_Y_NUM - 1)
+                    line_cnt <= line_cnt + 1;
+                else
+                    line_cnt <= 0;
+            end
+    end
+end
+
+assign m_axis_video_tuser = (line_cnt == 'b0 & pixel_cnt == 'b0 & tvalid & m_axis_video_tready);
+    
+assign m_axis_video_tlast= (pixel_cnt == CFG_X_NUM/4 - 1) ? 1'b1 : 1'b0;
 
 endmodule
