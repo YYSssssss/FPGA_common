@@ -12,33 +12,52 @@
 //-----------------------------------------------------------------------------
 
 `timescale 1ns / 1ps
-//`include "rsp_s1_prep_define.svh"
-//`include "rsp_s1_prep_op_info.svh"
 
 module commmon_tb;
 
 /////////////////////////// parameter ////////////////////////////
-parameter debug_fifo_data_gen_width = 16;
-parameter abs_width = 16;
-parameter READ_RAM_WIDTH = 128;
-parameter SAMPLE_WIDTH   = 32;
-parameter READ_DATA_NUM  = 1024;
-parameter NUM  = 8;
-parameter DATA_WIDTH  = 16;
-parameter CNT_DATA = 1024-1; 
-parameter PACKET_SELECT = 3;
+parameter txt_input = "";
 
-localparam DELAY          = 2;
-localparam INTERVAL       = 50;
-localparam DATA_NUM       = 1024;
-localparam INIT_ADDR      = 0;
-localparam ADD_ADDR       = 1;
-localparam END_ADDR       = 1024;
+localparam mapbase  = 32'h10000;
+localparam mapwidth = 12'd3840;
+localparam mapheight= 12'd2160;
+localparam mapstride= 15'd15360;
+localparam map1= $clog2(mapwidth*mapheight);
+localparam imgwidth = 12'd3840;
+localparam imgheight= 12'd2160;
+localparam imgbase  = 32'h20000;
+localparam imgstride= 14'd7680;
+localparam outbase  = 32'h30000;
+localparam outstride= 14'd7680;
+localparam start_x  = 12'd0;
+localparam start_y  = 12'd0;
+localparam end_x    = 12'd3839;
+localparam end_y    = 12'd2159;   
+localparam INTEGER_WIDTH = 12; 
+
+localparam IMAGE_WIDTHBIT    = 12    ;
+localparam IMAGE_HEIGHTBIT   = 12    ;
+localparam DECIMAL_WIDTH     =  4    ;
+localparam CMD_WIDTH         = IMAGE_WIDTHBIT+DECIMAL_WIDTH; 
+localparam AXIADDR_WIDTH     = 32    ;
+localparam AXIDATA_WIDTH     = 128   ;
+localparam BURSTBIT          = 8     ; 
+localparam IMAGE_STRIDEBIT   = IMAGE_WIDTHBIT + 2;
+
+localparam CACHE_WAY_NUM     =  4    ;
+localparam TAG_WIDTH         = 11    ;
+localparam INDEX_WIDTH       =  6    ;
+localparam OFFSET_WIDTH      =  8    ;    
+localparam CACHE_NUM         =  2    ;
+localparam PIXEL_WIDTH       = 16    ;
 
 /////////////////////////// logic ////////////////////////////
 //clk & rstn
 logic rst_n;
+logic clk_12p5m;
+logic clk_25m;
 logic clk_50m;
+logic clk_60m;
 logic clk_75m;
 logic clk_100m;
 logic clk_150m;
@@ -48,14 +67,10 @@ logic clk_300m;
 logic clk_400m;
 logic clk_500m;
 logic clk;
+
 logic start;
-logic finish;
-logic mem_req;
-logic mem_req_ack;
-logic done;
-logic done_ack;
-
-
+logic start_d0;
+logic start_d1;
 
 ///////////////////////////////////////////////////////
 
@@ -63,7 +78,9 @@ initial begin
 #0  
 rst_n=0;
 clk=0;
+clk_12p5m=0;
 clk_50m=0;
+clk_60m=0;
 clk_75m=0;
 clk_100m=0;
 clk_150m=0;
@@ -72,435 +89,187 @@ clk_250m=0;
 clk_300m=0;
 clk_400m=0;
 clk_500m=0;
-#100 
-rst_n=1;
+start=0;
+
+#100
+rst_n = 1;
+#100
+start = 1;
+
 
 #25000
-$stop;
-
+// $stop;
+$finish;
 end
 
-always #1  clk      = ~clk; // 200M
-always #10   clk_50m  = ~clk_50m;  // 50M
-always #6.67 clk_75m  = ~clk_75m;  // 75M
-always #5    clk_100m = ~clk_100m; // 100M
-always #3.33 clk_150m = ~clk_150m; // 150M
-always #2.5  clk_200m = ~clk_200m; // 200M
-always #2    clk_250m = ~clk_250m; // 250M
-always #1.67 clk_300m = ~clk_300m; // 300M
-always #1.25 clk_400m = ~clk_400m; // 400M
-always #1    clk_500m = ~clk_500m; // 500M
+always #1    clk        = ~clk;        // 200M
+always #40   clk_12p5m  = ~clk_12p5m;  // 12.5M
+always #10   clk_50m    = ~clk_50m;    // 50M
+always #8.33 clk_60m    = ~clk_60m;    // 50M
+always #6.67 clk_75m    = ~clk_75m;    // 75M
+always #5    clk_100m   = ~clk_100m;   // 100M
+always #3.33 clk_150m   = ~clk_150m;   // 150M
+always #2.5  clk_200m   = ~clk_200m;   // 200M
+always #2    clk_250m   = ~clk_250m;   // 250M
+always #1.67 clk_300m   = ~clk_300m;   // 300M
+always #1.25 clk_400m   = ~clk_400m;   // 400M
+always #1    clk_500m   = ~clk_500m;   // 500M
 
-always @(posedge clk or negedge rst_n) begin
-  if(rst_n == 1'b0)begin
-    start <= 0;
-  end
-  else begin
-    if(address == 'd130)
-      start <= 1;
-    else if(finish || o_finish)
-      start <= 1;
-    else
-      start <= 0;
-  end
+
+//******************** map_ctrl ********************//
+//logic 
+logic [0:128-1]    mem [2073600-1:0];
+
+logic           frame_pos         ; 
+logic           map_ready         ; 
+logic           map_req           ;
+logic [32-1:0]  map_addr          ;
+logic [8-1:0]   map_burst         ;
+logic           mapbuffer_empty   ;
+logic           map_rd            ;
+logic [128-1:0] map_data          ;
+logic [2-1:0]   map_cmd_rd        ;
+logic [2-1:0]   map_cmd_empty     ;
+logic [16-1:0]  map_cmd_y [0:2-1] ;
+logic [16-1:0]  map_cmd_x [0:2-1] ;
+
+initial begin
+    $readmemh("/home/ssm/Desktop/yys/sim/map_ctrl_sim/tb/map_3840x2160_U16_12Q4.txt", mem);
+    // $readmemh("/home/users/yuyushan/work/rsp_s1_prep/rsp_s1_prep_sim/input_data/rsp_s1_op_mst_a_0.txt", mem_1024x128);
 end
- 
-//******************** chirp_processing_top ********************//
-logic [128-1:0]                 o_m1_wr_data  ;
-logic [32-1:0]                  o_m1_wr_addr ;
-logic                           o_m1_wr_en    ;
-logic                           o_m1_wr_wea   ;
 
-logic [128-1:0]                 i_m0_rd_data  ;
-logic [128-1:0]                 s_m0_rd_data  ;
-logic [32-1:0]                  o_m0_rd_addr  ;
-logic                           o_m0_rd_en   ;
+always @ (posedge clk_300m or negedge rst_n) begin
+    if(!rst_n) begin
+        start_d0 <= 'd0;
+    end
+    else begin
+        start_d0 <= start;
+        start_d1 <= start_d0;
+    end
+end
+assign frame_pos = start_d0 && ~start_d1;
 
-logic [128-1:0]                 rd_data1  ;
-logic [32-1:0]                  rd_addr1  ;
-logic                           rd_en1   ;
 
-logic [128-1:0]                 rd_ram_data;
-logic                           rd_ram_valid;
-
-tpram_1024x128 gen_data (
-  .clka   (clk_500m),      // input wire clka
-  .ena    ('b0),      // input wire ena
-  .wea    ('b0),      // input wire [0 : 0] wea
-  .addra  ('b0),      // input wire [9 : 0] addra
-  .dina   ('d0      ),      // input wire [127 : 0] dina
-  .clkb   (clk_500m ),      // input wire clkb
-  .enb    (o_m0_rd_en),      // input wire enb
-  .addrb  (o_m0_rd_addr),      // input wire [9 : 0] addrb
-  .doutb  (s_m0_rd_data)       // output wire [127 : 0] doutb
+    map_ctrl                        #(
+    .AXIADDR_WIDTH                  (AXIADDR_WIDTH),
+    .IMAGE_WIDTHBIT                 (IMAGE_WIDTHBIT),
+    .IMAGE_HEIGHTBIT                (IMAGE_HEIGHTBIT),
+    .BURSTBIT                       (BURSTBIT),
+    .OUTSTANDING_NUM                (4),
+    .AXIDATA_WIDTH                  (AXIDATA_WIDTH),
+    .FIFO_DEPTH                     (261),//(37),
+    .DECIMAL_WIDTH                  (DECIMAL_WIDTH),   
+    .CACHE_NUM                      (CACHE_NUM)
+)
+    u0_map_ctrl(
+    .clk                            (clk_300m ),
+    .rstn                           (rst_n),
+    .frame_pos                      (frame_pos),
+    .mapbase                        (mapbase  ),
+    .mapwidth                       (mapwidth ),
+    .mapheight                      (mapheight),    
+    .mapstride                      (mapstride),
+    
+    .start_x                        (start_x  ),
+    .start_y                        (start_y  ),
+    .end_x                          (end_x    ),
+    .end_y                          (end_y    ), 
+       
+    .map_ready                      (map_ready      ),
+    .map_req                        (map_req        ),
+    .map_addr                       (map_addr       ),
+    .map_burst                      (map_burst      ),
+    .mapbuffer_empty                (mapbuffer_empty),
+    .map_rd                         (map_rd         ),   
+    .map_data                       (map_data       ),
+    .map_cmd_rd                     (map_cmd_rd     ),   
+    .map_cmd_empty                  (map_cmd_empty  ),
+    .map_cmd_y                      (map_cmd_y      ),
+    .map_cmd_x                      (map_cmd_x      )          
 );
+//******************** end_map_ctrl ****************//
 
-rsp_s1_prep_delay_data #(
-  .DEPTH      (3),
-  .DATA_WIDTH (READ_RAM_WIDTH)
-) u_delay_t8(
-  .clk   (clk_500m  ),
-  .rst_n (rst_n),
-  .i_x0  (s_m0_rd_data ),
-  .o_y0  (i_m0_rd_data )
-);
 
-// save_file_tb #(
-//   .DELAY_VALID_NUM (1), 
-//   .DATA_WIDTH      (READ_RAM_WIDTH),
-//   .FILE_ADDR       ("D:/yuganwei/rsp_s1_prep/txt_file1/input_data.txt"),
-//   .cnt_data        (CNT_DATA),
-//   .packet_select   (PACKET_SELECT)
-// ) u_save_file_cabs_data(
-//   .rst_n    (rst_n),
-//   .clk      (clk_500m),
-//   .valid    (o_m0_rd_en),
-//   .data     (i_m0_rd_data)
-// );
 
-rsp_s1_prep_core #(
-  .DELAY   (2)
-) u_rsp_s1_prep_core(
-  .rst_n                (rst_n),
-  .hrst_n               (),
-  .clk                  (clk_500m),
-  .hclk                 (),
-  .i_start              (start),
-  .o_finish             (finish),
 
-  //config
-  .i_is_real                (1'b0),
-  .i_dc_est_cmp_cnt         ('d511),
-  .i_dc_est_chp_cnt         ('d63),
-  .i_dc_est_frm_cnt         ('d0),
-  .i_dc_est_scale           ('d65536),
-  .i_dc_config_mode         ('h00),
-  .i_intf_est_scale         ('d80000),
-  .i_intf_config_mode       ('h00),
-  .i_combination_config_mode('h00),
-
-  //DC_estimation
-  // .i_dc_u                 ({16'd538,16'd538}),
-  .i_dc_u                 ({16'd118,16'd420}),//complex
-  .o_dc_u                 (),
-
-  //INTF_estimation
-  // .i_intf_cmp             (16'd657),
-  .i_intf_cmp             (32'd657),//complex
-  .o_intf_cmp             (),
-
-  //phase_gen: AHB to RAM
-  .i_phase_entry_select     ('h10),
-  .i_phase_w                ('h02000200),
-  .i_phase_coe              (),
+//******************** rd_txt_data_tb ********************//
+rd_txt_data_tb #(
+  .CODE_RUN_CNT               (5),
+  .DATA_WIDTH                 (128),
+  .DATA_NUM                   (32400),
+  .RAM_FILE                   (),
+  .DELAY_BIT_DEPTH            (0),
+  .DELAY_DATA_DEPTH           (0),
+  .DELAY_ADDR_DEPTH           (0),
+  .AXIS_DATA_WIDTH            ( ),
+  .AXIS_COLUMN                ( ),
+  .AXIS_ROW                   ( ),
+  .AXIS_ROW_INTERVAL          (16   ),
+  .AXIS_RUN_CNT               (3    ),
+  .S_AXI4_DATA_WIDTH            (128  ),
+  .S_AXI4_EVERY_REQ_ADDR_NUM    (4    ),
+  .S_AXI4_MEM_DEPTH             (16200),
+  .S_AXI4_MEM_FILE              ()
+) u_rd_txt_data_tb(
+  .clk           (clk_200m),
+  .rst_n         (rst_n),
   
-  .i_phase_ram0_addra       (s_addr),
-  .i_phase_ram0_bwea        (),
-  .i_phase_ram0_ena         (data1_vld),
-  .i_phase_ram0_dina        (data1),
-  .o_phase_ram0_douta       (),
-  .i_phase_ram0_wena        (data1_vld),
+  .axis_tdata    (),
+  .axis_tvalid   (),
+  .axis_tready   (),
+  .axis_tlast    (),
+  
+  .rd_en         (),
+  .rd_data       (),
+  .rd_valid      (),
+  .rd_addr       (),
+  
+  .s_axi4_araddr  (),
+  .s_axi4_arlen   (),
+  .s_axi4_arsize  (),
+  .s_axi4_arburst (),
+  .s_axi4_arvalid (),
+  .s_axi4_arready (),
+  .s_axi4_rready  (),
+  .s_axi4_rlast   (),
+  .s_axi4_rvalid  (),
+  .s_axi4_rresp   (),
+  .s_axi4_rid     (),
+  .s_axi4_rdata   ()
+);
 
-  .i_phase_ram1_addra       (s_addr2),
-  .i_phase_ram1_bwea        (),
-  .i_phase_ram1_ena         (data2_vld),
-  .i_phase_ram1_dina        (data2),
-  .o_phase_ram1_douta       (),
-  .i_phase_ram1_wena        (data2_vld), 
+//******************** end_rd_txt_data_tb ********************//
 
-  .i_data_formatter         ('d0),
 
-  .o_m1_wr_data          (o_m1_wr_data),
-  .o_m1_wr_addr          (o_m1_wr_addr),
-  .o_m1_wr_en            (o_m1_wr_en  ),
-  .o_m1_wr_wea           (o_m1_wr_wea ),
-  .i_m0_rd_data          (i_m0_rd_data),
-  .o_m0_rd_addr          (o_m0_rd_addr),
-  .o_m0_rd_en            (o_m0_rd_en  )
 
-//   .m_axi_rd             (m_axi_rd),
-//   .m_axi_wr             (m_axi_wr)
+//******************** save_file ********************//
+save_file_tb #(
+  .DELAY_VALID_NUM (0), 
+  .DATA_WIDTH      (8),
+  .FILE_ADDR       (32),
+  .cnt_data        (1024),
+  .packet_select   (1)
+) u_save_encode_input(
+  .rst_n    (rst_n),
+  .clk      (clk_300m),
+  .valid    (),
+  .data     ()
 );
 
 save_file_tb #(
-  .DELAY_VALID_NUM (1), 
-  .DATA_WIDTH      (128),
-  .FILE_ADDR       ("D:/yuganwei/rsp_s1_prep/txt_file1/XW.txt"),
-  .cnt_data        (CNT_DATA),
-  .packet_select   (PACKET_SELECT)
-) u_XW(
+  .DELAY_VALID_NUM (0), 
+  .DATA_WIDTH      (8),
+  .FILE_ADDR       (32),
+  .cnt_data        (1024),
+  .packet_select   (1)
+) u_save_decode_output(
   .rst_n    (rst_n),
-  .clk      (clk_500m),
-  .valid    (o_m1_wr_en),
-  .data     (o_m1_wr_data)
+  .clk      (clk_300m),
+  .valid    (),
+  .data     ()
 );
+//******************** end_save_file ********************//
 
 
-
-tpram_1024x128 wr_ram (
-  .clka   (clk_500m),      // input wire clka
-  .ena    (o_m1_wr_en),      // input wire ena
-  .wea    (o_m1_wr_wea),      // input wire [0 : 0] wea
-  .addra  (o_m1_wr_addr),      // input wire [9 : 0] addra
-  .dina   (o_m1_wr_data),      // input wire [127 : 0] dina
-  .clkb   (clk_500m ),      // input wire clkb
-  .enb    (rd_en1),      // input wire enb
-  .addrb  (rd_addr1),      // input wire [9 : 0] addrb
-  .doutb  (rd_data1)       // output wire [127 : 0] doutb
-);
-rsp_s1_prep_read_ram #(
-  .DELAY_DATA_ARRIVE    (DELAY        ),
-  .READ_RAM_WIDTH       (READ_RAM_WIDTH),
-  .SAMPLE_WIDTH         (SAMPLE_WIDTH  ),
-  .RD_INTERVAL          (INTERVAL      ),
-  .DATA_NUM             (DATA_NUM      ),
-  .INIT_ADDR            (INIT_ADDR     ),
-  .ADD_ADDR             (ADD_ADDR      ),
-  .END_ADDR             (END_ADDR      )
-)u_test_read_ram(
-  .clk            (clk),
-  .rst_n          (rst_n),
-  .i_start        (1'b1),
-  .i_m0_rd_data   (rd_data1),            
-  .o_m0_rd_addr   (rd_addr1),
-  .o_m0_rd_en     (rd_en1),
-  .o_data         (rd_ram_data ),
-  .o_data_valid   (rd_ram_valid),
-  .o_data_last    ( )
-);
-//save_file_tb #(
-//  .DELAY_VALID_NUM (1), 
-//  .DATA_WIDTH      (128),
-//  .FILE_ADDR       ("D:/yuganwei/rsp_s1_prep/txt_file1/wr_ram_data.txt"),
-//  .cnt_data        (CNT_DATA),
-//  .packet_select   (PACKET_SELECT)
-//) u_wr_ram_rd_data(
-//  .rst_n    (rst_n),
-//  .clk      (clk),
-//  .valid    (rd_ram_valid),
-//  .data     (rd_ram_data)
-//);
-
-
-//******************** End_chirp_processing_top ********************//
-
-
-//******************** wrapper ********************//
-// ahb_if_cfg #(.AHB_WDW(32), .AHB_RDW(32), .AHB_AW(32)) ahb_if_cfg();
-//logic [`RSP_S1_PREP_DATA_WIDTH-1:0]    i_m0_rd_data_A;
-//logic                         o_m0_rd_en_A;
-//logic [`RSP_S1_PREP_ADDR_WIDTH-1:0]    o_m0_rd_addr_A;
-
-//logic [`RSP_S1_PREP_STRB_WIDTH-1:0]    o_m1_wea_A;
-//logic [`RSP_S1_PREP_DATA_WIDTH-1:0]    o_m1_wr_data_A;
-//logic                         o_m1_wr_en_A;
-//logic [`RSP_S1_PREP_ADDR_WIDTH-1:0]    o_m1_wr_addr_A;
-
-logic                         o_finish;
-
-always@(posedge clk_500m or negedge rst_n)begin
-  if(rst_n == 1'b0)begin
-    mem_req_ack <= 0;
-  end
-  else begin
-    if(mem_req)
-      mem_req_ack <= 1;
-    else
-      mem_req_ack <= 0;
-  end
-end
-always@(posedge clk_500m or negedge rst_n)begin
-  if(rst_n == 1'b0)begin
-    done_ack <= 0;
-  end
-  else begin
-    if(done)
-      done_ack <= 1;
-    else
-      done_ack <= 0;
-  end
-end
-
-tpram_1024x128 wrapper_rd (
-  .clka   (clk_500m),      // input wire clka
-  .ena    ('b0),      // input wire ena
-  .wea    ('b0),      // input wire [0 : 0] wea
-  .addra  ('b0),      // input wire [9 : 0] addra
-  .dina   ('d0      ),      // input wire [127 : 0] dina
-  .clkb   (clk_500m ),      // input wire clkb
-  .enb    (o_m0_rd_en_A),    // input wire enb
-  .addrb  (o_m0_rd_addr_A),      // input wire [9 : 0] addrb
-  .doutb  (i_m0_rd_data_A)     // output wire [127 : 0] doutb
-);
-// chirp_processing_s1_wrapper u_chirp_processing_s1_wrapper(
-//   .rst_n               (rst_n),
-//   .clk                 (clk_500m),
-
-//   .i_cmd_valid         (start),
-//   .i_cmd_info          (),
-//   .o_cmd_ack           (),
-
-//   .i_start             (start),
-//   .i_start_info        (),
-//   .o_start_ack         (),
-  
-//   .o_finish            (o_finish),
-//   .o_finish_info       (),
-//   .i_finish_ack        (),
-  
-//   .i_init              (),
-//   .i_reset             (),
-//   .i_stop              (),
-//   .i_rerun             (),
-  
-//   // .ahb_cfg             (),
-//   .hclk                (clk_500m),
-//   .hreset              (rst_n),
-  
-//   .o_mem_req           (mem_req),
-//   .o_mem_bm            (),
-//   .i_mem_ack           (mem_req_ack),
-  
-//   .i_m0_rd_data_A      (i_m0_rd_data_A),
-//   .o_m0_rd_en_A        (o_m0_rd_en_A  ),
-//   .o_m0_rd_addr_A      (o_m0_rd_addr_A),
-  
-//   .i_m0_rd_data_B      (),
-//   .o_m0_rd_en_B        (),
-//   .o_m0_rd_addr_B      (),
-  
-//   .o_m1_wea_A          (o_m1_wea_A    ),
-//   .o_m1_wr_data_A      (o_m1_wr_data_A),
-//   .o_m1_wr_en_A        (o_m1_wr_en_A  ),
-//   .o_m1_wr_addr_A      (o_m1_wr_addr_A),
-  
-//   .o_m1_wea_B          (),
-//   .o_m1_wr_data_B      (),
-//   .o_m1_wr_en_B        (),
-//   .o_m1_wr_addr_B      (),
-  
-//   .o_status            (),
-//   .o_irq               ()    
-// );
-tpram_1024x128 wrapper_wr (
-  .clka   (clk_500m),      // input wire clka
-  .ena    (o_m1_wr_en_A),      // input wire ena
-  .wea    (o_m1_wea_A),      // input wire [0 : 0] wea
-  .addra  (o_m1_wr_addr_A),      // input wire [9 : 0] addra
-  .dina   (o_m1_wr_data_A),      // input wire [127 : 0] dina
-  .clkb   (clk_500m ),      // input wire clkb
-  .enb    (),//(mem_intf.enb),      // input wire enb
-  .addrb  (),//(mem_intf.addrb),      // input wire [9 : 0] addrb
-  .doutb  ()//(mem_intf.dina)       // output wire [127 : 0] doutb
-);
-
-//save_file_tb #(
-//  .DELAY_VALID_NUM (1), 
-//  .DATA_WIDTH      (128),
-//  .FILE_ADDR       ("D:/yuganwei/rsp_s1_prep/txt_file1/XW.txt"),
-//  .cnt_data        (CNT_DATA),
-//  .packet_select   (PACKET_SELECT)
-//) u_mul_c_data(
-//  .rst_n    (rst_n),
-//  .clk      (clk_500m),
-//  .valid    (o_m1_wr_en_A),
-//  .data     (o_m1_wr_data_A)
-//);
-// save_file_tb #(
-//   .DELAY_VALID_NUM (1), 
-//   .DATA_WIDTH      (128),
-//   .FILE_ADDR       ("D:/yuganwei/rsp_s1_prep/txt_file1/wr_ram_data.txt"),
-//   .cnt_data        (CNT_DATA),
-//   .packet_select   (PACKET_SELECT)
-// ) u_wr_ram_rd_data(
-//   .rst_n    (rst_n),
-//   .clk      (clk_500m),
-//   .valid    (o_m1_wea_A[0]),
-//   .data     (o_m1_wr_data_A)
-// );
-
-//******************** end_wrapper ********************//
-
-
-
-
-
-
-
-
-
-//******************** phase_ram ********************//
-parameter ADDRESS_NUM  = 1024;
-localparam ADDRESS_WIDTH = 32;
-logic [READ_RAM_WIDTH-1:0] mem_1024x64[ADDRESS_NUM-1:0];
-logic [READ_RAM_WIDTH-1:0] mem_32x32[ADDRESS_NUM-1:0];
-logic [ADDRESS_WIDTH-1:0] address;
-logic [ADDRESS_WIDTH-1:0] s_addr;
-logic [ADDRESS_WIDTH-1:0] address2;
-logic [ADDRESS_WIDTH-1:0] s_addr2;
-logic [63:0] data1;
-logic [31:0] data2;
-logic        data1_vld;
-logic        data2_vld;
-
-initial begin
-    $readmemh("D:/yuganwei/rsp_s1_prep/twiddle/twiddle_1024x64.txt", mem_1024x64);
-end
-initial begin
-    $readmemh("D:/yuganwei/rsp_s1_prep/twiddle/twiddle_32x32.txt", mem_32x32);
-end
-
-always@(posedge clk_500m or negedge rst_n)begin
-  if(rst_n == 1'b0)begin
-    data1 <= 128'b0;
-    address <= 0;
-    data1_vld <= 1'b0;
-  end
-  else begin
-    if(address == 'd130)
-      address <= address + 1'b1;
-    else if(address < 'd130)begin
-      data1 <= mem_1024x64[address];
-      address <= address+1;
-      data1_vld <= 1'b1;
-    end
-    else begin
-        data1 <= data1;
-        data1_vld <= 0;
-    end
-  end
-end
-assign s_addr = address - 1;
-
-always@(posedge clk_500m or negedge rst_n)begin
-  if(rst_n == 1'b0)begin
-    data1 <= 128'b0;
-    address2 <= 0;
-    data1_vld <= 1'b0;
-  end
-  else begin
-    if(address2 < 'd32)begin
-      data2 <= mem_32x32[address];
-      address2 <= address2 + 1;
-      data2_vld <= 1'b1;
-    end
-    else begin
-        data2 <= data2;
-        data2_vld <= 0;
-    end
-  end
-end
-assign s_addr2 = address2 - 1;
-
-//******************** End_phase_ram ********************//
-
-
-
-//fsdbDump
-// initial begin 
-//     $fsdbDumpfile("tb_common_wave.fsdb");
-//     $fsdbDumpvars(0,commmon_tb);
-//     $fsdbDumpMDA();
-// end
 
 endmodule
