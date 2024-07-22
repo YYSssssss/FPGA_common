@@ -4,7 +4,7 @@
 // Engineer: 
 // 
 // Create Date: 2023/08/08 15:01:15
-// Design Name: 
+// Design Name: Jade Yu
 // Module Name: save_file_tb
 // Project Name: 
 // Target Devices: 
@@ -24,17 +24,19 @@ module save_file_tb #(
     parameter DELAY_VALID_NUM = 4,
     parameter DATA_WIDTH = 16,
     parameter string FILE_ADDR = "D:/IC-DD/ChirpPreprocessing/complex_abs_value.txt",
-    parameter cnt_data = 1023,  // one valid = 1023 data
+    parameter cnt_data = 1024,  // one valid = 1023 data
     parameter packet_select = 1    
 )(
   input                             rst_n,
   input                             clk,
   input                             valid,
-  input  [DATA_WIDTH-1:0]           data
+  input  [DATA_WIDTH-1:0]           data ,
+  
+  output logic [31:0]                     cnt_valid
 );
 
 logic delay_valid;
-logic [15:0] cnt_valid;
+//logic [15:0] cnt_valid;
 logic s_delay_valid;
 logic [15:0] cnt_packet;
 
@@ -57,7 +59,7 @@ always@(posedge clk) begin
     cnt_packet <= 'd1;
   end
   else begin
-    if(cnt_valid == cnt_data) 
+    if(cnt_valid == cnt_data - 1) 
       cnt_packet <= cnt_packet + 'd1;
     else
       cnt_packet <= cnt_packet;
@@ -71,7 +73,7 @@ always @(posedge clk) begin
   if(!rst_n) begin
     cnt_valid <= 'd0;
   end
-  else if(cnt_valid == cnt_data) begin
+  else if(cnt_valid == cnt_data - 1) begin
     cnt_valid <= 'd0;
   end
   else if(s_delay_valid) begin
