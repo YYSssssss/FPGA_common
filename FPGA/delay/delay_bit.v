@@ -11,7 +11,7 @@
 // All right reserved
 //-----------------------------------------------------------------------------
 
-module delay #(parameter DELAY = 1)
+module delay_bit #(parameter DELAY = 1)
 (
   input               clk,
   input               rst_n,
