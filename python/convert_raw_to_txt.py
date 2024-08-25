@@ -37,15 +37,15 @@
 
 
 
-def raw_to_txt(raw_file, txt_file):
+def raw_to_txt(raw_file, txt_file, bytes_per_line):
     try:
         with open(raw_file, 'rb') as f_raw:
             raw_data = f_raw.read()
         
         with open(txt_file, 'w') as f_txt:
-            for i in range(0, len(raw_data), 16):
+            for i in range(0, len(raw_data), bytes_per_line):
                 # Read 16 bytes from raw data
-                line = raw_data[i:i+16]
+                line = raw_data[i:i+bytes_per_line]
                 
                 # Swap every 2 bytes
                 swapped_line = bytearray()
@@ -73,10 +73,12 @@ def raw_to_txt(raw_file, txt_file):
         print(f"An error occurred: {e}")
 
 # 使用方法
-input_file = 'D:/FPGA_common/python/input_3840x2160_UYVY422_0001.raw'
-txt_file = 'D:/FPGA_common/python/input_3840x2160_UYVY422_0001.txt'
+bytes_per_line = 4
+input_file = 'D:/FPGA_common/python/input_3840x2160_UYVY422_BIT8.raw'
+txt_file = 'D:/FPGA_common/python/input_3840x2160_UYVY422_BIT8_' + str(bytes_per_line) + 'bytes_per_line.txt'
 
-raw_to_txt(input_file, txt_file)
+
+raw_to_txt(input_file, txt_file, bytes_per_line)
 
 
 

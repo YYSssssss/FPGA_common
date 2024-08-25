@@ -9,8 +9,10 @@ def bin_to_txt(bin_file, txt_file):
                 line = bin_data[i:i+16]
                 # Convert bytes to hex string and remove spaces
                 hex_string = ''.join(f'{byte:02x}' for byte in line)
-                # Write the hex string to txt file
-                f_txt.write(hex_string + '\n')
+                # 翻转十六进制字符串
+                reversed_hex_string = ''.join([hex_string[j:j+2] for j in range(0, len(hex_string), 2)][::-1])
+                # 将翻转后的字符串写入文件
+                f_txt.write(reversed_hex_string + '\n')
                 
         print(f"Conversion complete: {bin_file} -> {txt_file}")
     
@@ -20,7 +22,7 @@ def bin_to_txt(bin_file, txt_file):
         print(f"An error occurred: {e}")
 
 # Usage
-bin_file = 'D:/FPGA_common/python/map.bin'
-txt_file = 'D:/FPGA_common/python/map.txt'
+bin_file = 'D:/FPGA_common/python/bMap12Q4.bin'
+txt_file = 'D:/FPGA_common/python/bMap12Q4.txt'
 bin_to_txt(bin_file, txt_file)
 
