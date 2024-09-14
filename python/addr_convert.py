@@ -21,6 +21,6 @@ def convert_and_write(input_file, output_file):
         print(f"An error occurred: {e}")
 
 # 使用示例
-input_file = 'D:/FPGA_common/python/topMap.txt'  # 输入文件路径
-output_file = 'D:/FPGA_common/python/top_pixel_addr.txt'  # 输出文件路径
+input_file = 'E:/Sensemi_Jade/YYS_GDC/Luke/20240914/result/topMap.txt'  # 输入文件路径
+output_file = 'E:/Sensemi_Jade/YYS_GDC/Luke/20240914/result/top_pixel_addr.txt'  # 输出文件路径
 convert_and_write(input_file, output_file)

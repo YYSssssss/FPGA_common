@@ -22,7 +22,11 @@ def bin_to_txt(bin_file, txt_file):
         print(f"An error occurred: {e}")
 
 # Usage
-bin_file = 'D:/FPGA_common/python/bMap12Q4.bin'
-txt_file = 'D:/FPGA_common/python/bMap12Q4.txt'
+# bin_file = 'E:/Sensemi_Jade/YYS_GDC/Luke/20240914/result/bMapLinearScale1.10.bin'
+# txt_file = 'E:/Sensemi_Jade/YYS_GDC/Luke/20240914/result/bMapLinearScale1.10.txt'
+
+bin_file = 'E:/Sensemi_Jade/YYS_GDC/Luke/20240914/result/bMapLinearPixLogBinAll.bin'
+txt_file = 'E:/Sensemi_Jade/YYS_GDC/Luke/20240914/result/bMapLinearPixLogBinAll_reverse.txt'
+
 bin_to_txt(bin_file, txt_file)
 

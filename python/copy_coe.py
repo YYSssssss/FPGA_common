@@ -5,11 +5,22 @@ ADD_ADDR = 0x100  # 每次累加的值
 BASE_ADDR = 0xF0000  # 配置的基地址值，可以修改为其他16进制值
 count_ac = 0  # 记录“000000AC”出现的次数
 block_cycle = 30  # 每个增量周期的次数
+block_num = 1440
 
-with open("output.txt", "w") as file:
-    for _ in range(1152):
+data = ["0000000000000000,", 
+        "0000000000000003,",
+        "0000001400000000,",
+        "0000002800000000,",
+        "00000054000000F0,",
+        "0000005800001E00,",
+        "0000005000000043,"]
+
+txt_file = "E:/Sensemi_Jade/YYS_GDC/Luke/20240914/result/output.txt"
+
+with open(txt_file, "w") as file:
+    for _ in range(block_num):
         for item in data:
-            if "000000AC" in item:
+            if "00000028" in item:
                 # 计算当前的增量基地址
                 base_increment = (count_ac // block_cycle) * BASE_ADDR
 
