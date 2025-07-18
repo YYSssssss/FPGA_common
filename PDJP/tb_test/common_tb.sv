@@ -37,7 +37,7 @@ module common_tb;
         // -------------------------------------------------------------------------
         // ADDITIONAL Parameter
         // -------------------------------------------------------------------------
-        localparam P_SIM		= 0			  	;// 1:simulation use only
+        localparam P_SIM		= 1			  	;// 1:simulation use only
 	    localparam P_DBUS_W	    = 8				;// data bus width
 	    localparam P_INIT_VAL	= 1'b0			;// The Initial value of Switch 
 	    localparam P_SAMP_CNT	= 10000			;// Sampling Timecounter(100MHz Clock: 100us/10ns=10000,Max:65536) 
@@ -190,7 +190,7 @@ module common_tb;
         .RST									(RST), // (i) async. reset (high active)
 
         // Switch Input
-        .SW_I								    (CLK_150m), // (i) Switch input
+        .SW_I								    ({2{!CLK_150m,!CLK_150m,CLK_150m,CLK_150m}}), // (i) Switch input
 
         // Switch Output
         .SW_O								    (SW_O)	// (o) Switch output

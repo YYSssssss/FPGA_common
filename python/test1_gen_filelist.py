@@ -20,19 +20,26 @@ import os
 #     obj.close()
 #     f2.close()
 
-def testl_gen_filelist():
-    filetype_verilog =" -verilog "
+def test1_gen_filelist():
+    """Placeholder implementation for generating a file list.
+
+    The original script was incomplete and contained several syntax errors.
+    This function now simply sets up a few variables and can be extended
+    later with the actual implementation.
+    """
+    filetype_verilog = " -verilog "
     filetype_systemverilog = " -verilog -vlog std sysv "
-    vobs_path = " /prj/chips/pvg/venus/yuyushan/jade venus 3/vobs"
-    need_delate_word ="+incdir+"
-    need_delate_word1 ="+incdir+"
-    need_save_word2 ="+define+FPGA"
-    header0 ="header files are defined in"
-    need_operate_words = [need_delate_word,need_delate_word1,need_save_word2]
+    vobs_path = "/prj/chips/pvg/venus/yuyushan/jade venus 3/vobs"
+    need_delate_word = "+incdir+"
+    need_delate_word1 = "+incdir+"
+    need_save_word2 = "+define+FPGA"
+    header0 = "header files are defined in"
+    need_operate_words = [need_delate_word, need_delate_word1, need_save_word2]
     current_path = os.getcwd()
+
 # file rtl = os.path.join(current path,"rsp sl top filelist fpga")file rtl = os.path.join("/prj/chips/pvg/venus/yuyushan/jade venus 3/vobs/ip/
-with open(file rtl,'r') as obj:data = obi.read()
-with open('file syn.v','w') as f2:
+# with open(file rtl,'r') as obj:data = obj.read()
+# with open('file syn.v','w') as f2:
 
 if __name__ == "__main__":
     test1_gen_filelist()
